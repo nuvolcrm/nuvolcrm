@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Más</b>Móvil',
+    'logo' => '<b>Nuvol</b>CRM',
     'logo_img' => 'vendor/adminlte/dist/img/masmovil.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
