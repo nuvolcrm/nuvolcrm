@@ -46,11 +46,13 @@
                     <tbody>
                         <?php
                             foreach ($link->query('SELECT * from cliente') as $row){
+                              $idioma = $row['idioma'];
+                              $idiomas = strtolower($idioma);
                         ?>
                         <tr>
                             <td><?php echo $row['dni']?></td>
                             <td><?php echo $row['nombre'],' ',$row['apellido1'],' ',$row['apellido2']?></td>
-                            <td><img width="100%" src="../public/vendor/adminlte/dist/img/idiomas/<?php echo $row['idioma']?>.png"></td>
+                            <td><img width="100%" src="../public/vendor/adminlte/dist/img/idiomas/<?php echo $idiomas?>.png"></td>
                             <td><?php echo $row['alias']?></td>
                             <td><a class='fas fa-phone-square-alt' href=" tel:<?php echo $row['telefono']?>"></td>
                             <td><?php echo $row['telefono']?></td>
