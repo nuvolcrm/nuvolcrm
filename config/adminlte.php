@@ -194,6 +194,11 @@ return [
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     'profile_url' => false,
+    
+    'use_route_url' => false,
+    'clientes_url' => 'clientes',
+    'crear_clientes_url' => 'crear_clientes',
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
