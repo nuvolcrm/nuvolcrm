@@ -230,12 +230,6 @@ return [
             'topnav' => true,
         ],
         [
-            'key'  => 'pages',
-            'text' => 'Pages',
-            'url'  => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-        ],
-        [
             'text' => 'Busqueda',
             'search' => true,
         ],
