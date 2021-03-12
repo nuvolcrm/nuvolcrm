@@ -11,8 +11,8 @@ $clientes = DB::table('cliente')->get();
  
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-1">
-        <h1>Clientes <a href="/Nuvolcrm/public/crear_clientes" class="rounded btn btn-primary"><i class="fas fa-plus"></i>añadir</a></h1>
+    <div class="col-sm">
+        <h1>Clientes <a href="/Nuvolcrm/public/crear_clientes" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
     </div>
   </div>
 </div>
