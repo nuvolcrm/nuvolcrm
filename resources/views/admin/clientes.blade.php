@@ -64,8 +64,8 @@ $clientes = DB::table('cliente')->get();
                             <td><?php echo $row-> segmento?></td>
                             <td><a class='far fa-envelope' href=" mailto:<?php echo $row-> email?>"></td>
                             <td><?php echo $row-> email?></td>
-                            <td><?php echo $row-> dni?></td>
-                            <td style='background-color:#EEFCFF'><?php echo $row-> dni?></td>
+                            <td><?php echo $row-> mailing?></td>
+                            <td style='background-color:#EEFCFF'></td>
                             <td><a href="admin/{{ $row-> idcliente }}/editar_cliente"><i class='fas fa-pencil-alt'></i></a></td>
                         </tr>
                         <?php
