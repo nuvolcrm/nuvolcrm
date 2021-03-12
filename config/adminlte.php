@@ -225,12 +225,12 @@ return [
 
     'menu' => [
         [
-            'text' => 'Busqueda',
+            'text' => 'Buscar',
             'search' => true,
             'topnav' => true,
         ],
         [
-            'text' => 'Busqueda',
+            'text' => 'Buscar',
             'search' => true,
         ],
         [
@@ -245,26 +245,26 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CRM'],
         [
             'text'        => 'Clientes',
             'url'         => 'clientes',
             'icon'        => 'fas fa-user-friends',
-            'label'       => 4,
+            'label'       => 5,
             'label_color' => 'success',
         ],
         [
-            'text'        => 'Presupuesto',
+            'text'        => 'Presupuestos',
             'url'         => 'presupuestos',
             'icon'        => 'fas fa-calculator',
-            'label'       => 4,
+            'label'       => 6,
             'label_color' => 'success',
         ],
         [
             'text'        => 'Ventas',
             'url'         => 'ventas',
             'icon'        => 'fas fa-table',
-            'label'       => 4,
+            'label'       => 7,
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
