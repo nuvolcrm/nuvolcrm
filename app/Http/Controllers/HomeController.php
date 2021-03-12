@@ -73,4 +73,8 @@ class HomeController extends Controller
     {
         return view('admin.gestion.usuarios_roles');
     }
+    public function crear_clientes()
+    {
+        return view('admin.crear_clientes');
+    }
 }
