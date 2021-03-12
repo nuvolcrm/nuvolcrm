@@ -8,11 +8,15 @@ $clientes = DB::table('cliente')->get();
 @section('title', 'Clientes')
 
 @section('content_header')
-<div class="col-sm-4">
-    Clientes
-</div>
-<div class="col-sm-4">
-    <a href="/Nuvolcrm/public/crear_clientes" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <h1>Clientes</h1>
+    </div>
+    <div class="col-sm">
+        <a href="/Nuvolcrm/public/crear_clientes" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a>
+    </div>
+  </div>
 </div>
 @stop
 @section('content')
