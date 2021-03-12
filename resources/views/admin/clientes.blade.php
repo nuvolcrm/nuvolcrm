@@ -12,7 +12,7 @@ $clientes = DB::table('cliente')->get();
     Clientes
 </div>
 <div class="col-sm-4">
-    <a href="/Nuvolcrm/public/crear_clientes" class="rounded-circle btn btn-success">+</a>
+    <a href="/Nuvolcrm/public/crear_clientes" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a>
 </div>
 @stop
 @section('content')
