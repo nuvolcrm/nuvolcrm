@@ -10,8 +10,9 @@ $clientes = DB::table('cliente')->get();
 @section('content_header')
 <div class="col-sm-4">
     <h1>Clientes</h1>
-    
-    <a href="/Nuvolcrm/public/crear_clientes" class="btn btn-success">Nuevo Cliente</a>
+</div>
+<div class="col-sm-4">
+    <a href="/Nuvolcrm/public/crear_clientes" class="rounded btn btn-success">+</a>
 </div>
 @stop
 @section('content')
