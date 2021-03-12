@@ -10,7 +10,7 @@
 </div>
 @stop
 <?php
-    $link = new PDO('mysql:host=138.68.138.156;dbname=nuvolcrm', 'forge', 'sBeywveCYpdkgajGCFXNSssssss');
+    $link = new PDO('mysql:host=138.68.138.156;dbname=nuvolcrm', 'forge', 'sBeywveCYpdkgajGCFXNSsssssss');
 ?>
 @section('content')
     <body>
