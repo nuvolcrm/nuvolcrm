@@ -77,4 +77,5 @@ class HomeController extends Controller
     {
         return view('admin.crear_clientes');
     }
+    
 }

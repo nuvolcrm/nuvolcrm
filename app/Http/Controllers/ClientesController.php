@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,41 +15,42 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        $clientes = DB::table('cliente')->get();
+        $clientes = DB::table('clientes')->get();
 
         return view('resources.views.admin.clientes', ['clientes' => $clientes]);
     }
     public function store(Request $request){
 
-        $clientes = array("dni"=>$request->input("dni"),
+        //Recoger Datos
+        $cliente = array("dni"=>$request->input("dni"),
                           "nombre"=>$request->input("nombre"),
                           "apellido1"=>$request->input("apellido1"),
                           "apellido2"=>$request->input("apellido2"),
                           "alias"=>$request->input("alias"),
-                          "fecha_nacimiento"=>$request->input("f_nacimiento"),
+                          "fecha_nacimiento"=>$request->input("fecha_nacimiento"),
                           "direccion"=>$request->input("direccion"),
                           "poblacion"=>$request->input("poblacion"),
                           "telefono"=>$request->input("telefono"),
-                          "idioma"=>$request->radio("idioma"),
+                          "idioma"=>$request->input("idioma"),
                           "email"=>$request->input("email"),
-                          "segmento"=>$request->radio("segmento"));
+                          "segmento"=>$request->input("segmento"));
 
-        $cliente = new Cliente();
-        $clietne->dni = $clientes["dni"];
-        $clietne->nombre = $clientes["nombre"];
-        $clietne->apellido1 = $clientes["apellido1"];
-        $clietne->apellido2 = $clientes["apellido2"];
-        $clietne->alias = $clientes["alias"];
-        $clietne->fehca_nacimiento = $clientes["f_nacimiento"];
-        $clietne->direccion = $clientes["direccion"];
-        $clietne->poblacion = $clientes["poblacion"];
-        $clietne->telefono = $clientes["telefono"];
-        $clietne->idioma = $clientes["idioma"];
-        $clietne->email = $clientes["email"];
-        $clietne->segmento = $clientes["segmento"];
+        $clientes = new Cliente();
+        $clientes->dni = $cliente["dni"];
+        $clientes->nombre = $cliente["nombre"];
+        $clientes->apellido1 = $cliente["apellido1"];
+        $clientes->apellido2 = $cliente["apellido2"];
+        $clientes->alias = $cliente["alias"];
+        $clientes->fecha_nacimiento = $cliente["fecha_nacimiento"];
+        $clientes->direccion = $cliente["direccion"];
+        $clientes->poblacion = $cliente["poblacion"];
+        $clientes->telefono = $cliente["telefono"];
+        $clientes->idioma = $cliente["idioma"];
+        $clientes->email = $cliente["email"];
+        $clientes->segmento = $cliente["segmento"];
 
-        $cliente->save();
+        $clientes->save();
 
-        return redirect("/clientes")-with("ok-crear","");
+        return redirect("/clientes");
     }
 }

@@ -200,6 +200,11 @@ return [
     'crear_clientes_url' => 'crear_clientes',
     'profile_url' => true,
 
+    
+    'use_route_url' => false,
+    'clientes_url' => 'clientes',
+    'crear_clientes_url' => 'crear_clientes',
+    'profile_url' => true,
     /*
     |--------------------------------------------------------------------------
     | Laravel Mix

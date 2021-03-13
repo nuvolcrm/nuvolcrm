@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-    <form action="../app/Http/Controllers/ClientesController.php" method="POST">
+    <form action="{{route('crear')}}" method="POST">
         @csrf
         <div class="input-group">
             <div>
@@ -37,7 +37,7 @@
             </div>
             <div>
                 <label class="control-label"> Fecha de Nacimiento</label>
-                <input style="margin-left: 5%" type="date" name="f_nacimiento" class="form-control mb-2" required>
+                <input style="margin-left: 5%" type="date" name="fecha_nacimiento" class="form-control mb-2" required>
             </div>
         </div>
         <div class="input-group" style="margin-top: 1%">

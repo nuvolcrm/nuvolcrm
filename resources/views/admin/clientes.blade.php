@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\DB;
 
-$clientes = DB::table('cliente')->get();
+$clientes = DB::table('clientes')->get();
 ?>
 @extends('adminlte::page')
 
