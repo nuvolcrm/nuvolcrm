@@ -58,33 +58,34 @@
         </div>
         <div class="input-group" style="margin-top: 1%">
             <div>
+                <label class="control-label"> Código Postal</label>
+                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5" placeholder="Código Postal" required/>
+            </div>
+            <div>
                 <label class="control-label"> Población</label>
                 <input  type="text" name="poblacion" placeholder="Poblacion" class="form-control mb-2" required>
             </div>
-            <div>
-                <label class="control-label"> Código Postal</label>
-                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5" placeholder="Escribe un Código Postal Válido" required/>
-            </div>
+
         </div>
         <div class="input-group" style="margin-top: 1%">
             <div class="form-group f98 required inline" data-fid="f98" name="idioma">
                 <label class="control-label" for="f98">Idioma</label>
             <div class="radio">
-                    <input  id="f97_1" name="idioma"  type="radio" value="espanyol">
-                    <label  for="f97_1">
+                    <input  id="f98_1" name="idioma"  type="radio" value="espanyol">
+                    <label  for="f98_1">
                         Español
                     </label><br>
-                    <input  id="f97_2" name="idioma"  type="radio" value="valenciano"  >
-                    <label  for="f97_2">
+                    <input  id="f98_2" name="idioma"  type="radio" value="valenciano"  >
+                    <label  for="f98_2">
                         Valenciano
                     </label><br>
-                    <input  id="f97_3" name="idioma"  type="radio" value="ingles"  >
-                    <label  for="f97_3">
+                    <input  id="f98_3" name="idioma"  type="radio" value="ingles"  >
+                    <label  for="f98_3">
                         Ingles
                     </label>
                 </div>
             </div>
-            <div style="margin-left: 5%" class="form-group f98 required inline" data-fid="f98" name="segmento">
+            <div style="margin-left: 5%" class="form-group f97 required inline" data-fid="f97" name="segmento">
                 <label class="control-label" for="f98">Segmento</label>
             <div class="radio">
                     <input  id="f97_1" name="segmento"  type="radio" value="residencial">
