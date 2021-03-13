@@ -59,11 +59,11 @@
         <div class="input-group" style="margin-top: 1%">
             <div>
                 <label class="control-label"> Código Postal</label>
-                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5" placeholder="Código Postal" required/>
+                <input type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5" placeholder="Código Postal" required/>
             </div>
             <div>
                 <label class="control-label"> Población</label>
-                <input  type="text" name="poblacion" placeholder="Poblacion" class="form-control mb-2" required>
+                <input style="margin-left: 5%" type="text" name="poblacion" placeholder="Poblacion" class="form-control mb-2" required>
             </div>
 
         </div>
