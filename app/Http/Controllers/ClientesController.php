@@ -51,6 +51,6 @@ class ClientesController extends Controller
 
         $clientes->save();
 
-        return redirect("/clientes");
+        return view("admin.clientes");
     }
 }
