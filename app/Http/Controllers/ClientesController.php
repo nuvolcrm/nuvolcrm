@@ -21,6 +21,7 @@ class ClientesController extends Controller
     }
     public function store(Request $request){
 
+        $clientes = DB::table('clientes')->get();
         //Recoger Datos
         $cliente = array("dni"=>$request->input("dni"),
                           "nombre"=>$request->input("nombre"),
