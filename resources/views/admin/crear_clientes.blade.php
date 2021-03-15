@@ -87,20 +87,20 @@
             <div style="margin-left: 5%" class="form-group f98 required inline" data-fid="f98" name="segmento">
                 <label class="control-label" for="f98">Segmento</label>
             <div class="radio">
-                    <input  id="f97_1" name="segmento"  type="radio" value="residencial">
-                    <label  for="f97_1">
+                    <input  id="f98_1" name="segmento"  type="radio" value="residencial">
+                    <label  for="f98_1">
                         Residencial
                     </label><br>
-                    <input  id="f97_2" name="segmento"  type="radio" value="especial"  >
-                    <label  for="f97_2">
+                    <input  id="f98_2" name="segmento"  type="radio" value="especial"  >
+                    <label  for="f98_2">
                         Especial
                     </label><br>
-                    <input  id="f97_3" name="segmento"  type="radio" value="autonomo"  >
-                    <label  for="f97_3">
+                    <input  id="f98_3" name="segmento"  type="radio" value="autonomo"  >
+                    <label  for="f98_3">
                         Autónomo
                     </label><br>
-                    <input  id="f97_4" name="segmento"  type="radio" value="empresa"  >
-                    <label  for="f97_4">
+                    <input  id="f98_4" name="segmento"  type="radio" value="empresa"  >
+                    <label  for="f98_4">
                         Empresa
                     </label>
                 </div>
