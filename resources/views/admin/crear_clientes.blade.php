@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Pedidos')
+@section('title', 'Clientes')
 
 @section('content_header')
     <h1>Crear Cliente</h1>
@@ -70,16 +70,16 @@
             <div class="form-group f98 required inline" data-fid="f98" name="idioma">
                 <label class="control-label" for="f98">Idioma</label>
             <div class="radio">
-                    <input  id="f97_1" name="idioma"  type="radio" value="espanyol">
-                    <label  for="f97_1">
+                    <input  id="idioma_esp" name="idioma"  type="radio" value="espanyol">
+                    <label  for="idioma_esp">
                         Español
                     </label><br>
-                    <input  id="f97_2" name="idioma"  type="radio" value="valenciano"  >
-                    <label  for="f97_2">
+                    <input  id="idioma_val" name="idioma"  type="radio" value="valenciano"  >
+                    <label  for="idioma_val">
                         Valenciano
                     </label><br>
-                    <input  id="f97_3" name="idioma"  type="radio" value="ingles"  >
-                    <label  for="f97_3">
+                    <input  id="idioma_ing" name="idioma"  type="radio" value="ingles"  >
+                    <label  for="idioma_ing">
                         Ingles
                     </label>
                 </div>
@@ -101,6 +101,20 @@
                     </label><br>
                     <input  id="f98_4" name="segmento"  type="radio" value="empresa"  >
                     <label  for="f98_4">
+                    <input  id="segmento_res" name="segmento"  type="radio" value="residencial">
+                    <label  for="segmento_res">
+                        Residencial
+                    </label><br>
+                    <input  id="segmento_es" name="segmento"  type="radio" value="especial"  >
+                    <label  for="segmento_es">
+                        Especial
+                    </label><br>
+                    <input  id="segmento_aut" name="segmento"  type="radio" value="autonomo"  >
+                    <label  for="segmento_aut">
+                        Autónomo
+                    </label><br>
+                    <input  id="segmento_emp" name="segmento"  type="radio" value="empresa"  >
+                    <label  for="segmento_emp">
                         Empresa
                     </label>
                 </div>
@@ -110,6 +124,7 @@
             <button class="btn btn-primary" type="submit">Agregar</button>
         </div>
     </form>
+
 @stop
 
 @section('css')

@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\DB;
+use Iluminate\Pagination\Paginator;
 
 $clientes = DB::table('clientes')->get();
 ?>
@@ -73,7 +74,7 @@ $clientes = DB::table('clientes')->get();
                             <td><?php echo $row-> email?></td>
                             <td><?php echo $row-> mailing?></td>
                             <td style='background-color:#EEFCFF'></td>
-                            <td><a href="admin/{{ $row-> idcliente }}/editar_cliente"><i class='fas fa-pencil-alt'></i></a></td>
+                            <td><a href="{{route('editar_cliente',$row->idcliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
                         </tr>
                         <?php
                         }
@@ -87,6 +88,7 @@ $clientes = DB::table('clientes')->get();
       </section>
     </body>
 @stop
+
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
