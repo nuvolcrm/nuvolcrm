@@ -125,7 +125,7 @@
         </div>
     </form>
     
-    <!-- añado otro modelo de formulario --
+    <!-- añado otro modelo de formulario -->
     <form class="well form-horizontal">
                       <fieldset>
                          <div class="form-group">
