@@ -13,13 +13,12 @@ $clientes = DB::table('clientes')->get();
 
 @section('content')
     <form action="{{route('editar')}}" method="POST">
-        @foreach ($clientes as $row)
         @csrf
         @method('PUT')
         <div class="input-group">
             <div>
                 <label class="control-label"> DNI</label>
-                <input  type="text" name="dni" value="{{$row -> dni}}" class="form-control mb-2">
+                <input  type="text" name="dni" value="" class="form-control mb-2">
             </div>
             <div>
                 <label class="control-label"> Nombre</label>
@@ -116,7 +115,6 @@ $clientes = DB::table('clientes')->get();
         <div>
             <button class="btn btn-primary" type="submit">Agregar</button>
         </div>
-        @endforeach
     </form>
 
 @stop

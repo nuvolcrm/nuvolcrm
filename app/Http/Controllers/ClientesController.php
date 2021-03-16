@@ -58,9 +58,8 @@ class ClientesController extends Controller
     }
     public function edit(Cliente $clientes){
         $clientes = Cliente::find($clientes->idcliente);
-        return $clientes;
-/*         return view('admin.editar_cliente', compact('cliente'));
- */ }
+        return view('admin.editar_cliente', compact('clientes'));
+ }
     public function update(Request $request, Cliente $clientes)
     {
         //validate the file
