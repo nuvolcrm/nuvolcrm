@@ -4,7 +4,7 @@
 @section('title', 'Clientes')
 
 @section('content_header')
-    <h1>Crear Cliente</h1>
+    <h1>Nuevo Cliente</h1>
 @stop
 
 @section('content')
@@ -21,12 +21,12 @@
 @csrf
 <div class="input-group">
 <div class="input-group" style="margin-top: 1%">
-<div class="form-group required inline" data-fid="f99" name="idioma">
-<label class="control-label" for="f99">Idioma</label>
+<div class="form-group required inline" data-fid="f99" name="tipo">
+<label class="control-label" for="f99">Tipo</label>
 <div class="radio">
-<input  id="segmento_res" name="segmento"  type="radio" value="res">
+<input  id="segmento_res" name="segmento"  type="radio" value="par">
 <label  for="segmento_res">
-    Residencial
+    Particular
 </label>
 <input  id="segmento_esp" name="segmento"  type="radio" value="esp">
 <label  for="segmento_esp">
