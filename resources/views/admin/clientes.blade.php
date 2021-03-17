@@ -13,7 +13,7 @@ $clientes = DB::table('clientes')->get();
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-        <h1>Clientes <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+        <h1>Clientes PROBANDO<a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
     </div>
   </div>
 </div>
