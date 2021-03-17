@@ -20,6 +20,28 @@
 <form action="{{route('crear')}}" method="POST">
 @csrf
 <div class="input-group">
+<div class="input-group" style="margin-top: 1%">
+<div class="form-group required inline" data-fid="f99" name="idioma">
+<label class="control-label" for="f99">Idioma</label>
+<div class="radio">
+<input  id="segmento_res" name="segmento"  type="radio" value="res">
+<label  for="segmento_res">
+    Residencial
+</label>
+<input  id="segmento_esp" name="segmento"  type="radio" value="esp"  >
+<label  for="segmento_esp">
+    Especial
+</label>
+<input  id="segmento_aut" name="segmento"  type="radio" value="aut"  >
+<label  for="segmento_aut">
+    Autónomo
+</label>
+<input  id="segmento_emp" name="segmento"  type="radio" value="emp"  >
+<label  for="segmento_emp">
+    Empresa
+</label>
+</div>
+</div>
 <div>
 <label class="control-label"> DNI</label>
 <input  type="text" name="dni" placeholder="DNI" class="form-control mb-2" required>
@@ -94,28 +116,6 @@
 </div>
 </div>
 
-<div class="input-group" style="margin-top: 1%">
-<div class="form-group required inline" data-fid="f99" name="idioma">
-<label class="control-label" for="f99">Idioma</label>
-<div class="radio">
-<input  id="segmento_res" name="segmento"  type="radio" value="res">
-<label  for="segmento_res">
-    Residencial
-</label><br>
-<input  id="segmento_esp" name="segmento"  type="radio" value="esp"  >
-<label  for="segmento_esp">
-    Especial
-</label><br>
-<input  id="segmento_aut" name="segmento"  type="radio" value="aut"  >
-<label  for="segmento_aut">
-    Autónomo
-</label><br>
-<input  id="segmento_emp" name="segmento"  type="radio" value="emp"  >
-<label  for="segmento_emp">
-    Empresa
-</label>
-</div>
-</div>
 </div>
 <div>
 <button class="btn btn-primary" type="submit">Añadir</button>
