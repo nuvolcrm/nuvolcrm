@@ -79,50 +79,38 @@
 <div class="form-group f98 required inline" data-fid="f98" name="idioma">
 <label class="control-label" for="f98">Idioma</label>
 <div class="radio">
-<input  id="idioma_esp" name="idioma"  type="radio" value="espanyol">
+<input  id="idioma_esp" name="idioma"  type="radio" value="esp">
 <label  for="idioma_esp">
     Español
 </label><br>
-<input  id="idioma_val" name="idioma"  type="radio" value="valenciano"  >
+<input  id="idioma_val" name="idioma"  type="radio" value="val">
 <label  for="idioma_val">
-    Valenciano
+    Valencià
 </label><br>
-<input  id="idioma_ing" name="idioma"  type="radio" value="ingles"  >
-<label  for="idioma_ing">
-    Ingles
+<input  id="idioma_ing" name="idioma"  type="radio" value="eng">
+<label  for="idioma_eng">
+    English
 </label>
 </div>
 </div>
-<div style="margin-left: 5%" class="form-group f98 required inline" data-fid="f98" name="segmento">
-<label class="control-label" for="f98">Segmento</label>
+
+<div class="input-group" style="margin-top: 1%">
+<div class="form-group required inline" data-fid="f99" name="idioma">
+<label class="control-label" for="f99">Idioma</label>
 <div class="radio">
-<input  id="f98_1" name="segmento"  type="radio" value="residencial">
-<label  for="f98_1">
-    Residencial
-</label><br>
-<input  id="f98_2" name="segmento"  type="radio" value="especial"  >
-<label  for="f98_2">
-    Especial
-</label><br>
-<input  id="f98_3" name="segmento"  type="radio" value="autonomo"  >
-<label  for="f98_3">
-    Autónomo
-</label><br>
-<input  id="f98_4" name="segmento"  type="radio" value="empresa"  >
-<label  for="f98_4">
-<input  id="segmento_res" name="segmento"  type="radio" value="residencial">
+<input  id="segmento_res" name="segmento"  type="radio" value="res">
 <label  for="segmento_res">
     Residencial
 </label><br>
-<input  id="segmento_es" name="segmento"  type="radio" value="especial"  >
-<label  for="segmento_es">
+<input  id="segmento_esp" name="segmento"  type="radio" value="esp"  >
+<label  for="segmento_esp">
     Especial
 </label><br>
-<input  id="segmento_aut" name="segmento"  type="radio" value="autonomo"  >
+<input  id="segmento_aut" name="segmento"  type="radio" value="aut"  >
 <label  for="segmento_aut">
     Autónomo
 </label><br>
-<input  id="segmento_emp" name="segmento"  type="radio" value="empresa"  >
+<input  id="segmento_emp" name="segmento"  type="radio" value="emp"  >
 <label  for="segmento_emp">
     Empresa
 </label>
@@ -130,7 +118,7 @@
 </div>
 </div>
 <div>
-<button class="btn btn-primary" type="submit">Agregar</button>
+<button class="btn btn-primary" type="submit">Añadir</button>
 </div>
 </form>
 </div>
