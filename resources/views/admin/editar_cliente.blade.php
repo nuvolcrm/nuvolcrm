@@ -12,6 +12,15 @@ $clientes = DB::table('clientes')->get();
 @stop
 
 @section('content')
+<!-- Main content -->
+<section class="content">
+<div class="row">
+<div class="col-12">
+<!-- /.card -->
+<div class="card">
+<!-- /.card-header -->
+<div class="card-body">
+
     <form action="{{route('editar')}}" method="POST">
         @csrf
         @method('PUT')
@@ -116,6 +125,12 @@ $clientes = DB::table('clientes')->get();
             <button class="btn btn-primary" type="submit">Agregar</button>
         </div>
     </form>
+
+    </div>
+    </div>
+</div>
+</div>
+</section>
 
 @stop
 
