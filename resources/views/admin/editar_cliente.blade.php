@@ -122,7 +122,7 @@ $clientes = DB::table('clientes')->get();
             </div>
         </div>
         <div>
-            <button class="btn btn-primary" type="submit">Agregar</button>
+            <button class="btn btn-primary" type="submit">Guardar cambios</button>
         </div>
     </form>
 
