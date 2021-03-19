@@ -15,7 +15,6 @@ $clientes = DB::table('clientes')->get();
 @section('content')
 <!-- Main content -->
 <section class="content">
-<<<<<<< HEAD
     <div class="row">
         <div class="col-12">
             <!-- /.card -->
@@ -127,7 +126,6 @@ $clientes = DB::table('clientes')->get();
                             <button class="btn btn-primary" type="submit">Guardar cambios</button>
                         </div>
                     </form>
-=======
 <div class="row">
 <div class="col-12">
 <!-- /.card -->
@@ -198,7 +196,6 @@ $clientes = DB::table('clientes')->get();
             <div class="form-group f98 required inline" data-fid="f98" name="idioma">
                 <label class="control-label" for="f98">Idioma</label>
             <div class="radio">
->>>>>>> b7d1b869a7fc8e1fbf22839c3cd7a02c87d6165d
 
                 </div>
             </div>
