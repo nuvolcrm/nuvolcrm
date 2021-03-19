@@ -13,7 +13,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
@@ -23,7 +23,8 @@
                         <!-- 5 OPERADORES POR INGRESOS -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title">Ingresos</h3>
+                            <h3 class="box-title"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos</h3>
+                            
                             <!--
 <div class="box-tools pull-right">
 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -92,7 +93,7 @@
             <!-- /.box-footer -->
 
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
@@ -101,7 +102,7 @@
                         <!-- 5 OPERADORES POR FIBRAS -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title">Fibras</h3>
+                            <h3 class="box-title"><i class="fas fa-wifi"></i>&nbsp;Fibras</h3>
                             <!--
 <div class="box-tools pull-right">
 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -169,7 +170,7 @@
             <!-- /.box-footer -->
 
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
@@ -177,7 +178,7 @@
                     <!-- 5 OPERADORES POR MOVILES -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title">Móviles</h3>
+                            <h3 class="box-title"><i class="fas fa-mobile-alt"></i>&nbsp;Móviles</h3>
 
                             <!--
 <div class="box-tools pull-right">
