@@ -111,7 +111,7 @@ $clientes = DB::table('clientes')->get();
     responsive: true,
     autoWidth: false,
     "language": {
-      "lengthMenu": "Mostrar " +
+      "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">
                             <option value = '5'>5</option>
                             <option value = '10'>10</option>
@@ -119,14 +119,14 @@ $clientes = DB::table('clientes')->get();
                             <option value = '50'>50</option>
                             <option value = '-1'>All</option>
                           </select>` +
-        "registros por página",
-      "zeroRecords": "Nada encontrado - lo siento",
-      "info": "Mostrando la página _PAGE_ of _PAGES_",
+        "registros",
+      "zeroRecords": "Ninguna coincidencia",
+      "info": "Página _PAGE_ de _PAGES_",
       "infoEmpty": "Sin registros disponibles",
-      "infoFiltered": "(filtrado do _MAX_ registros totales)",
-      'search': 'Buscar:',
+      "infoFiltered": "(filtrado de _MAX_ registros totales)",
+      'search': 'Buscar',
       'paginate': {
-        'nest': 'Siguiente',
+        'next': 'Siguiente',
         'previous': 'Anterior'
       }
     }
