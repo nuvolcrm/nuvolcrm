@@ -56,10 +56,10 @@ class ClientesController extends Controller
 
         return view("admin.clientes");
     }
-    public function edit(Cliente $clientes){
-        $clientes = Cliente::find($clientes->idcliente);
-        return view('admin.editar_cliente', compact('clientes'));
- }
+    public function edit($dni){
+        $cliente = Clientes::find($dni);
+        return view('admin.editar_cliente')->with('clientes',$cliente);
+    }
     public function update(Request $request, Cliente $clientes)
     {
         //validate the file
