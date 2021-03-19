@@ -47,7 +47,7 @@
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">1</a></td>
                                             <td>Másmóvil</td>
-                                            <td class="text-right"><span class="label label-success">1050,13 €</span></td>
+                                            <td class="text-right"><span class="label label-success">1050 €</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">2</a></td>
@@ -98,7 +98,7 @@
 
                         <div class="chart">
                             <!-- Sales Chart Canvas -->
-                            <canvas id="salesChart" style="height: 200px; width: 1192px;" height="200" width="1192"></canvas>
+                            <canvas id="salesChart" style="height: 100px; width: 1192px;" height="100" width="1192"></canvas>
                         </div>
                         <!-- /.chart-responsive -->
                     </div>
@@ -194,7 +194,7 @@
 
                         <div class="chart">
                             <!-- Sales Chart Canvas -->
-                            <canvas id="salesChart" style="height: 200px; width: 1192px;" height="200" width="1192"></canvas>
+                            <canvas id="salesChart" style="height: 100px; width: 1192px;" height="100" width="1192"></canvas>
                         </div>
                         <!-- /.chart-responsive -->
                     </div>
@@ -290,7 +290,7 @@
 
                         <div class="chart">
                             <!-- Sales Chart Canvas -->
-                            <canvas id="salesChart" style="height: 200px; width: 1192px;" height="200" width="1192"></canvas>
+                            <canvas id="salesChart" style="height: 100px; width: 1192px;" height="100" width="1192"></canvas>
                         </div>
                         <!-- /.chart-responsive -->
                     </div>
@@ -408,30 +408,30 @@
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">1</a></td>
                                             <td>Juan Manuel Garcia Membrives</td>
-                                            <td class="text-right"><span class="label label-success">39,90 €</span></td>
+                                            <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">2</a></td>
                                             <td>Pedro Luna García</td>
-                                            <td class="text-right"><span class="label label-warning">38 €</span></td>
+                                            <td class="text-right"><span class="label label-warning">38<sup>00</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">3</a></td>
                                             <td>Darío Morales Lopez</td>
-                                            <td class="text-right"><span class="label label-danger">54,47 €</span></td>
+                                            <td class="text-right"><span class="label label-danger">54<sup>47</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">4</a></td>
                                             <td>Antonia Juarez Roser</td>
-                                            <td class="text-right"><span class="label label-info">39,90 €</span></td>
+                                            <td class="text-right"><span class="label label-info">39<sup>90</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">5</a></td>
                                             <td>Claudia Antón Severo</td>
-                                            <td class="text-right"><span class="label label-warning">58,90 €</span></td>
+                                            <td class="text-right"><span class="label label-warning">58<sup>90</sup>€</span></td>
 
                                         </tr>
                                     </tbody>
@@ -487,34 +487,34 @@
                                             <td><a href="pages/examples/invoice.html">1</a></td>
                                             <!-- <td>Másmóvil</td> -->
                                             <td>Juan Manuel Garcia Membrives</td>
-                                            <td class="text-right"><span class="label label-success">39,90 €</span></td>
+                                            <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">2</a></td>
                                             <!-- <td>Pepephone</td> -->
                                             <td>Pedro Luna García</td>
-                                            <td class="text-right"><span class="label label-warning">58,90 €</span></td>
+                                            <td class="text-right"><span class="label label-warning">58<sup>90</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">3</a></td>
                                             <!-- <td>O2</td> -->
                                             <td>Darío Morales Lopez</td>
-                                            <td class="text-right"><span class="label label-danger">38 €</span></td>
+                                            <td class="text-right"><span class="label label-danger">38<sup>00</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">4</a></td>
                                             <!-- <td>Digi</td> -->
                                             <td>Antonia Juarez Roser</td>
-                                            <td class="text-right"><span class="label label-info">42 €</span></td>
+                                            <td class="text-right"><span class="label label-info">42<sup>00</sup>€</span></td>
 
                                         </tr>
                                         <tr>
                                             <td><a href="pages/examples/invoice.html">5</a></td>
                                             <!-- <td>Másmóvil</td> -->
                                             <td>Claudia Antón Severo</td>
-                                            <td class="text-right"><span class="label label-warning">39,90 €</span></td>
+                                            <td class="text-right"><span class="label label-warning">39<sup>90</sup>€</span></td>
 
                                         </tr>
                                     </tbody>
