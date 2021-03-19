@@ -297,247 +297,247 @@
                 </div>
             </div>
         </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <!-- /.card -->
-                    <div class="card">
-                        <!-- /.card-header -->
-                        <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- /.card -->
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
 
 
-                            <!-- 5 ULTIMOS CLIENTES -->
+                        <!-- 5 ULTIMOS CLIENTES -->
 
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
-                                <!--
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
+                            <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
                     -->
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table no-margin">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre y apellidos</th>
-                                                <th class="text-right">Ingresos</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">1</a></td>
-                                                <td>Juan Manuel Garcia Membrives</td>
-                                                <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">2</a></td>
-                                                <td>Pedro Luna García</td>
-                                                <!-- <td class="text-right"><span class="label label-warning">937 €</span></td> -->
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">3</a></td>
-                                                <td>Darío Morales Lopez</td>
-                                                <!-- <td class="text-right"><span class="label label-danger">458 €</span></td> -->
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">4</a></td>
-                                                <td>Antonia Juarez Roser</td>
-                                                <!-- <td class="text-right"><span class="label label-info">299 €</span></td> -->
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">5</a></td>
-                                                <td>Claudia Antón Severo</td>
-                                                <!-- <td class="text-right"><span class="label label-warning">245 €</span></td> -->
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.table-responsive -->
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer clearfix">
-                    <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
-                                <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                            </div>
                         </div>
-                    </div>
-                </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table no-margin">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre y apellidos</th>
+                                            <!-- <th class="text-right">Ingresos</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">1</a></td>
+                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">2</a></td>
+                                            <td>Pedro Luna García</td>
+                                            <!-- <td class="text-right"><span class="label label-warning">937 €</span></td> -->
 
-                <!-- /.box-footer -->
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">3</a></td>
+                                            <td>Darío Morales Lopez</td>
+                                            <!-- <td class="text-right"><span class="label label-danger">458 €</span></td> -->
 
-                <div class="col-md-4">
-                    <!-- /.card -->
-                    <div class="card">
-                        <!-- /.card-header -->
-                        <div class="card-body">
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">4</a></td>
+                                            <td>Antonia Juarez Roser</td>
+                                            <!-- <td class="text-right"><span class="label label-info">299 €</span></td> -->
 
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">5</a></td>
+                                            <td>Claudia Antón Severo</td>
+                                            <!-- <td class="text-right"><span class="label label-warning">245 €</span></td> -->
 
-                            <!-- 5 ULTIMOS PRESUPUESTOS -->
-
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos</h3>
-                                <!--
-                    <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                    -->
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table no-margin">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre y apellidos</th>
-                                                <th class="text-right">Valor</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">1</a></td>
-                                                <td>Juan Manuel Garcia Membrives</td>
-                                                <td class="text-right"><span class="label label-success">39,90 €</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">2</a></td>
-                                                <td>Pedro Luna García</td>
-                                                <td class="text-right"><span class="label label-warning">38 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">3</a></td>
-                                                <td>Darío Morales Lopez</td>
-                                                <td class="text-right"><span class="label label-danger">54,47 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">4</a></td>
-                                                <td>Antonia Juarez Roser</td>
-                                                <td class="text-right"><span class="label label-info">39,90 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">5</a></td>
-                                                <td>Claudia Antón Severo</td>
-                                                <td class="text-right"><span class="label label-warning">58,90 €</span></td>
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.table-responsive -->
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer clearfix">
-                                
-                    <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo presupuesto</a>
-                    
-                                <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                            </div>
+                            <!-- /.table-responsive -->
                         </div>
-                    </div>
-                </div>
-
-                <!-- /.box-footer -->
-
-                <div class="col-md-4">
-                    <!-- /.card -->
-                    <div class="card">
-                        <!-- /.card-header -->
-                        <div class="card-body">
-
-
-                            <!-- 5 ULTIMAS VENTAS -->
-
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h3>
-                                <!--
-                    <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                    -->
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table no-margin">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre y apellidos</th>
-                                                <th class="text-right">Cuota</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">1</a></td>
-                                                <!-- <td>Másmóvil</td> -->
-                                                <td>Juan Manuel Garcia Membrives</td>
-                                                <td class="text-right"><span class="label label-success">39,90 €</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">2</a></td>
-                                                <!-- <td>Pepephone</td> -->
-                                                <td>Pedro Luna García</td>
-                                                <td class="text-right"><span class="label label-warning">58,90 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">3</a></td>
-                                                <!-- <td>O2</td> -->
-                                                <td>Darío Morales Lopez</td>
-                                                <td class="text-right"><span class="label label-danger">38 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">4</a></td>
-                                                <!-- <td>Digi</td> -->
-                                                <td>Antonia Juarez Roser</td>
-                                                <td class="text-right"><span class="label label-info">42 €</span></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">5</a></td>
-                                                <!-- <td>Másmóvil</td> -->
-                                                <td>Claudia Antón Severo</td>
-                                                <td class="text-right"><span class="label label-warning">39,90 €</span></td>
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.table-responsive -->
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer clearfix">
-                    <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
-                                <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /.box-footer -->
-                
-
+                        <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- /.box-footer -->
+
+            <div class="col-md-4">
+                <!-- /.card -->
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+                        <!-- 5 ULTIMOS PRESUPUESTOS -->
+
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos</h3>
+                            <!--
+                    <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                    -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table no-margin">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre y apellidos</th>
+                                            <th class="text-right">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">1</a></td>
+                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <td class="text-right"><span class="label label-success">39,90 €</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">2</a></td>
+                                            <td>Pedro Luna García</td>
+                                            <td class="text-right"><span class="label label-warning">38 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">3</a></td>
+                                            <td>Darío Morales Lopez</td>
+                                            <td class="text-right"><span class="label label-danger">54,47 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">4</a></td>
+                                            <td>Antonia Juarez Roser</td>
+                                            <td class="text-right"><span class="label label-info">39,90 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">5</a></td>
+                                            <td>Claudia Antón Severo</td>
+                                            <td class="text-right"><span class="label label-warning">58,90 €</span></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo presupuesto</a>
+
+                            <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.box-footer -->
+
+            <div class="col-md-4">
+                <!-- /.card -->
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+                        <!-- 5 ULTIMAS VENTAS -->
+
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h3>
+                            <!--
+                    <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                    -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table no-margin">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre y apellidos</th>
+                                            <th class="text-right">Cuota</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">1</a></td>
+                                            <!-- <td>Másmóvil</td> -->
+                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <td class="text-right"><span class="label label-success">39,90 €</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">2</a></td>
+                                            <!-- <td>Pepephone</td> -->
+                                            <td>Pedro Luna García</td>
+                                            <td class="text-right"><span class="label label-warning">58,90 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">3</a></td>
+                                            <!-- <td>O2</td> -->
+                                            <td>Darío Morales Lopez</td>
+                                            <td class="text-right"><span class="label label-danger">38 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">4</a></td>
+                                            <!-- <td>Digi</td> -->
+                                            <td>Antonia Juarez Roser</td>
+                                            <td class="text-right"><span class="label label-info">42 €</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">5</a></td>
+                                            <!-- <td>Másmóvil</td> -->
+                                            <td>Claudia Antón Severo</td>
+                                            <td class="text-right"><span class="label label-warning">39,90 €</span></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.box-footer -->
+
+
+        </div>
+        </div>
+        </div>
+        </div>
     </section>
 
     <!-- SCRIPTS (revisar) -->
