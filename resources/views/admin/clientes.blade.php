@@ -41,6 +41,7 @@ $clientes = DB::table('clientes')->get();
             <table id="example2" class="table table-hover table-striped table-responsive text-nowrap text-sm">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>DOCUMENTO</th>
                   <th>NOMBRE</th>
                   <th><i class="fas fa-language"></i></th>
@@ -63,6 +64,7 @@ $clientes = DB::table('clientes')->get();
               <tbody>
                 @foreach ($clientes as $row)
                 <tr>
+                  <td>{{$row -> idcliente}}</td>
                   <td>{{$row -> dni}}</td>
                   <td>{{$row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2}}</td>
                   <td>
