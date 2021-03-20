@@ -525,7 +525,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <p class="text-center">
-                            <strong>Ingresos: 1 marzo 2021 - 19 marzo 2021</strong>
+                            <strong>Móviles: 1 marzo 2021 - 19 marzo 2021</strong>
                         </p>
 
                         <div class="chart">
