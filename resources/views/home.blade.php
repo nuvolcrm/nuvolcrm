@@ -81,8 +81,8 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
-                            <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
-                            <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                            <a href="{{ route('crear_clientes') }}" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
+                            <a href="{{ route('clientes') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
                         </div>
                     </div>
                 </div>
@@ -157,10 +157,8 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
-
                             <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nuevo presupuesto</a>
-
-                            <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                            <a href="{{ route('presupuestos') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
                         </div>
                     </div>
                 </div>
