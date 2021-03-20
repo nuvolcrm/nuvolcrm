@@ -11,7 +11,7 @@ $presupuestos = DB::table('presupuesto')
 @section('title', 'Presupuestos')
 
 @section('content_header')
-    <h1>Presupuestos</h1>
+    <h1>Presupuestos <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
 @stop
 
 @section('content')

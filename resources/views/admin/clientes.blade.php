@@ -64,7 +64,7 @@ $clientes = DB::table('clientes')->get();
                 @foreach ($clientes as $row)
                 <tr>
                   <td>{{$row -> dni}}</td>
-                  <td>{{$row -> nombre,' ',$row-> apellido1,' ',$row-> apellido2}}</td>
+                  <td>{{$row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2}}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">
