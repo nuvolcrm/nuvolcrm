@@ -4,6 +4,7 @@ use Iluminate\Pagination\Paginator;
 
 $presupuestos = DB::table('presupuesto')
             ->join('clientes', 'clientes.idcliente', '=', 'presupuesto.idcliente')
+            ->orderBy('presupuesto.idpresupuesto', 'desc')
             ->get();
 ?>
 @extends('adminlte::page')
@@ -27,14 +28,15 @@ $presupuestos = DB::table('presupuesto')
                 <table id="example2" class="table table-hover table-striped table-responsive text-nowrap text-sm">
                   <thead>
                         <tr>
+                            <th>ID</th>
                             <th>FECHA</th>
-                            <th>Nº</th>
                             <th>CLIENTE</th>
-                            <th>CONTACTO</th>
+                            <th><a class='fas fa-phone-square-alt'></th>
+                            <th>TELEFONO</th>
                             <th>POBLACION</th>
                             <th>SERVICIOS</th>
                             <th>TOTAL</th>
-                            <th>WEB</th>
+                            <th>VER</th>
                             <th>PDF</th>
                             <th></th>
                             <th></th>
@@ -48,9 +50,10 @@ $presupuestos = DB::table('presupuesto')
                             foreach ($presupuestos as $pre) { 
                         ?>
                         <tr>
-                            <td><?php echo $pre -> fecha?></td>
                             <td><?php echo $pre -> numpresupuesto?></td>
+                            <td><?php echo $pre -> fecha?></td>
                             <td><?php echo $pre -> nombre,' ',$pre-> apellido1,' ',$pre-> apellido2?></td>
+                            <td><a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></td>
                             <td><?php echo $pre-> telefono?></td>
                             <td><?php echo $pre-> poblacion?></td>
                             <td><img height='20px' src='../public/favicons/fibra1.svg'>  <img height='20px' src='../public/favicons/movil1.svg'></td>
@@ -104,10 +107,42 @@ $presupuestos = DB::table('presupuesto')
     </body>
 @stop
 
+
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
     <script> console.log('Hi!'); </script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
+    <script>
+  $('#example2').DataTable({
+    responsive: true,
+    autoWidth: false,
+    "order": [[ 0, "desc" ]],
+    "language": {
+      "lengthMenu": "Ver " +
+        `<select class = "custom-select custom-select-sm form-control form-control-sm">
+                            <option value = '5'>5</option>
+                            <option value = '10'>10</option>
+                            <option value = '25'>25</option>
+                            <option value = '50'>50</option>
+                            <option value = '-1'>All</option>
+                          </select>` +
+        " registros",
+      "zeroRecords": "Ninguna coincidencia",
+      "info": "Página _PAGE_ de _PAGES_",
+      "infoEmpty": "Sin registros disponibles",
+      "infoFiltered": "(filtrado de _MAX_ registros totales)",
+      'search': 'Buscar',
+      'paginate': {
+        'next': 'Siguiente',
+        'previous': 'Anterior'
+      }
+    }
+  });
+</script>
 @stop
