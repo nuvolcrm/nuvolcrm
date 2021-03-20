@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$clientes = DB::table('clientes')->get();
+$clientes = DB::table('clientes')
+            ->orderBy('idcliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
+            ->get();
 ?>
 @extends('adminlte::page')
 
@@ -88,7 +90,11 @@ $clientes = DB::table('clientes')->get();
                   <td>{{$row-> segmento}}</td>
                   <td><a class='far fa-envelope' href=" mailto:{{$row-> email}}"></td>
                   <td>{{$row-> email}}</td>
-                  <td>{{$row-> mailing}}</td>
+                  <td>
+                    @if ($row-> mailing === 'on')
+                    <i class="fas fa-check text-primary"></i>
+                    @endif
+                  </td>
                   <td style='background-color:#EEFCFF'></td>
                   <td><a href="{{route('editar_cliente',$row->idcliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
@@ -112,6 +118,7 @@ $clientes = DB::table('clientes')->get();
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
+    "order": [[ 3, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">
@@ -121,7 +128,7 @@ $clientes = DB::table('clientes')->get();
                             <option value = '50'>50</option>
                             <option value = '-1'>All</option>
                           </select>` +
-        "registros",
+        " registros",
       "zeroRecords": "Ninguna coincidencia",
       "info": "Página _PAGE_ de _PAGES_",
       "infoEmpty": "Sin registros disponibles",
