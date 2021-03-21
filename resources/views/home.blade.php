@@ -26,7 +26,13 @@ $ventas = DB::table('ventas')
 @section('title', 'Escritorio')
 
 @section('content_header')
-<h1>Escritorio</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Escritorio</h1>
+    </div>
+  </div>
+</div>
 @stop
 
 @section('content')
