@@ -42,22 +42,22 @@ $clientes = DB::table('clientes')
           <table id="example2" class="table table-hover table-striped table-responsive-xl table-sm text-sm">
               <thead class="table-primary">
                 <tr>
-                  <th>ID</th>
-                  <th>DOCUMENTO</th>
-                  <th>NOMBRE</th>
+                  <th>Id</th>
+                  <th>Documento</th>
+                  <th>Nombre</th>
                   <th><i class="fas fa-language"></i></th>
-                  <th>ALIAS</th>
-                  <th><i class='fas fa-phone-square-alt'></i></th>
-                  <th>TELEFONO</th>
-                  <th><i class="fab fa-whatsapp"></i></th>
-                  <th>DIRECCION</th>
-                  <th>POBLACION</th>
-                  <th>NACIMIENTO</th>
-                  <th>SEGM</th>
+                  <th>Alias</th>
+                  <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
+                  <th>Teléfono</th>
+                  <!-- <th><i class="fab fa-whatsapp"></i></th> -->
+                  <th>Dirección</th>
+                  <th>Población</th>
+                  <th>Nacimiento</th>
+                  <th>Segm.</th>
                   <th><i class='far fa-envelope'></i></th>
-                  <th>EMAIL</th>
+                  <th>Email</th>
                   <th><i class='far fa-newspaper'></i></th>
-                  <th>COD</th>
+                  <th>Valor</th>
                   <th></th>
                 </tr>
               </thead>
@@ -65,9 +65,9 @@ $clientes = DB::table('clientes')
               <tbody>
                 @foreach ($clientes as $row)
                 <tr>
-                  <td>{{$row -> idcliente}}</td>
-                  <td>{{$row -> dni}}</td>
-                  <td>{{$row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2}}</td>
+                  <td>{{ $row -> idcliente }}</td>
+                  <td>{{ $row -> dni }}</td>
+                  <td>{{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">
@@ -80,21 +80,27 @@ $clientes = DB::table('clientes')
                     @endif
                   </td>
                   <td>{{$row-> alias}}</td>
-                  <td><a class='fas fa-phone-square-alt' href="tel:{{$row->telefono}}"></td>
-                  <td>{{$row-> telefono}}</td>
-                  <td><a class='fab fa-whatsapp' href="https://api.whatsapp.com/send?phone=34{{$row-> telefono}}"></td>
+                  <td class="text-nowrap">
+                    <a class='fas fa-phone-square-alt' href="tel:{{$row->telefono}}"></a>
+                    <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$row-> telefono}}"></a>
+                    {{$row-> telefono}}
+                    </td>
                   <td>{{$row-> direccion}}</td>
                   <td>{{$row-> poblacion}}</td>
-                  <td>{{$row-> fecha_nacimiento}}</td>
+                  <td>{{$row-> fecha_nacimiento}}
+                    @if ($row-> fecha_nacimiento === date('Y-m-d')) <!-- esta condición no es correcta. Habría que cortar del string el mes/día y compararlos con el mes/dia actual date('m-d')-->
+                      <i class="fas fa-birthday-cake text-primary"></i>
+                    @endif                    
+                    </td>
                   <td>{{$row-> segmento}}</td>
-                  <td><a class='far fa-envelope' href=" mailto:{{$row-> email}}"></td>
+                  <td><a class="far fa-envelope" href=" mailto:{{$row-> email}}"></a></td>
                   <td>{{$row-> email}}</td>
                   <td>
                     @if ($row-> mailing === 'on')
                     <i class="fas fa-check text-primary"></i>
                     @endif
                   </td>
-                  <td style='background-color:#EEFCFF'></td>
+                  <td class="bg-info"></td>
                   <td><a href="{{route('editar_cliente',$row->idcliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
