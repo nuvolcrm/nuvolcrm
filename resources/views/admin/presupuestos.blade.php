@@ -12,7 +12,22 @@ $presupuestos = DB::table('presupuesto')
 @section('title', 'Presupuestos')
 
 @section('content_header')
-    <h1>Presupuestos <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Presupuestos <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+    </div>
+  </div>
+</div>
+
+@section('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
+
+@endsection
+
 @stop
 
 @section('content')
@@ -25,8 +40,8 @@ $presupuestos = DB::table('presupuesto')
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-hover table-striped table-responsive text-nowrap text-sm">
-                  <thead>
+                <table id="example2" class="table table-hover table-striped table-responsive-xl table-sm text-sm">
+                  <thead class="table-primary">
                         <tr>
                             <th>ID</th>
                             <th>FECHA</th>
