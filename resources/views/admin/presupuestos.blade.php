@@ -43,75 +43,77 @@ $presupuestos = DB::table('presupuesto')
                 <table id="example2" class="table table-hover table-striped table-responsive-xl table-sm text-sm">
                   <thead class="table-primary">
                         <tr>
-                            <th>ID</th>
-                            <th>FECHA</th>
-                            <th>CLIENTE</th>
-                            <th><a class='fas fa-phone-square-alt'></th>
-                            <th>TELEFONO</th>
-                            <th>POBLACION</th>
-                            <th>SERVICIOS</th>
-                            <th>TOTAL</th>
-                            <th>VER</th>
+                            <th>Id</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <!-- <th><a class='fas fa-phone-square-alt'></th> -->
+                            <th>Teléfono</th>
+                            <th>Población</th>
+                            <th>Servicios</th>
+                            <th>Cuota</th>
+                            <th>Detalle</th>
                             <th>PDF</th>
                             <th></th>
+                            <!-- <th></th>
                             <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>VALOR</th>
+                            <th></th> -->
+                            <th>Valor</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            foreach ($presupuestos as $pre) { 
-                        ?>
+                      @foreach ($presupuestos as $pre)
                         <tr>
-                            <td><?php echo $pre -> numpresupuesto?></td>
-                            <td><?php echo $pre -> fecha?></td>
-                            <td><?php echo $pre -> nombre,' ',$pre-> apellido1,' ',$pre-> apellido2?></td>
-                            <td><a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></td>
-                            <td><?php echo $pre-> telefono?></td>
-                            <td><?php echo $pre-> poblacion?></td>
-                            <td><img height='20px' src='../public/favicons/fibra1.svg'>  <img height='20px' src='../public/favicons/movil1.svg'></td>
-                            <td></td>
+                            <td>{{ $pre -> numpresupuesto }}</td>
+                            <td>{{ $pre -> fecha }}</td>
+                            <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
+                            <td class="text-nowrap">
+                              <a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></a>
+                              <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$pre-> telefono}}"></a>
+                              {{$pre-> telefono}}
+                              </td>
+                            <td>{{ $pre-> poblacion }}</td>
+                            <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
+                            <td>39<sup>90</sup> €</td>
                             <td>
-                                <button-sm type='button' id='presupuesto' class='btn-sm alert-light' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''>
-                                <i class='far fa-list-alt'></i>
-                                </button>
+                                <!-- <button-sm type='button' id='presupuesto' class='btn-sm' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''> -->
+                                <a target='_blank' href='#'><i class='far fa-list-alt text-primary'></i></a>
+                                <!-- </button> -->
                             </td>
                             <td>
-                                <button-sm class='btn-sm alert-light'>
-                                <a target='_blank' href=''>
-                                <i class='far fa-file-pdf'></i>
+                                <!-- <button-sm class='btn-sm alert-light'> -->
+                                <a target='_blank' href='#'><i class='far fa-file-pdf'></i></a>
+                              <!-- </button> -->
+                            </td>
+                            <td>
+                                <!-- <form method='POST' action=''>
+                            <td value='' name=''>
+                              <button-sm class='btn-sm btn-success' name='' value='' type='submit'>
+                                <i class='far fa-smile'></i>
                               </button>
                             </td>
-                            <td>
-                                <form method='POST' action=''>
-                                    <td value='' name=''>
-                                    <button-sm class='btn-sm btn-success' name='' value='' type='submit'>
-                                      <i class='far fa-smile'></i>
-                                    </button>
-                                    </td>
                                 </form>
                                 <form method='POST' action=''>
-                                    <td value='' name=''>
-                                      <button-sm class='btn-sm btn-warning' name='' value='' type='submit'>
-                                        <i class='far fa-meh'></i>
-                                      </button>
-                                    </td>
-                                </form>
-                                <form method='POST' action=''>
-                                    <td value='' name=''>
-                                      <button-sm class='btn-sm btn-danger' name='' value='' type='submit'>
-                                        <i class='far fa-frown'></i>
-                                      </button>
-                                    </td>
-                                </form>
+                            <td value='' name=''>
+                              <button-sm class='btn-sm btn-warning' name='' value='' type='submit'>
+                                <i class='far fa-meh'></i>
+                              </button>
                             </td>
-                            <td style='background-color:#EEFCFF'></td>
-                        </tr>
-                        <?php
-                        }
-                        ?>
+                                </form>
+                                <form method='POST' action=''>
+                            <td value='' name=''>
+                              <button-sm class='btn-sm btn-danger' name='' value='' type='submit'>
+                                <i class='far fa-frown'></i>
+                              </button>
+                            </td>
+                            </form> -->
+                              <button class='btn-xs btn-success'><i class='far fa-smile'></i></button>
+                              <button class='btn-xs btn-warning'><i class='far fa-meh'></i></button>
+                              <button class='btn-xs btn-danger'><i class='far fa-frown'></i></button>
+
+                            </td>
+                            <td class="bg-info"></td>
+                        </tr> 
+                      @endforeach          
                     </tbody> 
                 </table>
               </div>
@@ -121,7 +123,6 @@ $presupuestos = DB::table('presupuesto')
       </section>
     </body>
 @stop
-
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
