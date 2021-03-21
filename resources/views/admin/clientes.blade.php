@@ -39,8 +39,8 @@ $clientes = DB::table('clientes')
         <div class="card">
           <!-- /.card-header -->
           <div class="card-body">
-            <table id="example2" class="table table-hover table-striped table-responsive text-nowrap text-sm">
-              <thead>
+          <table id="example2" class="table table-hover table-striped table-responsive-xl table-sm text-sm">
+              <thead class="table-primary">
                 <tr>
                   <th>ID</th>
                   <th>DOCUMENTO</th>
