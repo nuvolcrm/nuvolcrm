@@ -64,13 +64,13 @@
                 <div class="col-md-4">
                     <div>
                         <label class="control-label">Primer Apellido</label>
-                        <input type="text" name="apellido1" placeholder="Primer Apellido" class="form-control mb-2" required>
+                        <input type="text" name="apellido1" placeholder="Primer apellido" class="form-control mb-2" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div>
                         <label class="control-label">Segundo Apellido</label>
-                        <input type="text" name="apellido2" placeholder="Segundo Apellido" class="form-control mb-2">
+                        <input type="text" name="apellido2" placeholder="Segundo apellido" class="form-control mb-2">
                     </div>
                 </div>
             </div>
