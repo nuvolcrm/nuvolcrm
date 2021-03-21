@@ -1,3 +1,26 @@
+<?php
+
+use Illuminate\Support\Facades\DB;
+use Iluminate\Pagination\Paginator;
+
+$clientes = DB::table('clientes')
+            ->orderBy('idcliente', 'desc')
+            ->take(5)
+            ->get();
+
+$presupuestos = DB::table('presupuesto')
+            ->join('clientes', 'clientes.idcliente', '=', 'presupuesto.idcliente')
+            ->orderBy('presupuesto.idpresupuesto', 'desc')
+            ->take(5)
+            ->get();
+
+$ventas = DB::table('ventas')
+            ->join('clientes', 'clientes.idcliente', '=', 'ventas.idcliente')
+            ->orderBy('idventas', 'desc')
+            ->take(5)
+            ->get();
+?>
+
 @extends('adminlte::page')
 
 @section('title', 'Escritorio')
@@ -24,7 +47,7 @@
                         <!-- 5 ULTIMOS CLIENTES -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
+                            <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -36,7 +59,7 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -45,35 +68,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @php($orden=1)
+                                    @foreach ($clientes as $cli)
                                         <tr>
-                                            <td><a href="pages/examples/invoice.html">1</a></td>
-                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <td>{{ $orden }}</td>
+                                            <td>{{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td>
                                             <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
                                         </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">2</a></td>
-                                            <td>Pedro Luna García</td>
-                                            <!-- <td class="text-right"><span class="label label-warning">937 €</span></td> -->
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">3</a></td>
-                                            <td>Darío Morales Lopez</td>
-                                            <!-- <td class="text-right"><span class="label label-danger">458 €</span></td> -->
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">4</a></td>
-                                            <td>Antonia Juarez Roser</td>
-                                            <!-- <td class="text-right"><span class="label label-info">299 €</span></td> -->
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">5</a></td>
-                                            <td>Claudia Antón Severo</td>
-                                            <!-- <td class="text-right"><span class="label label-warning">245 €</span></td> -->
-
-                                        </tr>
+                                    @php ($orden++)
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -121,35 +124,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @php($orden=1)
+                                    @foreach ($presupuestos as $pre)
+
                                         <tr>
-                                            <td><a href="pages/examples/invoice.html">1</a></td>
-                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <td>{{ $orden }}</td>
+                                            <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
                                             <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">2</a></td>
-                                            <td>Pedro Luna García</td>
-                                            <td class="text-right"><span class="label label-warning">38<sup>00</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">3</a></td>
-                                            <td>Darío Morales Lopez</td>
-                                            <td class="text-right"><span class="label label-danger">54<sup>47</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">4</a></td>
-                                            <td>Antonia Juarez Roser</td>
-                                            <td class="text-right"><span class="label label-info">39<sup>90</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">5</a></td>
-                                            <td>Claudia Antón Severo</td>
-                                            <td class="text-right"><span class="label label-warning">58<sup>90</sup>€</span></td>
-
-                                        </tr>
+                                    @php ($orden++)
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -197,40 +181,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @php($orden=1)
+                                        @foreach ($ventas as $ven)
                                         <tr>
-                                            <td><a href="pages/examples/invoice.html">1</a></td>
+                                            <td>{{ $orden }}</td>
                                             <!-- <td>Másmóvil</td> -->
-                                            <td>Juan Manuel Garcia Membrives</td>
+                                            <td>{{ $ven -> nombre.' '.$ven-> apellido1.' '.$ven-> apellido2 }}</td>
                                             <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">2</a></td>
-                                            <!-- <td>Pepephone</td> -->
-                                            <td>Pedro Luna García</td>
-                                            <td class="text-right"><span class="label label-warning">58<sup>90</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">3</a></td>
-                                            <!-- <td>O2</td> -->
-                                            <td>Darío Morales Lopez</td>
-                                            <td class="text-right"><span class="label label-danger">38<sup>00</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">4</a></td>
-                                            <!-- <td>Digi</td> -->
-                                            <td>Antonia Juarez Roser</td>
-                                            <td class="text-right"><span class="label label-info">42<sup>00</sup>€</span></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><a href="pages/examples/invoice.html">5</a></td>
-                                            <!-- <td>Másmóvil</td> -->
-                                            <td>Claudia Antón Severo</td>
-                                            <td class="text-right"><span class="label label-warning">39<sup>90</sup>€</span></td>
-
-                                        </tr>
+                                        @php ($orden++)
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -256,10 +216,7 @@
                 <div class="card">
                     <!-- /.card-header -->
                     <div class="card-body">
-
-
                         <!-- 5 OPERADORES POR INGRESOS -->
-
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos: 2.897 €</h3>
                             <!--
@@ -331,7 +288,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <p class="text-center">
-                            <strong>Ingresos: 1 marzo 2021 - 19 marzo 2021</strong>
+                            <strong>Ingresos: 01/{{ date('m') }}/{{ date('Y') }} a {{date('d') }}/{{ date('m') }}/{{ date('Y') }}</strong>
                         </p>
 
                         <div class="chart">
@@ -427,7 +384,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <p class="text-center">
-                            <strong>Fibras: 1 marzo 2021 - 19 marzo 2021</strong>
+                            <strong>Fibras: 01/{{ date('m') }}/{{ date('Y') }} a {{date('d') }}/{{ date('m') }}/{{ date('Y') }}</strong>
                         </p>
 
                         <div class="chart">
@@ -523,7 +480,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <p class="text-center">
-                            <strong>Móviles: 1 marzo 2021 - 19 marzo 2021</strong>
+                            <strong>Móviles: 01/{{ date('m') }}/{{ date('Y') }} a {{date('d') }}/{{ date('m') }}/{{ date('Y') }}</strong>
                         </p>
 
                         <div class="chart">

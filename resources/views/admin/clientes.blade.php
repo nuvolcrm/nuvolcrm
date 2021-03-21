@@ -39,12 +39,12 @@ $clientes = DB::table('clientes')
         <div class="card">
           <!-- /.card-header -->
           <div class="card-body">
-          <table id="example2" class="table table-hover table-striped table-responsive-xl table-sm text-sm">
+          <table id="example2" class="table table-hover table-striped table-responsive-xl table-md text-sm">
               <thead class="table-primary">
                 <tr>
                   <th>Id</th>
                   <th>Documento</th>
-                  <th>Nombre</th>
+                  <th class="text-nowrap">Nombre y apellidos</th>
                   <th><i class="fas fa-language"></i></th>
                   <th>Alias</th>
                   <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
