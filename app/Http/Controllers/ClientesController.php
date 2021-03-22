@@ -78,7 +78,7 @@ class ClientesController extends Controller
             'segmento' => 'selected',
             
         ]); */
-        $clientes = Cliente::findOrFail($clientes->idcliente);
+        $clientes = Cliente::findOrFail($clientes->idCliente);
 
         $clientes->dni = request('dni');
         $clientes->nombre = request('nombre');

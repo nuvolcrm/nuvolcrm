@@ -5,7 +5,7 @@ use Iluminate\Pagination\Paginator;
 
 $ventas = DB::table('ventas')
             ->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
-            ->orderBy('idVentas', 'desc')
+            ->orderBy('idVenta', 'desc')
             ->get();
 ?>
 
@@ -67,7 +67,7 @@ $ventas = DB::table('ventas')
               <tbody>
                 @foreach ($ventas as $row)
                 <tr>
-                  <td>{{ $row -> idVentas }}</td>
+                  <td>{{ $row -> idVenta }}</td>
                   <td></td>
                   <td>{{ $row -> alias }}</td>
                   <td>{{ $row -> dni }}</td>

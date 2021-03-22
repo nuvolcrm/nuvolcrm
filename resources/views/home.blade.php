@@ -4,19 +4,19 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $clientes = DB::table('clientes')
-            ->orderBy('idcliente', 'desc')
+            ->orderBy('idCliente', 'desc')
             ->take(5)
             ->get();
 
 $presupuestos = DB::table('presupuesto')
-            ->join('clientes', 'clientes.idcliente', '=', 'presupuesto.idcliente')
+            ->join('clientes', 'clientes.idCliente', '=', 'presupuesto.idCliente')
             ->orderBy('presupuesto.idpresupuesto', 'desc')
             ->take(5)
             ->get();
 
 $ventas = DB::table('ventas')
-            ->join('clientes', 'clientes.idcliente', '=', 'ventas.idcliente')
-            ->orderBy('idventas', 'desc')
+            ->join('clientes', 'clientes.idCliente', '=', 'ventas.idCliente')
+            ->orderBy('idVenta', 'desc')
             ->take(5)
             ->get();
 ?>
