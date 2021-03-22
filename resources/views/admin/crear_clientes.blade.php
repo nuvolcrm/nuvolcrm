@@ -114,7 +114,7 @@
                     </div>
                  </div>
                  <div class="col-md-4">
-                    <div style="text-align-left">
+                    <div>
                         <label class="control-label">Newsletter</label>
                         <input type="checkbox" name="newsletter" class="" checked>
                     </div>
