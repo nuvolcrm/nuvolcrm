@@ -6,7 +6,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      <h1>Nuevo Cliente 2</h1>
+      <h1>Nuevo Cliente</h1>
     </div>
   </div>
 </div>
@@ -114,7 +114,7 @@
                     </div>
                  </div>
                  <div class="col-md-4">
-                    <div>
+                    <div style="text-align-left">
                         <label class="control-label">Newsletter</label>
                         <input type="checkbox" name="newsletter" class="" checked>
                     </div>
