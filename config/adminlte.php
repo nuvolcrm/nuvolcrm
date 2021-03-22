@@ -277,17 +277,7 @@ return [
             'label'       => 7,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        ['header' => 'HERRAMIENTAS'],
         [
             'text'    => 'Extra',
             'icon'    => 'fas fa-fw fa-share',
@@ -338,6 +328,18 @@ return [
                 ],
             ],
         ],
+        ['header' => 'account_settings'],
+        [
+            'text' => 'profile',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        
         ['header' => 'labels'],
         [
             'text'       => 'important',
