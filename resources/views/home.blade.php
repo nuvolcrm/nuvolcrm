@@ -8,7 +8,7 @@ $clientes = DB::table('clientes')
             ->take(5)
             ->get();
 
-$presupuestos = DB::table('presupuestoS')
+$presupuestos = DB::table('presupuestos')
             ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
             ->orderBy('presupuestos.idPresupuesto', 'desc')
             ->take(5)
