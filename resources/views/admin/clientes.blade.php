@@ -123,7 +123,7 @@ $clientes = DB::table('clientes')
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
-    "order": [[ 3, "desc" ]],
+    "order": [[ 0, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">
