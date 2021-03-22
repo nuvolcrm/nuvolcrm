@@ -200,15 +200,10 @@ $clientes = DB::table('clientes')->get();
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-</section>
-=======
         <div>
             <button class="btn btn-primary" type="submit">Guardar cambios</button>
         </div>
     </form>
->>>>>>> b7d1b869a7fc8e1fbf22839c3cd7a02c87d6165d
 
     </div>
     </div>
