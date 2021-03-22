@@ -114,7 +114,7 @@
                     </div>
                  </div>
                  <div class="col-md-4">
-                    <div style="text-align-left">
+                    <div>
                         <label class="control-label">Newsletter</label>
                         <input type="checkbox" name="newsletter" class="" checked>
                     </div>
@@ -124,7 +124,7 @@
                 <div class="col-md-4">
                     <div>
                         <label class="control-label">Dirección</label>
-                        <input size="50%" type="text" name="direccion" placeholder="Dirección" class="form-control mb-2" required>
+                        <input type="text" name="direccion" placeholder="Dirección" class="form-control mb-2" required>
                     </div>
                 </div>
                 <div class="col-md-4">

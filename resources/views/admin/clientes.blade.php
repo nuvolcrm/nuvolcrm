@@ -7,6 +7,7 @@ $clientes = DB::table('clientes')
             ->orderBy('idCliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
             ->get();
 ?>
+
 @extends('adminlte::page')
 
 @section('title', 'Clientes')
