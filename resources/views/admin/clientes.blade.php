@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $clientes = DB::table('clientes')
-            ->orderBy('idcliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
+            ->orderBy('idCliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
             ->get();
 ?>
 @extends('adminlte::page')
@@ -68,7 +68,7 @@ $clientes = DB::table('clientes')
                 <tr>
                   <td>{{ $row -> idCliente }}</td>
                   <td>{{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
-                  <td>{{$row-> alias}}</td>
+                  <td>{{ $row -> alias }}</td>
                   <td>{{ $row -> dni }}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
