@@ -3,9 +3,10 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $presupuestos = DB::table('presupuesto')
-            ->join('clientes', 'clientes.idcliente', '=', 'presupuesto.idcliente')
-            ->orderBy('presupuesto.idpresupuesto', 'desc')
+            ->join('clientes', 'clientes.idCliente', '=', 'presupuesto.idCliente')
+            ->orderBy('presupuesto.idPresupuesto', 'desc')
             ->get();
+
 ?>
 @extends('adminlte::page')
 
@@ -46,8 +47,9 @@ $presupuestos = DB::table('presupuesto')
                             <th>Id</th>
                             <th>Fecha</th>
                             <th>Nombre y apellidos</th>
-                            <!-- <th><a class='fas fa-phone-square-alt'></th> -->
-                            <th><i class='fas fa-phone-square-alt'></i> <i class='fab fa-whatsapp'></i> Teléfono</th>
+                            <th>Nombre tarifa</th>
+                            <!-- <th><a class='fas fa-phone-square-alt'></th><i class='fas fa-phone-square-alt'></i> <i class='fab fa-whatsapp'></i>  -->
+                            <th>Teléfono</th>
                             <th>Población</th>
                             <th>Servicios</th>
                             <th>Cuota</th>
@@ -63,9 +65,10 @@ $presupuestos = DB::table('presupuesto')
                     <tbody>
                       @foreach ($presupuestos as $pre)
                         <tr>
-                            <td>{{ $pre -> numpresupuesto }}</td>
+                            <td>{{ $pre -> idPresupuesto }}</td>
                             <td>{{ $pre -> fecha }}</td>
                             <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
+                            <td>{{ $pre -> nombre }}</td>
                             <td class="text-nowrap">
                               <a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></a>
                               <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$pre-> telefono}}"></a>
