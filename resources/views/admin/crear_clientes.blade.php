@@ -107,10 +107,10 @@
                         <input type="email" name="email" required placeholder="Email" class="form-control mb-2">
                     </div>
                  </div>
-                 <div class="col-md-1">
-                    <div class="text-align-left">
+                 <div class="col-md-4">
+                    <div style="text-align-left">
                         <label class="control-label">Newsletter</label>
-                        <input type="checkbox" name="newsletter" class="form-control mb-2 align-left" checked>
+                        <input type="checkbox" name="newsletter" class="" checked>
                     </div>
                  </div>
             </div>
