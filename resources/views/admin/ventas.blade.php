@@ -116,6 +116,7 @@ $ventas = DB::table('ventas')
                   <td class="bg-info">Balance</td>
                   <td></td>
                   <td></td>
+                  <td></td>
                   <td class="bg-info"></td>
                   <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
