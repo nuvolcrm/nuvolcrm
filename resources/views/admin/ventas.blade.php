@@ -71,8 +71,8 @@ $ventas = DB::table('ventas')
                 <tr>
                   <td>{{ $row -> idVenta }}</td>
                   <td>{{ $row -> nombreTarifa }}</td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $row -> descripcion }}</td>
+                  <td>{{ $row -> nombreOperador }}</td>
                   <td></td>
                   <td></td>
                   <td></td>
