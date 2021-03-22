@@ -70,7 +70,7 @@ $ventas = DB::table('ventas')
                 @foreach ($ventas as $row)
                 <tr>
                   <td>{{ $row -> idVenta }}</td>
-                  <td></td>
+                  <td>{{ $row -> nombreTarifa }}</td>
                   <td></td>
                   <td></td>
                   <td></td>
