@@ -66,7 +66,7 @@ $clientes = DB::table('clientes')
               <tbody>
                 @foreach ($clientes as $row)
                 <tr>
-                  <td>{{ $row -> idcliente }}</td>
+                  <td>{{ $row -> idCliente }}</td>
                   <td>{{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
                   <td>{{$row-> alias}}</td>
                   <td>{{ $row -> dni }}</td>
@@ -102,7 +102,7 @@ $clientes = DB::table('clientes')
                     @endif
                   </td>
                   <td class="bg-info"></td>
-                  <td><a href="{{route('editar_cliente',$row->idcliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
+                  <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
               </tbody>
