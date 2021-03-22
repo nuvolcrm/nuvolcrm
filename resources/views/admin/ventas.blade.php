@@ -70,29 +70,54 @@ $ventas = DB::table('ventas')
                 @foreach ($ventas as $row)
                 <tr>
                   <td>{{ $row -> idVenta }}</td>
-                  <td>{{ $row -> nombreTarifa }}</td>
-                  <td>{{ $row -> descripcion }}</td>
                   <td>{{ $row -> nombreOperador }}</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $row -> descripcion }}</td>
+                  <td>{{ $row -> dni }}</td>
+                  <td><i class='fas fa-user primary'></i></td>
+                  <td>
+                  @if ($row -> alias <> '')
+                  ("{{ $row -> alias }}")
+                  @endif
+                  {{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
+                  <td>@if ($row-> idioma === 'Valenciano')
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">
+                    @elseif ($row-> idioma === 'Español')
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg" alt="Español" width="20" height="15">
+                    @elseif ($row-> idioma === 'Ingles')
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="Ingles" width="20" height="15">
+                    @else
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/No_flag.svg" alt="NO" width="20" height="15">
+                    @endif
+                    </td>
+                  <td>{{ $row -> usuario }}</td>
+                  <td>{{ $row -> linea }}</td>
+                  <td>{{ $row -> dni }}</td>
+                  <td>{{ $row -> fecha_alta }}</td>
+                  <td>{{ $row -> tipoalta }}</td>
+                  <td>{{ $row -> fecha_activa }}</td>
+                  <td>portada</td>
+                  <td>{{ $row -> fecha_sale }}</td>
+                  <td>
+                    @if ($row -> incidencias <> '')
+                    <i class="far fa-eye warning"></i>
+                    @elseif
+                    <i class="far fa-eye secondary"></i>
+                    @endif
+                    </td>
+                    <td>
+                    @if ($row -> observaciones <> '')
+                    <i class="fas fa-exclamation-triangle warning"></i>
+                    @elseif
+                    <i class="fas fa-exclamation-triangle secondary"></i>
+                    @endif
+                    </td>
+                  <td class="bg-info">{{ $row -> comision }}</td>
+                  <td class="bg-info">{{ $row -> extracomision }}</td>
+                  <td class="bg-info">Balance</td>
                   <td></td>
                   <td></td>
                   <td class="bg-info"></td>
-                  <td><a href="#"><i class='fas fa-pencil-alt'></i></a></td>
+                  <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
                 @endforeach
               </tbody>
