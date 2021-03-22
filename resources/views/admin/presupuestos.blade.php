@@ -46,8 +46,8 @@ $presupuestos = DB::table('presupuesto')
                             <th>Id</th>
                             <th>Fecha</th>
                             <th>Nombre y apellidos</th>
-                            <!-- <th><a class='fas fa-phone-square-alt'></th> -->
-                            <th><i class='fas fa-phone-square-alt'></i> <i class='fab fa-whatsapp'></i> Teléfono</th>
+                            <!-- <th><i class='fas fa-phone-square-alt'></i><i class='fab fa-whatsapp'></i></th> -->
+                            <th>Teléfono</th>
                             <th>Población</th>
                             <th>Servicios</th>
                             <th>Cuota</th>
