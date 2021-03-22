@@ -2,9 +2,9 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$presupuestos = DB::table('presupuesto')
-            ->join('clientes', 'clientes.idCliente', '=', 'presupuesto.idCliente')
-            ->orderBy('presupuesto.idPresupuesto', 'desc')
+$presupuestos = DB::table('presupuestos')
+            ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
+            ->orderBy('presupuestos.idPresupuesto', 'desc')
             ->get();
 
 ?>
