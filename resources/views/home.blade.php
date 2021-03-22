@@ -205,7 +205,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
                             <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
-                            <a href="{{ route('ventas') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                            <a href="{{ route('ventas') }}" class="btn btn-sm btn-default pull-right">Ver todo...</a>
                         </div>
                     </div>
                 </div>
