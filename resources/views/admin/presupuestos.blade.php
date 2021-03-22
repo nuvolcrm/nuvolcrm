@@ -67,7 +67,7 @@ $presupuestos = DB::table('presupuesto')
                             <td>{{ $pre -> idPresupuesto }}</td>
                             <td>{{ $pre -> fecha }}</td>
                             <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
-                            <td>{{ $pre -> nombre }}</td>
+                            <!-- <td>{{ $pre -> nombre }}</td> -->
                             <td class="text-nowrap">
                               <a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></a>
                               <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$pre-> telefono}}"></a>
