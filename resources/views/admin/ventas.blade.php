@@ -100,14 +100,14 @@ $ventas = DB::table('ventas')
                   <td>
                     @if ($row -> incidencias <> '')
                     <i class="far fa-eye warning"></i>
-                    @elseif
+                    @else
                     <i class="far fa-eye secondary"></i>
                     @endif
                     </td>
                     <td>
                     @if ($row -> observaciones <> '')
                     <i class="fas fa-exclamation-triangle warning"></i>
-                    @elseif
+                    @else
                     <i class="fas fa-exclamation-triangle secondary"></i>
                     @endif
                     </td>
