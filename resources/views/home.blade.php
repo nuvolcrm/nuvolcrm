@@ -10,7 +10,7 @@ $clientes = DB::table('clientes')
 
 $presupuestos = DB::table('presupuestoS')
             ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
-            ->orderBy('presupuestos.idpresupuesto', 'desc')
+            ->orderBy('presupuestos.idPresupuesto', 'desc')
             ->take(5)
             ->get();
 
