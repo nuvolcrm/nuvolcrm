@@ -48,7 +48,8 @@ $clientes = DB::table('clientes')
                   <th>Documento</th>
                   <th><i class="fas fa-language"></i></th>
                   <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
-                  <th class="text-nowrap"><i class='fas fa-phone-square-alt'></i>&nbsp;<i class='fab fa-whatsapp'></i> Teléfono</th>
+                  <!-- <i class='fas fa-phone-square-alt'></i>&nbsp;<i class='fab fa-whatsapp'></i> -->
+                  <th class="text-nowrap">Teléfono</th>
                   <!-- <th><i class="fab fa-whatsapp"></i></th> -->
                   <th>Dirección</th>
                   <th>Población</th>
