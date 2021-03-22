@@ -117,7 +117,7 @@ $ventas = DB::table('ventas')
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td class="bg-info"></td>
+                  <td class="bg-info">{{ $row -> idColaborador }}</td>
                   <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
                 @endforeach
