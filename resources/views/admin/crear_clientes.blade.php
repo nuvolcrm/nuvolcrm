@@ -3,7 +3,13 @@
 @section('title', 'Clientes')
 
 @section('content_header')
-<h1>Nuevo Cliente</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Nuevo Cliente</h1>
+    </div>
+  </div>
+</div>
 @stop
 
 @section('content')
