@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $ventas = DB::table('ventas')
-            //->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
+            ->join('clientes', 'cliente.idCliente', '=', 'ventas.idCliente')
+            ->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
+            ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
             ->orderBy('idVenta', 'desc')
             ->get();
 ?>
