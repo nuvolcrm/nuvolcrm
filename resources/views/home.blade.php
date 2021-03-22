@@ -503,14 +503,6 @@ $ventas = DB::table('ventas')
         </div>
         </div>
     </section>
-
-    <!-- SCRIPTS (revisar) -->
-    <!-- <script src="dist/js/adminlte.min.js"></script>
-    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="resources/js/Chart.js"></script>
-    <script src="dist/js/pages/dashboard2.js"></script>
-    <script src="dist/js/demo.js"></script> -->
-
 </body>
 
 @stop
@@ -520,7 +512,10 @@ $ventas = DB::table('ventas')
 @stop
 
 @section('js')
-<script>
-    console.log('Hi!');
-</script>
+    <!-- SCRIPTS (revisar) -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="resources/js/Chart.js"></script>
+    <script src="dist/js/pages/dashboard2.js"></script>
+    <script src="dist/js/demo.js"></script>
 @stop
