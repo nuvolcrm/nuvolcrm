@@ -44,7 +44,7 @@ $clientes = DB::table('clientes')
                 <tr>
                   <th>Id</th>
                   <th class="text-nowrap">Nombre y apellidos</th>
-                  <th>Alias</th>
+                  <!-- <th>Alias</th> -->
                   <th>Documento</th>
                   <th><i class="fas fa-language"></i></th>
                   <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
@@ -67,8 +67,12 @@ $clientes = DB::table('clientes')
                 @foreach ($clientes as $row)
                 <tr>
                   <td>{{ $row -> idCliente }}</td>
-                  <td>{{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
-                  <td>{{ $row -> alias }}</td>
+                  <td>
+                  @if ($row -> alias <> '')
+                  ("{{ $row -> alias }}")
+                  @endif
+                  {{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
+                  <!-- <td>{{ $row -> alias }}</td> -->
                   <td>{{ $row -> dni }}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
