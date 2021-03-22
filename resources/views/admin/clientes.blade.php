@@ -43,10 +43,10 @@ $clientes = DB::table('clientes')
               <thead class="table-primary">
                 <tr>
                   <th>Id</th>
-                  <th>Documento</th>
                   <th class="text-nowrap">Nombre y apellidos</th>
-                  <th><i class="fas fa-language"></i></th>
                   <th>Alias</th>
+                  <th>Documento</th>
+                  <th><i class="fas fa-language"></i></th>
                   <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
                   <th class="text-nowrap"><i class='fas fa-phone-square-alt'></i>&nbsp;<i class='fab fa-whatsapp'></i> Teléfono</th>
                   <!-- <th><i class="fab fa-whatsapp"></i></th> -->
@@ -66,8 +66,9 @@ $clientes = DB::table('clientes')
                 @foreach ($clientes as $row)
                 <tr>
                   <td>{{ $row -> idcliente }}</td>
-                  <td>{{ $row -> dni }}</td>
                   <td>{{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
+                  <td>{{$row-> alias}}</td>
+                  <td>{{ $row -> dni }}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">
@@ -79,7 +80,6 @@ $clientes = DB::table('clientes')
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/No_flag.svg" alt="NO" width="20" height="15">
                     @endif
                   </td>
-                  <td>{{$row-> alias}}</td>
                   <td class="text-nowrap">
                     <a class='fas fa-phone-square-alt' href="tel:{{$row->telefono}}"></a>
                     <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$row-> telefono}}"></a>

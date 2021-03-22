@@ -139,18 +139,21 @@
                     <div class="form-group f98 required inline" data-fid="f98" name="idioma">
                         <label class="control-label" for="f98">Idioma</label>
                         <div class="radio">
-                            <input id="idioma_esp" name="idioma" type="radio" value="esp">
-                            <label for="idioma_esp">
+                            <input id="idioma_esp" name="idioma" type="radio" value="esp" checked>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg" alt="Español" width="20" height="15">&nbsp;&nbsp;
+                            <!-- <label for="idioma_esp">
                                 Español &nbsp;&nbsp;
-                            </label>
+                            </label> -->
                             <input id="idioma_val" name="idioma" type="radio" value="val">
-                            <label for="idioma_val">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">&nbsp;&nbsp;
+                            <!-- <label for="idioma_val">
                                 Valencià &nbsp;&nbsp;
-                            </label>
+                            </label> -->
                             <input id="idioma_eng" name="idioma" type="radio" value="eng">
-                            <label for="idioma_eng">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="Ingles" width="20" height="15">&nbsp;&nbsp;
+                            <!-- <label for="idioma_eng">
                                 English
-                            </label>
+                            </label> -->
                         </div>
                     </div>
                 </div>
