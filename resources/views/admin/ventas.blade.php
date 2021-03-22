@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$clientes = DB::table('ventas')
-            ->join('clientes', 'clientes.idcliente', '=', 'presupuesto.idcliente')
+$ventas = DB::table('ventas')
+            ->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
             ->orderBy('idVentas', 'desc')
             ->get();
 ?>
@@ -38,36 +38,38 @@ $clientes = DB::table('ventas')
               <thead class="table-primary">
                 <tr>
                   <th>Id</th>
-                  <th class="text-nowrap">Nombre y apellidos</th>
-                  <!-- <th>Alias</th> -->
+                  <th>Operador</th>
+                  <th>Tarifa</th>
                   <th>Documento</th>
+                  <th>Tipo</th>
+                  <th>Cuota</th>
+                  <th>Documento</th>
+                  <th><i class='fas fa-user'></i></th>
+                  <th>Titular</th>
                   <th><i class="fas fa-language"></i></th>
-                  <!-- <th><i class='fas fa-phone-square-alt'></i></th> -->
-                  <!-- <i class='fas fa-phone-square-alt'></i>&nbsp;<i class='fab fa-whatsapp'></i> -->
-                  <th class="text-nowrap">Teléfono</th>
-                  <!-- <th><i class="fab fa-whatsapp"></i></th> -->
-                  <th>Dirección</th>
-                  <th>Población</th>
-                  <th>Nacimiento</th>
-                  <th>Segm.</th>
-                  <th><i class='far fa-envelope'></i></th>
-                  <th>Email</th>
-                  <th><i class='far fa-newspaper'></i></th>
-                  <th>Valor</th>
-                  <th></th>
+                  <th>Usuario</th>
+                  <th>Línea</th>
+                  <th>Alta</th>
+                  <th>Porta</th>
+                  <th>Activa</th>
+                  <th>Estado</th>
+                  <th>Baja</th>
+                  <th>Observaciones</th>
+                  <th>Incidencias</th>
+                  <th>Comisión</th>
+                  <th>Extra</th>
+                  <th>Balance</th>
+                  <th>Vendedor</th>
+                  <th><i class='fas fa-pencil-alt'></i></th>
                 </tr>
               </thead>
 
               <tbody>
-                @foreach ($clientes as $row)
+                @foreach ($ventas as $row)
                 <tr>
-                  <td>{{ $row -> idCliente }}</td>
-                  <td>
-                  @if ($row -> alias <> '')
-                  ("{{ $row -> alias }}")
-                  @endif
-                  {{ $row -> nombre.' '.$row-> apellido1.' '.$row-> apellido2 }}</td>
-                  <!-- <td>{{ $row -> alias }}</td> -->
+                  <td>{{ $row -> idVentas }}</td>
+                  <td></td>
+                  <td>{{ $row -> alias }}</td>
                   <td>{{ $row -> dni }}</td>
                   <td>
                     @if ($row-> idioma === 'Valenciano')
