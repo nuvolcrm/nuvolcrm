@@ -7,6 +7,7 @@ $ventas = DB::table('ventas')
             ->join('clientes', 'clientes.idCliente', '=', 'ventas.idCliente')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
+            ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
             ->orderBy('idVenta', 'desc')
             ->get();
 ?>
@@ -42,7 +43,7 @@ $ventas = DB::table('ventas')
                   <th>Id</th>
                   <th>Operador</th>
                   <th>Tarifa</th>
-                  <th>Tipo</th>
+                  <th></th>
                   <th>Cuota</th>
                   <th>Documento</th>
                   <th><i class='fas fa-user'></i></th>
@@ -71,7 +72,7 @@ $ventas = DB::table('ventas')
                   <td>{{ $row -> idVenta }}</td>
                   <td>{{ $row -> nombreOperador }}</td>
                   <td>{{ $row -> descripcion }}</td>
-                  <td><i class="fas fa-wifi text-primary"></i></td>
+                  <td><i class='{{ $row -> imagen }} text-primary'></i></td>
                   <td class="text-right">{{ $row -> cuota }}&nbsp€</td>
                   <td>{{ $row -> dni }}</td>
                   <td><i class='fas fa-user text-primary'></i></td>
