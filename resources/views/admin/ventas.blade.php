@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $ventas = DB::table('ventas')
-            ->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
+            //->join('tarifa', 'tarifa.idTarifa', '=', 'ventas.idTarifa')
             ->orderBy('idVenta', 'desc')
             ->get();
 ?>
@@ -69,41 +69,28 @@ $ventas = DB::table('ventas')
                 <tr>
                   <td>{{ $row -> idVenta }}</td>
                   <td></td>
-                  <td>{{ $row -> alias }}</td>
-                  <td>{{ $row -> dni }}</td>
-                  <td>
-                    @if ($row-> idioma === 'Valenciano')
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg" alt="Valenciano" width="20" height="15">
-                    @elseif ($row-> idioma === 'Español')
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg" alt="Español" width="20" height="15">
-                    @elseif ($row-> idioma === 'Ingles')
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="Ingles" width="20" height="15">
-                    @else
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/No_flag.svg" alt="NO" width="20" height="15">
-                    @endif
-                  </td>
-                  <td class="text-nowrap">
-                    <a class='fas fa-phone-square-alt' href="tel:{{$row->telefono}}"></a>
-                    <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$row-> telefono}}"></a>
-                    {{$row-> telefono}}
-                    </td>
-                  <td>{{$row-> direccion}}</td>
-                  <td>{{$row-> poblacion}}</td>
-                  <td>{{$row-> fecha_nacimiento}}
-                    @if ($row-> fecha_nacimiento === date('Y-m-d')) <!-- esta condición no es correcta. Habría que cortar del string el mes/día y compararlos con el mes/dia actual date('m-d')-->
-                      <i class="fas fa-birthday-cake text-primary"></i>
-                    @endif                    
-                    </td>
-                  <td>{{$row-> segmento}}</td>
-                  <td><a class="far fa-envelope" href=" mailto:{{$row-> email}}"></a></td>
-                  <td>{{$row-> email}}</td>
-                  <td>
-                    @if ($row-> mailing === 'on')
-                    <i class="fas fa-check text-primary"></i>
-                    @endif
-                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td class="bg-info"></td>
-                  <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
+                  <td><a href="#"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
               </tbody>
