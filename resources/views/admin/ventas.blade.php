@@ -42,7 +42,6 @@ $ventas = DB::table('ventas')
                   <th>Id</th>
                   <th>Operador</th>
                   <th>Tarifa</th>
-                  <th>Documento</th>
                   <th>Tipo</th>
                   <th>Cuota</th>
                   <th>Documento</th>
@@ -56,7 +55,7 @@ $ventas = DB::table('ventas')
                   <th>Activa</th>
                   <th>Estado</th>
                   <th>Baja</th>
-                  <th>Observaciones</th>
+                  <th><i class="far fa-eye warning"></i></th>
                   <th>Incidencias</th>
                   <th>Comisión</th>
                   <th>Extra</th>
@@ -72,8 +71,10 @@ $ventas = DB::table('ventas')
                   <td>{{ $row -> idVenta }}</td>
                   <td>{{ $row -> nombreOperador }}</td>
                   <td>{{ $row -> descripcion }}</td>
+                  <td><i class="fas fa-wifi text-primary"></i></td>
+                  <td class="text-right">{{ $row -> cuota }}&nbsp€</td>
                   <td>{{ $row -> dni }}</td>
-                  <td><i class='fas fa-user primary'></i></td>
+                  <td><i class='fas fa-user text-primary'></i></td>
                   <td>
                   @if ($row -> alias <> '')
                   ("{{ $row -> alias }}")
@@ -91,32 +92,28 @@ $ventas = DB::table('ventas')
                     </td>
                   <td>{{ $row -> usuario }}</td>
                   <td>{{ $row -> linea }}</td>
-                  <td>{{ $row -> dni }}</td>
                   <td>{{ $row -> fecha_alta }}</td>
                   <td>{{ $row -> tipoalta }}</td>
                   <td>{{ $row -> fecha_activa }}</td>
-                  <td>portada</td>
+                  <td><span class="badge badge-info">conf</span></td>
                   <td>{{ $row -> fecha_sale }}</td>
                   <td>
-                    @if ($row -> incidencias <> '')
-                    <i class="far fa-eye warning"></i>
-                    @elseif
-                    <i class="far fa-eye secondary"></i>
+                    @if ($row -> observaciones <> '')
+                    <i class="far fa-eye text-warning"></i>
+                    @else
+                    <i class="far fa-eye text-muted"></i>
                     @endif
                     </td>
-                    <td>
-                    @if ($row -> observaciones <> '')
-                    <i class="fas fa-exclamation-triangle warning"></i>
-                    @elseif
-                    <i class="fas fa-exclamation-triangle secondary"></i>
+                  <td>
+                    @if ($row -> incidencias <> '')
+                    <i class="fas fa-exclamation-triangle text-danger"></i>
+                    @else
+                    <i class="fas fa-exclamation-triangle text-muted"></i>
                     @endif
                     </td>
                   <td class="bg-info">{{ $row -> comision }}</td>
                   <td class="bg-info">{{ $row -> extracomision }}</td>
                   <td class="bg-info">Balance</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
                   <td class="bg-info">{{ $row -> idColaborador }}</td>
                   <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
