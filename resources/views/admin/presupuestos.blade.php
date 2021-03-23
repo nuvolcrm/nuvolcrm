@@ -82,7 +82,7 @@ $presupuestos = DB::table('presupuestos')
                   </td>
                   <td>{{ $pre-> poblacion }}</td>
                   <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
-                  <td class="text-right">{{$pre-> cuota}}€</td>
+                  <td class="text-right">{{$pre-> cuota}}&nbsp€</td>
                   <td>
                     <!-- <button-sm type='button' id='presupuesto' class='btn-sm' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''> -->
                     <a href='#'><i class='far fa-list-alt text-primary'></i></a>
