@@ -112,9 +112,9 @@ $ventas = DB::table('ventas')
                     <i class="fas fa-exclamation-triangle text-muted"></i>
                     @endif
                     </td>
-                  <td class="bg-info">{{ $row -> comision }}</td>
-                  <td class="bg-info">{{ $row -> extracomision }}</td>
-                  <td class="bg-info">Balance</td>
+                  <td class="bg-info text-right">{{ $row -> comision }}</td>
+                  <td class="bg-info text-right">{{ $row -> extracomision }}</td>
+                  <td class="bg-info text-right">Balance</td>
                   <td class="bg-info">{{ $row -> idColaborador }}</td>
                   <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
