@@ -81,5 +81,9 @@ class HomeController extends Controller
     {
         return view('admin.editar_cliente');
     }
+    public function crear_presupuestos()
+    {
+        return view('admin.crear_presupuestos');
+    }
     
 }

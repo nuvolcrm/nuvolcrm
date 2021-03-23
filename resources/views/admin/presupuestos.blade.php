@@ -4,6 +4,8 @@ use Iluminate\Pagination\Paginator;
 
 $presupuestos = DB::table('presupuestos')
             ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
+            ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
+            ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
             ->orderBy('presupuestos.idPresupuesto', 'desc')
             ->get();
 
@@ -16,7 +18,7 @@ $presupuestos = DB::table('presupuestos')
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      <h1>Presupuestos <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+      <h1>Presupuestos <a href="{{ route('crear_presupuestos') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
     </div>
   </div>
 </div>
@@ -67,15 +69,14 @@ $presupuestos = DB::table('presupuestos')
                             <td>{{ $pre -> idPresupuesto }}</td>
                             <td>{{ $pre -> fecha }}</td>
                             <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
-                            <!-- <td>{{ $pre -> nombre }}</td> -->
                             <td class="text-nowrap">
                               <a class='fas fa-phone-square-alt' href="tel:{{$pre->telefono}}"></a>
                               <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$pre-> telefono}}"></a>
                               {{$pre-> telefono}}
                               </td>
-                            <td>{{ $pre-> poblacion }}</td>
+                            <td>{{ $pre-> poblacionPre }}</td>
                             <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
-                            <td>39<sup>90</sup> €</td>
+                            <td>{{$pre-> cuota}}€</td>
                             <td>
                                 <!-- <button-sm type='button' id='presupuesto' class='btn-sm' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''> -->
                                 <a target='_blank' href='#'><i class='far fa-list-alt text-primary'></i></a>
@@ -83,7 +84,7 @@ $presupuestos = DB::table('presupuestos')
                             </td>
                             <td>
                                 <!-- <button-sm class='btn-sm alert-light'> -->
-                                <a target='_blank' href='#'><i class='far fa-file-pdf'></i></a>
+                                <a target='_blank' href='{{route('imprimir')}}'><i class='far fa-file-pdf'></i></a>
                               <!-- </button> -->
                             </td>
                             <td>
