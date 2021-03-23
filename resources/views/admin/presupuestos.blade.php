@@ -76,7 +76,7 @@ $presupuestos = DB::table('presupuestos')
                     <a class='fab fa-whatsapp text-success' href="https://api.whatsapp.com/send?phone=34{{$pre-> telefono}}"></a>
                     {{$pre-> telefono}}
                   </td>
-                  <td>{{ $pre-> poblacionPre }}</td>
+                  <td>{{ $pre-> poblacion }}</td>
                   <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
                   <td>{{$pre-> cuota}}€</td>
                   <td>
