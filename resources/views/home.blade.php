@@ -121,7 +121,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -178,7 +178,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -236,7 +236,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -332,7 +332,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -426,7 +426,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table table-hover table-responsive-xl table-md text-md">
                                     <thead>
                                         <tr>
                                             <th>#</th>

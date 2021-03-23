@@ -41,7 +41,7 @@ $presupuestos = DB::table('presupuestos')
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-hover table-striped table-responsive-xl table-md text-sm">
+                <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                   <thead class="table-primary">
                         <tr>
                             <th>Id</th>
