@@ -56,8 +56,8 @@ $ventas = DB::table('ventas')
                   <th>Activa</th>
                   <th>Estado</th>
                   <th>Baja</th>
-                  <th><i class="far fa-eye warning"></i></th>
-                  <th>Incidencias</th>
+                  <th><i class="far fa-eye"></i></th>
+                  <th><i class="fas fa-exclamation-triangle"></i></th>
                   <th>Comisión</th>
                   <th>Extra</th>
                   <th>Balance</th>
