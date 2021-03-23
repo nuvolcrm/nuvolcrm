@@ -9,6 +9,7 @@ $ventas = DB::table('ventas')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
             ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
             ->orderBy('fecha_alta', 'desc') //mejor ordenar por fecha_alta, por si grabamos a posteriori una venta más antigua, que se muestre en la fecha que toca.
+            ->groupBy('idVenta')
             ->get();
 ?>
 
