@@ -71,8 +71,8 @@ $presupuestos = DB::table('presupuestos')
                   <td>{{ $pre -> idPresupuesto }}</td>
                   <td>{{ $pre -> fecha }}</td>
                   <td>
-                  @if ($row -> alias <> '')
-                  ("{{ $row -> alias }}")
+                  @if ($pre -> alias <> '')
+                  ("{{ $pre -> alias }}")
                   @endif
                   {{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
                   <td class="text-nowrap">
