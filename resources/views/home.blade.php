@@ -53,7 +53,7 @@ $ventas = DB::table('ventas')
                         <!-- 5 ULTIMOS CLIENTES -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h4>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -109,7 +109,7 @@ $ventas = DB::table('ventas')
                         <!-- 5 ULTIMOS PRESUPUESTOS -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos</h4>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -166,7 +166,7 @@ $ventas = DB::table('ventas')
                         <!-- 5 ULTIMAS VENTAS -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h4>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -205,7 +205,7 @@ $ventas = DB::table('ventas')
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
                             <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
-                            <a href="{{ route('ventas') }}" class="btn btn-sm btn-default pull-right">Ver todo...</a>
+                            <a href="{{ route('ventas') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
                         </div>
                     </div>
                 </div>
@@ -224,7 +224,7 @@ $ventas = DB::table('ventas')
                     <div class="card-body">
                         <!-- 5 OPERADORES POR INGRESOS -->
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos: 2.897 €</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos: 2.897 €</h4>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -320,7 +320,7 @@ $ventas = DB::table('ventas')
                         <!-- 5 OPERADORES POR FIBRAS -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-wifi"></i>&nbsp;Fibras: 26</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-wifi"></i>&nbsp;Fibras: 26</h4>
                             <!--
                             <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -413,7 +413,7 @@ $ventas = DB::table('ventas')
                         <!-- 5 OPERADORES POR MOVILES -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fas fa-mobile-alt"></i>&nbsp;Móviles: 68</h3>
+                            <h4 class="box-title text-primary"><i class="fas fa-mobile-alt"></i>&nbsp;Móviles: 68</h4>
 
                             <!--
                             <div class="box-tools pull-right">

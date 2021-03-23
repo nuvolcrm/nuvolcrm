@@ -8,7 +8,7 @@ $ventas = DB::table('ventas')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
             ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
-            ->orderBy('idVenta', 'desc')
+            ->orderBy('idVenta', 'desc') //mejor ordenar por fecha_alta, por si grabamos a posteriori una venta más antigua, que se muestre en la fecha que toca.
             ->get();
 ?>
 
