@@ -106,7 +106,7 @@ $clientes = DB::table('clientes')
                     <i class="fas fa-check text-primary"></i>
                     @endif
                   </td>
-                  <td class="bg-info"></td>
+                  <td class="bg-info text-right"></td>
                   <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
