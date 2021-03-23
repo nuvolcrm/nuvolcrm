@@ -8,7 +8,7 @@ $ventas = DB::table('ventas')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
             ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
-            ->orderBy('idVenta', 'desc') //mejor ordenar por fecha_alta, por si grabamos a posteriori una venta más antigua, que se muestre en la fecha que toca.
+            ->orderBy('fecha_alta', 'desc') //mejor ordenar por fecha_alta, por si grabamos a posteriori una venta más antigua, que se muestre en la fecha que toca.
             ->get();
 ?>
 
@@ -145,7 +145,7 @@ $ventas = DB::table('ventas')
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
-    "order": [[ 0, "desc" ]],
+    "order": [[ 11, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">
