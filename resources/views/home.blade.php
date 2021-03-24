@@ -48,10 +48,7 @@ $ventas = DB::table('ventas')
                 <div class="card">
                     <!-- /.card-header -->
                     <div class="card-body">
-
-
                         <!-- 5 ULTIMOS CLIENTES -->
-
                         <div class="box-header with-border">
                             <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h4>
                             <!--
