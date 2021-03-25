@@ -43,6 +43,7 @@ $clientes = DB::table('clientes')
           <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
               <thead class="table-primary">
                 <tr>
+                  <th>Keywords</th>
                   <th>Id</th>
                   <th class="text-nowrap">Nombre y apellidos</th>
                   <!-- <th>Alias</th> -->
@@ -67,6 +68,7 @@ $clientes = DB::table('clientes')
               <tbody>
                 @foreach ($clientes as $row)
                 <tr>
+                  <td>{{ $row -> keywords }}</td>
                   <td>{{ $row -> idCliente }}</td>
                   <td>
                   @if ($row -> alias <> '')
@@ -129,6 +131,7 @@ $clientes = DB::table('clientes')
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
+    "columnDefs": [ { "visible": false, "targets": 0 } ],
     "order": [[ 0, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
