@@ -37,5 +37,5 @@ Route::post('/crear', [App\Http\Controllers\ClientesController::class, 'store'])
 Route::get('/editar_cliente', [App\Http\Controllers\ClientesController::class, 'edit'])->name('editar_cliente');
 Route::patch('/editar', [App\Http\Controllers\ClientesController::class, 'update'])->name('editar');
 Route::get('/crear_presupuestos', [App\Http\Controllers\HomeController::class, 'crear_presupuestos'])->name('crear_presupuestos');
-Route::post('/crearPre', [App\Http\Controllers\PresupuestosController::class, 'store'])->name('crearPre');
+Route::post('/crearPre', [App\Http\Controllers\PresupuestosController::class, 'crearPre'])->name('crearPre');
 Route::get('/imprimir-pdf', [App\Http\Controllers\PresupuestosController::class, 'imprimir'])->name('imprimir');

@@ -8,41 +8,30 @@ use App\Models\Presupuesto;
 
 class PresupuestosController extends Controller
 {
-    public function store(Request $request){
+    public function crearPre(Request $request){
 
         $presupuestos = DB::table('presupuestos')->get();
         //Recoger Datos
-        $presupuesto = array("dni"=>$request->input("dni"),
-                          "nombre"=>$request->input("nombre"),
-                          "apellido1"=>$request->input("apellido1"),
-                          "apellido2"=>$request->input("apellido2"),
-                          "alias"=>$request->input("alias"),
-                          "fecha_nacimiento"=>$request->input("fecha_nacimiento"),
-                          "direccion"=>$request->input("direccion"),
-                          "poblacion"=>$request->input("poblacion"),
-                          "telefono"=>$request->input("telefono"),
-                          "idioma"=>$request->input("idioma"),
-                          "email"=>$request->input("email"),
-                          "segmento"=>$request->input("segmento"));
+        $presupuesto = array("dni"=>$request->input("dni"), 
+                            "opactual"=>$request->input("opactual"),
+                            "cuotaactual"=>$request->input("cuotaactual"),
+                            "finpermanencia"=>$request->input("finpermanencia"),
+                            "idTarifa"=>$request->input("idTarifa"),
+                            "linea"=>$request->input("linea"),
+                            "usuario"=>$request->input("usuario"));
 
         $presupuestos = new Presupuesto();
         $presupuestos->dni = $presupuesto["dni"];
-        $presupuestos->nombre = $presupuesto["nombre"];
-        $presupuestos->apellido1 = $presupuesto["apellido1"];
-        $presupuestos->apellido2 = $presupuesto["apellido2"];
-        $presupuestos->alias = $presupuesto["alias"];
-        $presupuestos->fecha_nacimiento = $presupuesto["fecha_nacimiento"];
-        $presupuestos->direccion = $presupuesto["direccion"];
-        $presupuestos->poblacion = $presupuesto["poblacion"];
-        $presupuestos->telefono = $presupuesto["telefono"];
-        $presupuestos->idioma = $presupuesto["idioma"];
-        $presupuestos->email = $presupuesto["email"];
-        $presupuestos->segmento = $presupuesto["segmento"];
+        $presupuestos->opactual = $presupuesto["opactual"];
+        $presupuestos->cuotaactual = $presupuesto["cuotaactual"];
+        $presupuestos->finpermanencia = $presupuesto["finpermanencia"];
+        $presupuestos->idTarifa = $presupuesto["idTarifa"];
+        $presupuestos->linea = $presupuesto["linea"];
+        $presupuestos->usuario = $presupuesto["usuario"];
 
-        /* $clientes->save(); */
-        return $presupuestos;
+        $presupuestos->save();
 
-        /* return view("admin.clientes"); */
+        return view("admin.presupuestos");
     }
     function imprimir(){
         $pdf = \PDF::loadView('$presupuestos');
