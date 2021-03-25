@@ -132,7 +132,7 @@ $clientes = DB::table('clientes')
     responsive: true,
     autoWidth: false,
     "columnDefs": [ { "visible": false, "targets": 0 } ],
-    "order": [[ 0, "desc" ]],
+    "order": [[ 1, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">
