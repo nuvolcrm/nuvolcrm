@@ -196,14 +196,14 @@ return [
     'profile_url' => false,
     
     'use_route_url' => false,
-    'clientes_url' => 'clientes',
-    'crear_clientes_url' => 'crear_clientes',
+    'clients_url' => 'clients',
+    'crear_clients_url' => 'crear_clients',
     'profile_url' => true,
 
     
     'use_route_url' => false,
-    'clientes_url' => 'clientes',
-    'crear_clientes_url' => 'crear_clientes',
+    'clients_url' => 'clients',
+    'crear_clients_url' => 'crear_clients',
     'profile_url' => true,
     /*
     |--------------------------------------------------------------------------
@@ -257,8 +257,8 @@ return [
         ],
         ['header' => 'CRM'],
         [
-            'text'        => 'Clientes',
-            'url'         => 'clientes',
+            'text'        => 'clients',
+            'url'         => 'clients',
             'icon'        => 'fas fa-user-friends',
             'label'       => 5,
             'label_color' => 'success',

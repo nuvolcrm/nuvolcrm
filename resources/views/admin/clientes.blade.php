@@ -3,20 +3,20 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$clientes = DB::table('clientes')
-            ->orderBy('idCliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
+$clients = DB::table('clients')
+            ->orderBy('id', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
             ->get();
 ?>
 
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'clients')
 
 @section('content_header')
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      <h1>Clientes <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+      <h1>clients <a href="{{ route('crear_clients') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
     </div>
   </div>
 </div>
@@ -65,9 +65,9 @@ $clientes = DB::table('clientes')
               </thead>
 
               <tbody>
-                @foreach ($clientes as $row)
+                @foreach ($clients as $row)
                 <tr>
-                  <td>{{ $row -> idCliente }}</td>
+                  <td>{{ $row -> id }}</td>
                   <td>
                   @if ($row -> alias <> '')
                   ("{{ $row -> alias }}")
@@ -107,7 +107,7 @@ $clientes = DB::table('clientes')
                     @endif
                   </td>
                   <td class="bg-info text-right"></td>
-                  <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
+                  <td><a href="{{route('editar_cliente',$row->id)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
               </tbody>

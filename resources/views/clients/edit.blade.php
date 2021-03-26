@@ -1,9 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\DB;
-
-$clients = DB::table('clients')->get();
-?>
 @extends('adminlte::page')
 
 @section('title', 'Pedidos')
@@ -21,64 +15,63 @@ $clients = DB::table('clients')->get();
             <div class="card">
                 <!-- /.card-header -->
                 <div class="card-body">
-
-                    <form action="{{route('crear')}}/{{$clients -> dni}}" method="POST">
+                    <form action="{{route('clients.update', $client)}}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="input-group">
                             <div>
                                 <label class="control-label"> DNI</label>
-                                <input type="text" name="dni" value="{{$row -> dni}}" class="form-control mb-2">
+                                <input type="text" name="dni" value="{{$client -> dni}}" class="form-control mb-2">
                             </div>
                             <div>
                                 <label class="control-label"> Nombre</label>
-                                <input style="margin-left: 5%" type="text" name="nombre" placeholder="" class="form-control mb-2">
+                                <input style="margin-left: 5%" type="text" name="nombre" placeholder="" class="form-control mb-2" value="{{$client -> nombre}}">
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
                             <div>
                                 <label class="control-label"> Primer Apellido</label>
-                                <input type="text" name="apellido1" placeholder="" class="form-control mb-2">
+                                <input type="text" name="apellido1" placeholder="" class="form-control mb-2" value="{{$client -> apellido1}}">
                             </div>
                             <div>
                                 <label class="control-label"> Segundo Apellido</label>
-                                <input style="margin-left: 5%" type="text" name="apellido2" placeholder="" class="form-control mb-2">
+                                <input style="margin-left: 5%" type="text" name="apellido2" placeholder="" class="form-control mb-2" value="{{$client -> apellido2}}">
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
                             <div>
                                 <label class="control-label"> Alias</label>
-                                <input type="text" name="alias" placeholder="" class="form-control mb-2">
+                                <input type="text" name="alias" placeholder="" class="form-control mb-2" value="{{$client -> alias}}">
                             </div>
                             <div>
                                 <label class="control-label"> Fecha de Nacimiento</label>
-                                <input style="margin-left: 5%" type="date" name="fecha_nacimiento" class="form-control mb-2" placeholder="">
+                                <input style="margin-left: 5%" type="date" name="fecha_nacimiento" class="form-control mb-2" placeholder="" value="{{$client -> fecha_nacimiento}}">
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
                             <div>
                                 <label class="control-label"> Telefono</label>
-                                <input type="tel" name="telefono" placeholder="" maxlength="9" pattern="[6-7-9]{1}[0-9]{8}" class="form-control mb-2">
+                                <input type="tel" name="telefono" placeholder="" maxlength="9" pattern="[6-7-9]{1}[0-9]{8}" class="form-control mb-2" value="{{$client -> telefono}}"> 
                             </div>
                             <div>
                                 <label class="control-label"> Email</label>
-                                <input style="margin-left: 5%" type="email" name="email" placeholder="" class="form-control mb-2">
+                                <input style="margin-left: 5%" type="email" name="email" placeholder="" class="form-control mb-2" value="{{$client -> email}}">
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
                             <div>
                                 <label class="control-label"> Dirección</label>
-                                <input size="50%" type="text" name="direccion" placeholder="" class="form-control mb-2">
+                                <input size="50%" type="text" name="direccion" placeholder="" class="form-control mb-2" value="{{$client -> direccion}}">
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
                             <div>
                                 <label class="control-label"> Población</label>
-                                <input type="text" name="poblacion" placeholder="" class="form-control mb-2">
+                                <input type="text" name="poblacion" placeholder="" class="form-control mb-2" value="{{$client -> poblacion}}">
                             </div>
                             <div>
                                 <label class="control-label"> Código Postal</label>
-                                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5" />
+                                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5"  value="{{$client -> c_postal}}"/>
                             </div>
                         </div>
                         <div class="input-group" style="margin-top: 1%">
@@ -126,89 +119,10 @@ $clients = DB::table('clients')->get();
                             <button class="btn btn-primary" type="submit">Guardar cambios</button>
                         </div>
                     </form>
-<div class="row">
-<div class="col-12">
-<!-- /.card -->
-<div class="card">
-<!-- /.card-header -->
-<div class="card-body">
-
-    <form action="{{route('editar')}}" method="POST">
-        @csrf
-        @method('PUT')
-        <div class="input-group">
-            <div>
-                <label class="control-label"> DNI</label>
-                <input  type="text" name="dni" value="" class="form-control mb-2">
-            </div>
-            <div>
-                <label class="control-label"> Nombre</label>
-                <input style="margin-left: 5%" type="text" name="nombre" placeholder="" class="form-control mb-2">
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div>
-                <label class="control-label"> Primer Apellido</label>
-                <input type="text" name="apellido1" placeholder="" class="form-control mb-2" >
-            </div>
-            <div>
-                <label class="control-label"> Segundo Apellido</label>    
-                <input style="margin-left: 5%"  type="text" name="apellido2" placeholder="" class="form-control mb-2">
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div>
-                <label class="control-label"> Alias</label>
-                <input type="text" name="alias" placeholder="" class="form-control mb-2">
-            </div>
-            <div>
-                <label class="control-label"> Fecha de Nacimiento</label>
-                <input style="margin-left: 5%" type="date" name="fecha_nacimiento" class="form-control mb-2" placeholder="">
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div>
-                <label class="control-label"> Telefono</label>
-                <input type="tel" name="telefono" placeholder="" maxlength="9" pattern="[6-7-9]{1}[0-9]{8}" class="form-control mb-2">
-            </div>
-            <div>
-                <label class="control-label"> Email</label>
-                <input style="margin-left: 5%" type="email" name="email" placeholder="" class="form-control mb-2">
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div>
-                <label class="control-label"> Dirección</label>
-                <input size="50%" type="text" name="direccion" placeholder="" class="form-control mb-2"> 
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div>
-                <label class="control-label"> Población</label>
-                <input  type="text" name="poblacion" placeholder="" class="form-control mb-2">
-            </div>
-            <div>
-                <label class="control-label"> Código Postal</label>
-                <input style="margin-left: 5%" type="text" class="form-control" name="c_postal" value="" data-rule-number="true" maxlength="5"/>
-            </div>
-        </div>
-        <div class="input-group" style="margin-top: 1%">
-            <div class="form-group f98 required inline" data-fid="f98" name="idioma">
-                <label class="control-label" for="f98">Idioma</label>
-            <div class="radio">
-
                 </div>
             </div>
         </div>
-        <div>
-            <button class="btn btn-primary" type="submit">Guardar cambios</button>
-        </div>
-    </form>
-
     </div>
-    </div>
-</div>
-</div>
 </section>
 
 @stop

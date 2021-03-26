@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $presupuestos = DB::table('presupuestos')
-            ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
+            ->join('clients', 'clients.id', '=', 'presupuestos.id')
             ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
             ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
             ->get();
@@ -12,7 +12,7 @@ $presupuestos = DB::table('presupuestos')
 
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'clients')
 
 @section('content_header')
 <div class="container-fluid">
@@ -40,7 +40,7 @@ $presupuestos = DB::table('presupuestos')
                                 <label class="control-label">DNI</label>
                                 <input type="text" name="dni" placeholder="DNI" class="form-control mb-2" required>
                             </div>
-                            <a href="{{ route('crear_clientes') }}" class="btn btn-primary"><i>Crear Cliente</i></a>
+                            <a href="{{ route('crear_clients') }}" class="btn btn-primary"><i>Crear Cliente</i></a>
                         </div>
                         <div class="row">
                             <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
@@ -61,6 +61,6 @@ $presupuestos = DB::table('presupuestos')
 
 @section('js')
 <script>
-    console.log('Crear Clientes');
+    console.log('Crear clients');
 </script>
 @stop

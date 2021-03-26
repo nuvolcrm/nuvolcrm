@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'clients')
 
 @section('content_header')
 <div class="container-fluid">
@@ -183,6 +183,6 @@
 
 @section('js')
 <script>
-    console.log('Crear Clientes');
+    console.log('Crear clients');
 </script>
 @stop

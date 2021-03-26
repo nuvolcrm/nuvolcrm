@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $ventas = DB::table('ventas')
-            ->join('clientes', 'clientes.idCliente', '=', 'ventas.idCliente')
+            ->join('clients', 'clients.id', '=', 'ventas.id')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
             ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
@@ -20,7 +20,7 @@ $ventas = DB::table('ventas')
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      <h1>Ventas <a href="{{ route('crear_clientes') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
+      <h1>Ventas <a href="{{ route('crear_clients') }}" class="rounded-circle btn btn-primary"><i class="fas fa-plus"></i></a></h1>
     </div>
   </div>
 </div>

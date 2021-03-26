@@ -25,9 +25,9 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function clientes()
+    public function clients()
     {
-        return view('admin.clientes');
+        return view('admin.clients');
     }
     public function presupuestos()
     {
@@ -73,9 +73,9 @@ class HomeController extends Controller
     {
         return view('admin.gestion.usuarios_roles');
     }
-    public function crear_clientes()
+    public function crear_clients()
     {
-        return view('admin.crear_clientes');
+        return view('admin.crear_clients');
     }
     public function editar_cliente()
     {

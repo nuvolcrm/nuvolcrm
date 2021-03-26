@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
-class ClientesController extends Controller
+class clientsController extends Controller
 {
     
     /**
@@ -17,13 +17,13 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        $clientes = DB::table('clientes')->get();
+        $clients = DB::table('clients')->get();
 
-        return view('/clientes', ['clientes' => $clientes]);
+        return view('/clients', ['clients' => $clients]);
     }
     public function store(Request $request){
 
-        $clientes = DB::table('clientes')->get();
+        $clients = DB::table('clients')->get();
         //Recoger Datos
         $cliente = array("dni"=>$request->input("dni"),
                           "nombre"=>$request->input("nombre"),
@@ -38,29 +38,29 @@ class ClientesController extends Controller
                           "email"=>$request->input("email"),
                           "segmento"=>$request->input("segmento"));
 
-        $clientes = new Cliente();
-        $clientes->dni = $cliente["dni"];
-        $clientes->nombre = $cliente["nombre"];
-        $clientes->apellido1 = $cliente["apellido1"];
-        $clientes->apellido2 = $cliente["apellido2"];
-        $clientes->alias = $cliente["alias"];
-        $clientes->fecha_nacimiento = $cliente["fecha_nacimiento"];
-        $clientes->direccion = $cliente["direccion"];
-        $clientes->poblacion = $cliente["poblacion"];
-        $clientes->telefono = $cliente["telefono"];
-        $clientes->idioma = $cliente["idioma"];
-        $clientes->email = $cliente["email"];
-        $clientes->segmento = $cliente["segmento"];
+        $clients = new Cliente();
+        $clients->dni = $cliente["dni"];
+        $clients->nombre = $cliente["nombre"];
+        $clients->apellido1 = $cliente["apellido1"];
+        $clients->apellido2 = $cliente["apellido2"];
+        $clients->alias = $cliente["alias"];
+        $clients->fecha_nacimiento = $cliente["fecha_nacimiento"];
+        $clients->direccion = $cliente["direccion"];
+        $clients->poblacion = $cliente["poblacion"];
+        $clients->telefono = $cliente["telefono"];
+        $clients->idioma = $cliente["idioma"];
+        $clients->email = $cliente["email"];
+        $clients->segmento = $cliente["segmento"];
 
-        $clientes->save();
+        $clients->save();
 
-        return view("admin.clientes");
+        return view("admin.clients");
     }
     public function edit($dni){
-        $cliente = Clientes::find($dni);
-        return view('admin.editar_cliente')->with('clientes',$cliente);
+        $cliente = clients::find($dni);
+        return view('admin.editar_cliente')->with('clients',$cliente);
     }
-    public function update(Request $request, Cliente $clientes)
+    public function update(Request $request, Cliente $clients)
     {
         //validate the file
         /* $data = request()->validate([
@@ -78,24 +78,24 @@ class ClientesController extends Controller
             'segmento' => 'selected',
             
         ]); */
-        $clientes = Cliente::findOrFail($clientes->idCliente);
+        $clients = Cliente::findOrFail($clients->id);
 
-        $clientes->dni = request('dni');
-        $clientes->nombre = request('nombre');
-        $clientes->apellido1 = request('apellido1');
-        $clientes->apellido2 = request('apellido2');
-        $clientes->alias = request('alias');
-        $clientes->fecha_nacimiento = request('fecha_nacimiento');
-        $clientes->telefono = request('telefono');
-        $clientes->email = request('email');
-        $clientes->direccion = request('direccion');
-        $clientes->poblacion = request('poblacion');
-        $clientes->idioma = request('idioma');
-        $clientes->segmento = request('segmento');
+        $clients->dni = request('dni');
+        $clients->nombre = request('nombre');
+        $clients->apellido1 = request('apellido1');
+        $clients->apellido2 = request('apellido2');
+        $clients->alias = request('alias');
+        $clients->fecha_nacimiento = request('fecha_nacimiento');
+        $clients->telefono = request('telefono');
+        $clients->email = request('email');
+        $clients->direccion = request('direccion');
+        $clients->poblacion = request('poblacion');
+        $clients->idioma = request('idioma');
+        $clients->segmento = request('segmento');
 
 
-        $clientes->save();
+        $clients->save();
 
-        return view("admin.clientes");
+        return view("admin.clients");
     }
 }

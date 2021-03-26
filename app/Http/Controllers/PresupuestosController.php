@@ -39,10 +39,10 @@ class PresupuestosController extends Controller
         $presupuestos->email = $presupuesto["email"];
         $presupuestos->segmento = $presupuesto["segmento"];
 
-        /* $clientes->save(); */
+        /* $clients->save(); */
         return $presupuestos;
 
-        /* return view("admin.clientes"); */
+        /* return view("admin.clients"); */
     }
     function imprimir(){
         $pdf = \PDF::loadView('$presupuestos');
