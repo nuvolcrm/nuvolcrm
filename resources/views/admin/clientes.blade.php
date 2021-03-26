@@ -43,6 +43,7 @@ $clients = DB::table('clients')
           <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
               <thead class="table-primary">
                 <tr>
+                  <th class="d-none">Keywords</th>
                   <th>Id</th>
                   <th class="text-nowrap">Nombre y apellidos</th>
                   <!-- <th>Alias</th> -->
@@ -106,8 +107,17 @@ $clients = DB::table('clients')
                     <i class="fas fa-check text-primary"></i>
                     @endif
                   </td>
-                  <td class="bg-info text-right"></td>
+<<<<<<< HEAD
+                  <td class="bg-info"></td>
                   <td><a href="{{route('editar_cliente',$row->id)}}"><i class='fas fa-pencil-alt'></i></a></td>
+=======
+                  <td class="bg-info text-right"></td>
+<<<<<<< HEAD
+                  <td><a href="{{route('editar_cliente',$row->id)}}"><i class='fas fa-pencil-alt'></i></a></td>
+=======
+                  <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
+>>>>>>> 3381d2f2507dae39cf56dfd09cdeef7b7842c93b
+>>>>>>> 79e19a1620f595068563236487387d0f78285174
                 </tr>
                 @endforeach
               </tbody>
@@ -129,7 +139,7 @@ $clients = DB::table('clients')
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
-    "order": [[ 0, "desc" ]],
+    "order": [[ 1, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">

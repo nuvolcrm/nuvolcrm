@@ -41,7 +41,7 @@ class clientController extends Controller
 
         $client->save();
 
-        //return view("clients.show");
+        // return view("clients.show");
         return redirect()->route("clients.index");
     }
 

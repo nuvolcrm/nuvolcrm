@@ -257,7 +257,7 @@ return [
         ],
         ['header' => 'CRM'],
         [
-            'text'        => 'clients',
+            'text'        => 'Clientes',
             'url'         => 'clients',
             'icon'        => 'fas fa-user-friends',
             'label'       => 5,

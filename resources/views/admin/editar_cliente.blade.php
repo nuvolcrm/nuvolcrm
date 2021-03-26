@@ -22,7 +22,11 @@ $clients = DB::table('clients')->get();
                 <!-- /.card-header -->
                 <div class="card-body">
 
+<<<<<<< HEAD
                     <form action="{{route('crear')}}/{{$clients -> dni}}" method="POST">
+=======
+                    <form action="{{route('client.store')}}" method="POST">
+>>>>>>> 79e19a1620f595068563236487387d0f78285174
                         @csrf
                         @method('PUT')
                         <div class="input-group">

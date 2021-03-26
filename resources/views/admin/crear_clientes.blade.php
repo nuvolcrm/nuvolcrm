@@ -21,11 +21,11 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <form action="{{route('crear')}}" method="POST">
+                    <form action="{{route('client.store')}}" method="POST">
                         @csrf
                         <div class="input-group">
                             <div class="form-group required inline" data-fid="f99" name="tipo">
-                                <label class="control-label" for="f99">Tipo</label>
+                                <label class="control-label" for="f99">Segmento</label>
                                 <div class="radio">
                                     <input id="segmento_res" name="segmento" type="radio" value="par">
                                     <label for="segmento_res">
