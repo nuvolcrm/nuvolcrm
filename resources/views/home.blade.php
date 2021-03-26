@@ -46,29 +46,16 @@ $ventas = DB::table('ventas')
                 <div class="card">
                     <!-- /.card-header -->
                     <div class="card-body">
-<<<<<<< HEAD
-
-
-                        <!-- 5 ULTIMOS clients -->
-
-                        <div class="box-header with-border">
-                            <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 clients</h3>
-=======
                         <!-- 5 ULTIMOS CLIENTES -->
                         <div class="box-header with-border">
-<<<<<<< HEAD
                             <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
-=======
-                            <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h4>
->>>>>>> 3381d2f2507dae39cf56dfd09cdeef7b7842c93b
                             <!--
-                    <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                    -->
->>>>>>> 79e19a1620f595068563236487387d0f78285174
+                                <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                                -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -82,7 +69,6 @@ $ventas = DB::table('ventas')
                                         </tr>
                                     </thead>
                                     <tbody>
-<<<<<<< HEAD
                                         @php($orden = 1)
                                             @foreach ($clients as $cli)
                                                 <tr>
@@ -105,137 +91,6 @@ $ventas = DB::table('ventas')
                                     <a href="{{ route('clients.index') }}" class="btn btn-sm btn-default pull-right">Ver
                                         todo</a>
                                 </div>
-=======
-                                    @php($orden=1)
-                                    @foreach ($clients as $cli)
-                                        <tr>
-                                            <td>{{ $orden }}</td>
-                                            <td>
-                                                @if ($cli -> alias <> '')
-                                                ("{{ $cli -> alias }}")
-                                                @endif
-                                                {{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}
-                                                </td>
-                                            <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
-                                        </tr>
-                                    @php ($orden++)
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.box-body -->
-                        <div class="box-footer clearfix">
-                            <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
-                            <a href="{{ route('clients.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- /.box-footer -->
-
-            <div class="col-md-4">
-                <!-- /.card -->
-                <div class="card">
-                    <!-- /.card-header -->
-                    <div class="card-body">
-
-
-                        <!-- 5 ULTIMOS PRESUPUESTOS -->
-
-                        <div class="box-header with-border">
-                            <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos</h4>
-                            <!--
-                    <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                    -->
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-responsive-xl table-md text-md">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nombre y apellidos</th>
-                                            <th class="text-right">Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    @php($orden=1)
-                                    @foreach ($presupuestos as $pre)
-
-                                        <tr>
-                                            <td>{{ $orden }}</td>
-                                            <td>{{ $pre -> nombre.' '.$pre-> apellido1.' '.$pre-> apellido2 }}</td>
-                                            <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
-                                        </tr>
-                                    @php ($orden++)
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.box-body -->
-                        <div class="box-footer clearfix">
-                            <a href="{{ route('crear_presupuestos') }}" class="btn btn-sm btn-primary pull-left">Nuevo presupuesto</a>
-                            <a href="{{ route('presupuestos') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- /.box-footer -->
-
-            <div class="col-md-4">
-                <!-- /.card -->
-                <div class="card">
-                    <!-- /.card-header -->
-                    <div class="card-body">
-
-
-                        <!-- 5 ULTIMAS VENTAS -->
-
-                        <div class="box-header with-border">
-                            <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h4>
-                            <!--
-                    <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                    -->
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-responsive-xl table-md text-md">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nombre y apellidos</th>
-                                            <th class="text-right">Cuota</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @php($orden=1)
-                                        @foreach ($ventas as $ven)
-                                        <tr>
-                                            <td>{{ $orden }}</td>
-                                            <!-- <td>Másmóvil</td> -->
-                                            <td>{{ $ven -> nombre.' '.$ven-> apellido1.' '.$ven-> apellido2 }}</td>
-                                            <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
-                                        </tr>
-                                        @php ($orden++)
-                                        @endforeach
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -251,15 +106,15 @@ $ventas = DB::table('ventas')
                                 <!-- 5 ULTIMOS PRESUPUESTOS -->
 
                                 <div class="box-header with-border">
-                                    <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;Últimos 5
-                                        presupuestos</h4>
+                                    <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos
+                                    </h4>
                                     <!--
-                                                        <div class="box-tools pull-right">
-                                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                        </div>
-                                                        -->
+                                                                <div class="box-tools pull-right">
+                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                                                </div>
+                                                                -->
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
@@ -281,7 +136,8 @@ $ventas = DB::table('ventas')
                                                             <td>{{ $pre->nombre . ' ' . $pre->apellido1 . ' ' . $pre->apellido2 }}
                                                             </td>
                                                             <td class="text-right"><span
-                                                                    class="label label-success">39<sup>90</sup>€</span></td>
+                                                                    class="label label-success">39<sup>90</sup>€</span>
+                                                            </td>
                                                         </tr>
                                                         @php($orden++)
                                                         @endforeach
@@ -294,8 +150,7 @@ $ventas = DB::table('ventas')
                                         <div class="box-footer clearfix">
                                             <a href="{{ route('crear_presupuestos') }}" class="btn btn-sm btn-primary pull-left">Nuevo
                                                 presupuesto</a>
-                                            <a href="{{ route('presupuestos') }}" class="btn btn-sm btn-default pull-right">Ver
-                                                todo</a>
+                                            <a href="{{ route('presupuestos') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -314,13 +169,6 @@ $ventas = DB::table('ventas')
 
                                         <div class="box-header with-border">
                                             <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h4>
-                                            <!--
-                                                                                <div class="box-tools pull-right">
-                                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                                                </button>
-                                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                                                </div>
-                                                                                -->
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
@@ -375,13 +223,6 @@ $ventas = DB::table('ventas')
                                                 <div class="box-header with-border">
                                                     <h4 class="box-title text-primary"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos: 2.897 €
                                                     </h4>
-                                                    <!--
-                                                                                                        <div class="box-tools pull-right">
-                                                                                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                                                                        </button>
-                                                                                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                                                                        </div>
-                                                                                                        -->
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
@@ -430,11 +271,8 @@ $ventas = DB::table('ventas')
                                                     <!-- /.table-responsive -->
                                                 </div>
                                                 <!-- /.box-body -->
-                                                <div class="box-footer clearfix">
-                                                    <!--
-                                                                                                        <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                                                                                                        -->
-                                                    <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                                                <div class="box-footer clearfix"><a href="javascript:void(0)"
+                                                        class="btn btn-sm btn-default pull-right">Ver todo</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -473,13 +311,6 @@ $ventas = DB::table('ventas')
 
                                                 <div class="box-header with-border">
                                                     <h4 class="box-title text-primary"><i class="fas fa-wifi"></i>&nbsp;Fibras: 26</h4>
-                                                    <!--
-                                                                                                                <div class="box-tools pull-right">
-                                                                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                                                                                </button>
-                                                                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                                                                                </div>
-                                                                                                                -->
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
@@ -528,11 +359,8 @@ $ventas = DB::table('ventas')
                                                     <!-- /.table-responsive -->
                                                 </div>
                                                 <!-- /.box-body -->
-                                                <div class="box-footer clearfix">
-                                                    <!--
-                                                                                                        <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                                                                                                        -->
-                                                    <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                                                <div class="box-footer clearfix"> <a href="javascript:void(0)"
+                                                        class="btn btn-sm btn-default pull-right">Ver todo</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -568,14 +396,6 @@ $ventas = DB::table('ventas')
 
                                                 <div class="box-header with-border">
                                                     <h4 class="box-title text-primary"><i class="fas fa-mobile-alt"></i>&nbsp;Móviles: 68</h4>
-
-                                                    <!--
-                                                                                                                <div class="box-tools pull-right">
-                                                                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                                                                                </button>
-                                                                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                                                                                </div>
-                                                                                                                -->
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
