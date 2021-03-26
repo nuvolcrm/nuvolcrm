@@ -7,7 +7,8 @@ $ventas = DB::table('ventas')
             ->join('clientes', 'clientes.idCliente', '=', 'ventas.idCliente')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
             ->join('operadores', 'operadores.idOperador', '=', 'tarifas.idOperador')
-            ->orderBy('idVenta', 'desc')
+            ->join('servicios', 'servicios.idServicio', '=', 'tarifas.idServicio')
+            ->orderBy('fecha_alta', 'desc') //mejor ordenar por fecha_alta, por si grabamos a posteriori una venta más antigua, que se muestre en la fecha que toca.
             ->get();
 ?>
 
@@ -36,14 +37,13 @@ $ventas = DB::table('ventas')
         <div class="card">
           <!-- /.card-header -->
           <div class="card-body">
-          <table id="example2" class="table table-hover table-striped table-responsive table-md text-sm">
+          <table id="example2" class="table table-hover table-responsive table-md text-sm">
               <thead class="table-primary">
                 <tr>
                   <th>Id</th>
                   <th>Operador</th>
                   <th>Tarifa</th>
-                  <th>Documento</th>
-                  <th>Tipo</th>
+                  <th></th>
                   <th>Cuota</th>
                   <th>Documento</th>
                   <th><i class='fas fa-user'></i></th>
@@ -56,8 +56,8 @@ $ventas = DB::table('ventas')
                   <th>Activa</th>
                   <th>Estado</th>
                   <th>Baja</th>
-                  <th>Observaciones</th>
-                  <th>Incidencias</th>
+                  <th><i class="far fa-eye"></i></th>
+                  <th><i class="fas fa-exclamation-triangle"></i></th>
                   <th>Comisión</th>
                   <th>Extra</th>
                   <th>Balance</th>
@@ -72,8 +72,10 @@ $ventas = DB::table('ventas')
                   <td>{{ $row -> idVenta }}</td>
                   <td>{{ $row -> nombreOperador }}</td>
                   <td>{{ $row -> descripcion }}</td>
+                  <td><i class='{{ $row -> imagen }} text-primary'></i></td>
+                  <td class="text-right">{{ $row -> cuota }}&nbsp€</td>
                   <td>{{ $row -> dni }}</td>
-                  <td><i class='fas fa-user primary'></i></td>
+                  <td><i class='fas fa-user text-primary'></i></td>
                   <td>
                   @if ($row -> alias <> '')
                   ("{{ $row -> alias }}")
@@ -91,32 +93,28 @@ $ventas = DB::table('ventas')
                     </td>
                   <td>{{ $row -> usuario }}</td>
                   <td>{{ $row -> linea }}</td>
-                  <td>{{ $row -> dni }}</td>
                   <td>{{ $row -> fecha_alta }}</td>
                   <td>{{ $row -> tipoalta }}</td>
                   <td>{{ $row -> fecha_activa }}</td>
-                  <td>portada</td>
+                  <td><span class="badge badge-info">conf</span></td>
                   <td>{{ $row -> fecha_sale }}</td>
                   <td>
-                    @if ($row -> incidencias <> '')
-                    <i class="far fa-eye warning"></i>
-                    @else
-                    <i class="far fa-eye secondary"></i>
-                    @endif
-                    </td>
-                    <td>
                     @if ($row -> observaciones <> '')
-                    <i class="fas fa-exclamation-triangle warning"></i>
+                    <i class="far fa-eye text-warning"></i>
                     @else
-                    <i class="fas fa-exclamation-triangle secondary"></i>
+                    <i class="far fa-eye text-muted"></i>
                     @endif
                     </td>
-                  <td class="bg-info">{{ $row -> comision }}</td>
-                  <td class="bg-info">{{ $row -> extracomision }}</td>
-                  <td class="bg-info">Balance</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>
+                    @if ($row -> incidencias <> '')
+                    <i class="fas fa-exclamation-triangle text-danger"></i>
+                    @else
+                    <i class="fas fa-exclamation-triangle text-muted"></i>
+                    @endif
+                    </td>
+                  <td class="bg-info text-right">{{ $row -> comision }}</td>
+                  <td class="bg-info text-right">{{ $row -> extracomision }}</td>
+                  <td class="bg-info text-right">Balance</td>
                   <td class="bg-info">{{ $row -> idColaborador }}</td>
                   <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
                 </tr>
@@ -147,7 +145,7 @@ $ventas = DB::table('ventas')
   $('#example2').DataTable({
     responsive: true,
     autoWidth: false,
-    "order": [[ 0, "desc" ]],
+    "order": [[ 11, "desc" ]],
     "language": {
       "lengthMenu": "Ver " +
         `<select class = "custom-select custom-select-sm form-control form-control-sm">

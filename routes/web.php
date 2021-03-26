@@ -49,6 +49,16 @@ Route::get('gestion/servicios', [App\Http\Controllers\HomeController::class, 'se
 Route::get('gestion/tarifas', [App\Http\Controllers\HomeController::class, 'tarifas'])->name('tarifas');
 Route::get('gestion/colaboradores', [App\Http\Controllers\HomeController::class, 'colaboradores'])->name('colaboradores');
 Route::get('gestion/usuarios_roles', [App\Http\Controllers\HomeController::class, 'usuarios_roles'])->name('usuarios_roles');
+<<<<<<< HEAD
 
 
 
+=======
+Route::get('/crear_clientes', [App\Http\Controllers\HomeController::class, 'crear_clientes'])->name('crear_clientes');
+Route::post('/crear', [App\Http\Controllers\ClientesController::class, 'store'])->name('crear');
+Route::get('/editar_cliente', [App\Http\Controllers\ClientesController::class, 'edit'])->name('editar_cliente');
+Route::patch('/editar', [App\Http\Controllers\ClientesController::class, 'update'])->name('editar');
+Route::get('/crear_presupuestos', [App\Http\Controllers\HomeController::class, 'crear_presupuestos'])->name('crear_presupuestos');
+Route::post('/crearPre', [App\Http\Controllers\PresupuestosController::class, 'crearPre'])->name('crearPre');
+Route::get('/imprimir-pdf', [App\Http\Controllers\PresupuestosController::class, 'imprimir'])->name('imprimir');
+>>>>>>> 3381d2f2507dae39cf56dfd09cdeef7b7842c93b
