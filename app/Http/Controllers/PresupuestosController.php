@@ -33,8 +33,8 @@ class PresupuestosController extends Controller
 
         return view("admin.presupuestos");
     }
-    function imprimir(){
+    /**function imprimir(){
         $pdf = \PDF::loadView('$presupuestos');
         return $pdf->download('presupuesto.pdf');
-    }
+    }*/
 }
