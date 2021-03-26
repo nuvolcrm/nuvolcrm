@@ -75,7 +75,12 @@ $ventas = DB::table('ventas')
                                     @foreach ($clientes as $cli)
                                         <tr>
                                             <td>{{ $orden }}</td>
-                                            <td>{{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td>
+                                            <td>
+                                                @if ($cli -> alias <> '')
+                                                ("{{ $cli -> alias }}")
+                                                @endif
+                                                {{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}
+                                                </td>
                                             <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
                                         </tr>
                                     @php ($orden++)
