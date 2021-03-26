@@ -21,7 +21,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <form action="{{route('crear')}}" method="POST">
+                    <form action="{{route('client.store')}}" method="POST">
                         @csrf
                         <div class="input-group">
                             <div class="form-group required inline" data-fid="f99" name="tipo">

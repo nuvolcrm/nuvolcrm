@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$clientes = DB::table('clientes')
-            ->orderBy('idCliente', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
+$clientes = DB::table('clients')
+            ->orderBy('id', 'desc') //ha funcionado al añadir la línea 117: "order": [[ 3, "desc" ]],
             ->get();
 ?>
 
@@ -67,7 +67,7 @@ $clientes = DB::table('clientes')
               <tbody>
                 @foreach ($clientes as $row)
                 <tr>
-                  <td>{{ $row -> idCliente }}</td>
+                  <td>{{ $row -> id }}</td>
                   <td>
                   @if ($row -> alias <> '')
                   ("{{ $row -> alias }}")
@@ -107,7 +107,7 @@ $clientes = DB::table('clientes')
                     @endif
                   </td>
                   <td class="bg-info"></td>
-                  <td><a href="{{route('editar_cliente',$row->idCliente)}}"><i class='fas fa-pencil-alt'></i></a></td>
+                  <td><a href="{{route('editar_cliente',$row->id)}}"><i class='fas fa-pencil-alt'></i></a></td>
                 </tr>
                 @endforeach
               </tbody>

@@ -258,7 +258,7 @@ return [
         ['header' => 'CRM'],
         [
             'text'        => 'Clientes',
-            'url'         => 'clientes',
+            'url'         => 'clients',
             'icon'        => 'fas fa-user-friends',
             'label'       => 5,
             'label_color' => 'success',

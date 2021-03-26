@@ -3,19 +3,19 @@
 use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
-$clientes = DB::table('clientes')
-            ->orderBy('idCliente', 'desc')
+$clients = DB::table('clients')
+            ->orderBy('id', 'desc')
             ->take(5)
             ->get();
 
 $presupuestos = DB::table('presupuestos')
-            ->join('clientes', 'clientes.idCliente', '=', 'presupuestos.idCliente')
+            ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
             ->orderBy('presupuestos.idPresupuesto', 'desc')
             ->take(5)
             ->get();
 
 $ventas = DB::table('ventas')
-            ->join('clientes', 'clientes.idCliente', '=', 'ventas.idCliente')
+            ->join('clients', 'clients.id', '=', 'ventas.idCliente')
             ->orderBy('idVenta', 'desc')
             ->take(5)
             ->get();
@@ -50,10 +50,10 @@ $ventas = DB::table('ventas')
                     <div class="card-body">
 
 
-                        <!-- 5 ULTIMOS CLIENTES -->
+                        <!-- 5 ULTIMOS clients -->
 
                         <div class="box-header with-border">
-                            <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h3>
+                            <h3 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 clients</h3>
                             <!--
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -75,7 +75,7 @@ $ventas = DB::table('ventas')
                                     </thead>
                                     <tbody>
                                     @php($orden=1)
-                                    @foreach ($clientes as $cli)
+                                    @foreach ($clients as $cli)
                                         <tr>
                                             <td>{{ $orden }}</td>
                                             <td>{{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td>
@@ -90,8 +90,8 @@ $ventas = DB::table('ventas')
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
-                            <a href="{{ route('crear_clientes') }}" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
-                            <a href="{{ route('clientes') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                            <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo Cliente</a>
+                            <a href="{{ route('clients.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
                         </div>
                     </div>
                 </div>
