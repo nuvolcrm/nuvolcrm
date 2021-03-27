@@ -165,6 +165,26 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-4">
+                    <div>
+                        <label class="control-label">Keywords</label>
+                        <input type="text" name="keywords" placeholder="Keywords" class="form-control mb-2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <label class="control-label">Observaciones</label>
+                        <input type="text" name="observaciones" placeholder="Observaciones" class="form-control mb-2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <label class="control-label">Otros</label>
+                        <input type="text" name="otros" placeholder="Otros" class="form-control mb-2">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
                 <button class="btn btn-danger" type="submit">Cancelar</button>
             </div>
