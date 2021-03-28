@@ -138,7 +138,7 @@
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Código Postal</label>
-                            <input type="text" class="form-control mb-2" name="c_postal" data-rule-number="true"
+                            <input type="text" class="form-control mb-2" name="codigoPostal" data-rule-number="true"
                                 maxlength="5" placeholder="Código Postal" required>
                         </div>
                     </div>

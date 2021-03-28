@@ -32,6 +32,7 @@ class clientController extends Controller
         $client->cuenta = $request->cuenta;
         $client->fecha_nacimiento = $request->fecha_nacimiento;
         $client->direccion = $request->direccion;
+        $client->codigoPostal = $request->codigoPostal;
         $client->poblacion = $request->poblacion;
         $client->telefono = $request->telefono;
         $client->idioma = $request->idioma;
