@@ -32,21 +32,21 @@
                                 <label class="control-label" for="f99">Tipo</label>
                                 <div class="radio">
                                     <input id="segmento_res" name="segmento" type="radio" value="par">
-                                    <label for="segmento_res">
+                                    <!-- <label for="segmento_res"> -->
                                         Particular&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_esp" name="segmento" type="radio" value="esp">
-                                    <label for="segmento_esp">
+                                    <!-- <label for="segmento_esp"> -->
                                         Especial&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_aut" name="segmento" type="radio" value="aut">
-                                    <label for="segmento_aut">
+                                    <!-- <label for="segmento_aut"> -->
                                         Autónomo&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_emp" name="segmento" type="radio" value="emp">
-                                    <label for="segmento_emp">
+                                    <!-- <label for="segmento_emp"> -->
                                         Empresa
-                                    </label>
+                                    <!-- </label> -->
                                 </div>
                             </div>
                         </div>
