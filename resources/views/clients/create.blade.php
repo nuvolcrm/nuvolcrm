@@ -120,7 +120,7 @@
                             <input type="email" name="email" required placeholder="Email" class="form-control mb-2">
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-start">
+                    <div class="col-md-4 d-flex flex-row">
                         <div>
                             <label class="control-label">Newsletter</label>
                             <input type="checkbox" name="newsletter" class="form-control mb-2" checked>
