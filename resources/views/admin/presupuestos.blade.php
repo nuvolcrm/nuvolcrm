@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\DB;
 use Iluminate\Pagination\Paginator;
 
 $presupuestos = DB::table('presupuestos')
-  ->join('clients', 'clients.id', '=', 'presupuestos.id')
+  ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
   ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
   ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
   ->orderBy('presupuestos.idPresupuesto', 'desc')
@@ -90,8 +90,8 @@ $presupuestos = DB::table('presupuestos')
                   </td>
                   <td>
                     <!-- <button-sm class='btn-sm alert-light'> -->
-                    <a target='_blank' href="{{ route('imprimir') }}"><i class='far fa-file-pdf'></i></a>
-                    <!-- </button> -->
+                    <a target='_blank' href="route('imprimir')"><i class='far fa-file-pdf'></i></a>
+                    <!-- </button> route('imprimir')-->
                   </td>
                   <td>
                     <!-- <form method='POST' action=''>
