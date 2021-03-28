@@ -188,6 +188,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div>&nbsp;</div>
+            </div>
                 <div class="row">
                     <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
                     <a href="{{route("clients.index")}}">
