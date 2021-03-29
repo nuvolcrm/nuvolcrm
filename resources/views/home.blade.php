@@ -244,7 +244,7 @@ $ventas = DB::table('ventas')
                                         <!-- 5 ULTIMAS VENTAS -->
 
                                         <div class="box-header with-border">
-                                            <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;<strong>last 5 ventas</strong></h4>
+                                            <h4 class="box-title text-primary"><i class="far fa-handshake"></i>&nbsp;<strong>last 5 ventas</strong></h4>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
@@ -393,36 +393,42 @@ $ventas = DB::table('ventas')
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
+                                                                    <th></th>
                                                                     <th>Operador</th>
                                                                     <th class="text-right">Fibras</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">1</a></td>
+                                                                    <td>1</td>
+                                                                    <th><img src="1.jpg"></img></th>
                                                                     <td>Másmóvil</td>
                                                                     <td class="text-right"><span class="label label-success">9</span></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">2</a></td>
+                                                                    <td>2</td>
+                                                                    <th><img src="2.jpg"></img></th>
                                                                     <td>Lowi</td>
                                                                     <td class="text-right"><span class="label label-warning">6</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">3</a></td>
+                                                                    <td>3</td>
+                                                                    <th><img src="3.jpg"></img></th>
                                                                     <td>O2</td>
                                                                     <td class="text-right"><span class="label label-danger">4</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">4</a></td>
+                                                                    <td>4</td>
+                                                                    <th><img src="4.jpg"></img></th>
                                                                     <td>Digi</td>
                                                                     <td class="text-right"><span class="label label-info">3</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">5</a></td>
+                                                                    <td>5</td>
+                                                                    <th><img src="5.jpg"></img></th>
                                                                     <td>Movistar</td>
                                                                     <td class="text-right"><span class="label label-warning">2</span></td>
 
@@ -477,36 +483,42 @@ $ventas = DB::table('ventas')
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
+                                                                    <th></th>
                                                                     <th>Operador</th>
                                                                     <th class="text-right">Móviles</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">1</a></td>
+                                                                    <td>1</td>
+                                                                    <td><img src="masmovil.jpg"></img></td>
                                                                     <td>Másmóvil</td>
                                                                     <td class="text-right"><span class="label label-success">17</span></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">2</a></td>
+                                                                    <td>2</td>
+                                                                    <th><img src="2.jpg"></img></th>
                                                                     <td>Lowi</td>
                                                                     <td class="text-right"><span class="label label-warning">17</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">3</a></td>
+                                                                    <td>3</td>
+                                                                    <th><img src="3.jpg"></img></th>
                                                                     <td>LlamaYá</td>
                                                                     <td class="text-right"><span class="label label-danger">13</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">4</a></td>
+                                                                    <td>4</td>
+                                                                    <th><img src="4.jpg"></img></th>
                                                                     <td>O2</td>
                                                                     <td class="text-right"><span class="label label-info">11</span></td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><a href="pages/examples/invoice.html">5</a></td>
+                                                                    <td>5</td>
+                                                                    <th><img src="5.jpg"></img></th>
                                                                     <td>Digi</td>
                                                                     <td class="text-right"><span class="label label-warning">10</span></td>
 

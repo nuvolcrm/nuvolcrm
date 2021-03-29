@@ -273,7 +273,7 @@ return [
         [
             'text'        => 'Ventas',
             'url'         => 'ventas',
-            'icon'        => 'fas fa-table',
+            'icon'        => 'far fa-handshake',
             'label'       => 7,
             'label_color' => 'success',
         ],
