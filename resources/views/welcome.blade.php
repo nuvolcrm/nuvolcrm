@@ -7,34 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MOVY</title>
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="../resources/img/favicons/favicon.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="../resources/img/favicons/favicon.png">
-	<link rel="icon" type="image/png" href="../resources/img/favicons/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="../resources/img/favicons/favicon.png" sizes="16x16">
-	<link rel="manifest" href="../resources/img/favicons/favicon.png">
-	<link rel="shortcut icon" href="../resources/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="resources/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="resources/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" href="resources/img/favicons/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="resources/img/favicons/favicon.png" sizes="16x16">
+	<link rel="manifest" href="resources/img/favicons/favicon.png">
+	<link rel="shortcut icon" href="resources/img/favicons/favicon.png">
 	<meta name="msapplication-TileColor" content="#00a8ff">
-	<meta name="msapplication-config" content="../resources/img/favicons/favicon.png">
+	<meta name="msapplication-config" content="resources/img/favicons/favicon.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
 	<!-- Owl -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/owl.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/owl.css">
 	<!-- Animate.css -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/animate.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="../resources/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
 	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="../resources/fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="resources/fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/cardio.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/cardio.css">
 </head>
 
 <body>
 	<div class="preloader">
-		<img src="../resources/img/loader.gif" alt="Preloader image">
+		<img src="resources/img/loader.gif" alt="Preloader image">
 	</div>
 	<nav class="navbar">
 		<div class="container">
@@ -46,7 +46,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="../resources/img/favicon.png" data-active-url="../resources/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="resources/img/favicon.png" data-active-url="resources/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -218,7 +218,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="../resources/img/icons/heart-blue.png" alt="" class="icon">
+							<img src="resources/img/icons/heart-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">Cardio Training</h4>
 						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
@@ -227,7 +227,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="../resources/img/icons/guru-blue.png" alt="" class="icon">
+							<img src="resources/img/icons/guru-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">Yoga Pilates</h4>
 						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
@@ -236,7 +236,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="../resources/img/icons/weight-blue.png" alt="" class="icon">
+							<img src="resources/img/icons/weight-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">Power Training</h4>
 						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
@@ -261,7 +261,7 @@
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="../resources/img/team/team3.jpg" alt="Team Image" class="avatar">
+						<img src="resources/img/team/team3.jpg" alt="Team Image" class="avatar">
 						<div class="title">
 							<h4>Ben Adamson</h4>
 							<h5 class="muted regular">Fitness Instructor</h5>
@@ -277,7 +277,7 @@
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="../resources/img/team/team1.jpg" alt="Team Image" class="avatar">
+						<img src="resources/img/team/team1.jpg" alt="Team Image" class="avatar">
 						<div class="title">
 							<h4>Eva Williams</h4>
 							<h5 class="muted regular">Personal Trainer</h5>
@@ -293,7 +293,7 @@
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="../resources/img/team/team2.jpg" alt="Team Image" class="avatar">
+						<img src="resources/img/team/team2.jpg" alt="Team Image" class="avatar">
 						<div class="title">
 							<h4>John Phillips</h4>
 							<h5 class="muted regular">Personal Trainer</h5>
@@ -313,7 +313,7 @@
 			<div class="row no-margin">
 				<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
 					<div class="pricing">
-						<div class="box-main active" data-img="../resources/img/pricing1.jpg">
+						<div class="box-main active" data-img="resources/img/pricing1.jpg">
 							<h4 class="white">Yoga Pilates</h4>
 							<h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
 							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
@@ -330,7 +330,7 @@
 						</div>
 					</div>
 					<div class="pricing">
-						<div class="box-main" data-img="../resources/img/pricing2.jpg">
+						<div class="box-main" data-img="resources/img/pricing2.jpg">
 							<h4 class="white">Cardio Training</h4>
 							<h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
 							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
@@ -448,13 +448,13 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
-	<script src="../resources/js/jquery-1.11.1.min.js"></script>
-	<script src="../resources/js/owl.carousel.min.js"></script>
-	<script src="../resources/js/bootstrap.min.js"></script>
-	<script src="../resources/js/wow.min.js"></script>
-	<script src="../resources/js/typewriter.js"></script>
-	<script src="../resources/js/jquery.onepagenav.js"></script>
-	<script src="../resources/js/main.js"></script>
+	<script src="resources/js/jquery-1.11.1.min.js"></script>
+	<script src="resources/js/owl.carousel.min.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/wow.min.js"></script>
+	<script src="resources/js/typewriter.js"></script>
+	<script src="resources/js/jquery.onepagenav.js"></script>
+	<script src="resources/js/main.js"></script>
 </body>
 
 </html>
