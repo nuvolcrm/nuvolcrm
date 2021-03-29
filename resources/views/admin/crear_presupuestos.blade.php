@@ -4,7 +4,7 @@ use Iluminate\Pagination\Paginator;
 use App\Models\Presupuesto;
 
 $presupuestos = DB::table('presupuestos')
-            ->join('clients', 'clients.id', '=', 'presupuestos.id')
+            ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
             ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
             ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
             ->get();
@@ -13,11 +13,7 @@ $presupuestos = DB::table('presupuestos')
 
 @extends('adminlte::page')
 
-<<<<<<< HEAD
-@section('title', 'clients')
-=======
 @section('title', 'Presupuestos')
->>>>>>> 79e19a1620f595068563236487387d0f78285174
 
 @section('content_header')
 <div class="container-fluid">
@@ -35,27 +31,18 @@ $presupuestos = DB::table('presupuestos')
     <!-- /.card -->
     <div class="card">
         <!-- /.card-header -->
-        <form action="{{route('crearPre')}}" method="POST">
+        <form action="{{route('crear_presupuestos')}}" method="POST">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     
                         @csrf
-<<<<<<< HEAD
-                        <div class="col-sm">
-                            <div>
-                                <label class="control-label">DNI</label>
-                                <input type="text" name="dni" placeholder="DNI" class="form-control mb-2" required>
-                            </div>
-                            <a href="{{ route('crear_clients') }}" class="btn btn-primary"><i>Crear Cliente</i></a>
-=======
                         <div>
                             <label class="control-label">DNI</label>
                             <select name="idCliente" class="form-control mb-2">
                                 @foreach ($presupuestos as $pre)
                                 <option value="{{$pre -> idCliente}}">{{$pre -> dni}}, {{$pre -> nombre}} {{$pre -> apellido1}} {{$pre -> apellido2}}({{$pre -> alias}})</option>                              
                                 @endforeach
->>>>>>> 79e19a1620f595068563236487387d0f78285174
                         </div>
                 </div>
                 <div class="col-md-4">
@@ -145,10 +132,6 @@ $presupuestos = DB::table('presupuestos')
 
 @section('js')
 <script>
-<<<<<<< HEAD
-    console.log('Crear clients');
-=======
     console.log('Crear Presupuestos');
->>>>>>> 79e19a1620f595068563236487387d0f78285174
 </script>
 @stop
