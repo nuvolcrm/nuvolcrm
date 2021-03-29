@@ -15,10 +15,10 @@ use App\Http\Controllers\clientController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 Route::get('/login', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Auth::routes();
