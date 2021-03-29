@@ -41,6 +41,81 @@ $ventas = DB::table('ventas')
     <section class="content">
 
         <div class="row">
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-success">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>3847</strong>&nbsp;<i class="fas fa-euro-sign"></i></h1>
+                            <h3>Ingresos</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-primary">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>28</strong>&nbsp;<i class="fas fa-wifi"></i></h1>
+                            <h3>Fibras</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-danger">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>85</strong>&nbsp;<i class="fas fa-mobile"></i></h1>
+                            <h3>Móviles</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-warning">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>27</strong>&nbsp;<i class="fas fa-user"></i></h1>
+                            <h3>Nuevos Clientes</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-secondary">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>12</strong>&nbsp;<i class="fas fa-calculator"></i></h1>
+                            <h3>Nuevos presup.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- /.card -->
+                <div class="card bg-info">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="box-header with-border">
+                            <h1><strong>128</strong>&nbsp;<i class="fas fa-newspaper"></i></h1>
+                            <h3>Mailings abiertos</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-4">
                 <!-- /.card -->
                 <div class="card">
