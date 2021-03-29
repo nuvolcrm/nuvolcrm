@@ -123,7 +123,7 @@ $ventas = DB::table('ventas')
                     <div class="card-body">
                         <!-- 5 ULTIMOS CLIENTES -->
                         <div class="box-header with-border">
-                            <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;Últimos 5 Clientes</h4>
+                            <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;<strong>last 5 Clientes</strong></h4>
                             <!--
                                 <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -183,8 +183,7 @@ $ventas = DB::table('ventas')
                                 <!-- 5 ULTIMOS PRESUPUESTOS -->
 
                                 <div class="box-header with-border">
-                                    <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;Últimos 5 presupuestos
-                                    </h4>
+                                    <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;<strong>last 5 presupuestos</strong></h4>
                                     <!--
                                                                 <div class="box-tools pull-right">
                                                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -245,7 +244,7 @@ $ventas = DB::table('ventas')
                                         <!-- 5 ULTIMAS VENTAS -->
 
                                         <div class="box-header with-border">
-                                            <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;Últimas 5 ventas</h4>
+                                            <h4 class="box-title text-primary"><i class="fas fa-table"></i>&nbsp;<strong>last 5 ventas</strong></h4>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
@@ -298,8 +297,7 @@ $ventas = DB::table('ventas')
                                             <div class="card-body">
                                                 <!-- 5 OPERADORES POR INGRESOS -->
                                                 <div class="box-header with-border">
-                                                    <h4 class="box-title text-primary"><i class="fas fa-piggy-bank"></i>&nbsp;Ingresos: 2.897 €
-                                                    </h4>
+                                                    <h4 class="box-title text-primary"><i class="fas fa-piggy-bank"></i>&nbsp;<strong>top 5 ingresos</strong></h4>
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
@@ -347,10 +345,9 @@ $ventas = DB::table('ventas')
                                                     </div>
                                                     <!-- /.table-responsive -->
                                                 </div>
-                                                <!-- /.box-body -->
-                                                <div class="box-footer clearfix"><a href="javascript:void(0)"
+                                                <!-- <div class="box-footer clearfix"><a href="javascript:void(0)"
                                                         class="btn btn-sm btn-default pull-right">Ver todo</a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
 
@@ -387,7 +384,7 @@ $ventas = DB::table('ventas')
                                                 <!-- 5 OPERADORES POR FIBRAS -->
 
                                                 <div class="box-header with-border">
-                                                    <h4 class="box-title text-primary"><i class="fas fa-wifi"></i>&nbsp;Fibras: 26</h4>
+                                                    <h4 class="box-title text-primary"><i class="fas fa-wifi"></i>&nbsp;<strong>top 5 fibras</strong></h4>
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
@@ -435,10 +432,9 @@ $ventas = DB::table('ventas')
                                                     </div>
                                                     <!-- /.table-responsive -->
                                                 </div>
-                                                <!-- /.box-body -->
-                                                <div class="box-footer clearfix"> <a href="javascript:void(0)"
+                                                <!-- <div class="box-footer clearfix"> <a href="javascript:void(0)"
                                                         class="btn btn-sm btn-default pull-right">Ver todo</a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
 
@@ -472,7 +468,7 @@ $ventas = DB::table('ventas')
                                                 <!-- 5 OPERADORES POR MOVILES -->
 
                                                 <div class="box-header with-border">
-                                                    <h4 class="box-title text-primary"><i class="fas fa-mobile-alt"></i>&nbsp;Móviles: 68</h4>
+                                                    <h4 class="box-title text-primary"><i class="fas fa-mobile-alt"></i>&nbsp;<strong>top 5 móviles</strong></h4>
                                                 </div>
                                                 <!-- /.box-header -->
                                                 <div class="box-body">
@@ -520,11 +516,9 @@ $ventas = DB::table('ventas')
                                                     </div>
                                                     <!-- /.table-responsive -->
                                                 </div>
-                                                <!-- /.box-body -->
-                                                <div class="box-footer clearfix">
-                                                    <!--<a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>-->
+                                                <!-- <div class="box-footer clearfix">
                                                     <a href="javascript:void(0)" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                                                </div>
+                                                </div> -->
 
 
                                                 <!-- /.box-footer -->
