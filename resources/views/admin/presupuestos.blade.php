@@ -89,9 +89,9 @@ $presupuestos = DB::table('presupuestos')
                     <!-- </button> -->
                   </td>
                   <td>
-                    <!-- <button-sm class='btn-sm alert-light'> -->
-                    <!-- <a target='_blank' href="{{ route('imprimir') }}"><i class='far fa-file-pdf'></i></a> -->
-                    <!-- </button> -->
+                    <button-sm class='btn-sm alert-light'>
+                    <a target='_blank' href="{{-- {{ route('imprimir') }} --}}"><i class='far fa-file-pdf'></i></a>
+                    </button>
                   </td>
                   <td>
                     <!-- <form method='POST' action=''>
