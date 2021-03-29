@@ -20,6 +20,9 @@ use App\Http\Controllers\ventasController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 // Rutas de autentificacion
 Auth::routes();

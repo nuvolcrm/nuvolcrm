@@ -32,21 +32,21 @@
                                 <label class="control-label" for="f99">Tipo</label>
                                 <div class="radio">
                                     <input id="segmento_res" name="segmento" type="radio" value="par">
-                                    <label for="segmento_res">
+                                    <!-- <label for="segmento_res"> -->
                                         Particular&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_esp" name="segmento" type="radio" value="esp">
-                                    <label for="segmento_esp">
+                                    <!-- <label for="segmento_esp"> -->
                                         Especial&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_aut" name="segmento" type="radio" value="aut">
-                                    <label for="segmento_aut">
+                                    <!-- <label for="segmento_aut"> -->
                                         Autónomo&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_emp" name="segmento" type="radio" value="emp">
-                                    <label for="segmento_emp">
+                                    <!-- <label for="segmento_emp"> -->
                                         Empresa
-                                    </label>
+                                    <!-- </label> -->
                                 </div>
                             </div>
                         </div>
@@ -120,10 +120,10 @@
                             <input type="email" name="email" required placeholder="Email" class="form-control mb-2">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-flex flex-row">
                         <div>
                             <label class="control-label">Newsletter</label>
-                            <input type="checkbox" name="newsletter" class="" checked>
+                            <input type="checkbox" name="newsletter" class="form-control mb-2" checked>
                         </div>
                     </div>
                 </div>
@@ -187,6 +187,9 @@
                         <input type="text" name="otros" placeholder="Otros" class="form-control mb-2">
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div>&nbsp;</div>
             </div>
                 <div class="row">
                     <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
