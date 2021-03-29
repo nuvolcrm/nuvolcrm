@@ -17,6 +17,9 @@ use App\Http\Controllers\clientController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
