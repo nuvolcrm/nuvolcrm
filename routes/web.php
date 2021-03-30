@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clientController;
-use App\Http\Controllers\presupuestosController;
+use App\Http\Controllers\PresupuestosController;
 use App\Http\Controllers\ventasController;
 
 /*
@@ -36,12 +36,12 @@ Route::get('clients/{client}/edit', [clientController::class, 'edit'])->name('cl
 Route::put('clients/{client}', [clientController::class, 'update'])->name('clients.update');
 
 // Rutas de presupuestos
-Route::get('presupuestos', [presupuestosController::class, 'index'])->name('presupuestos.index');
-Route::get('presupuestos/create', [presupuestosController::class, 'create'])->name('presupuestos.create');
-Route::put('presupuestos', [presupuestosController::class, 'store'])->name('presupuestos.store');
-Route::get('presupuestos/{presupuesto}', [presupuestosController::class, 'show'])->name('presupuestos.show');
-Route::get('presupuestos/{presupuesto}/edit', [presupuestosController::class, 'edit'])->name('presupuestos.edit');
-Route::put('presupuestos/{presupuesto}', [presupuestosController::class, 'update'])->name('presupuestos.update');
+Route::get('presupuestos', [PresupuestosController::class, 'index'])->name('presupuestos.index');
+Route::get('presupuestos/create', [PresupuestosController::class, 'create'])->name('presupuestos.create');
+Route::put('presupuestos', [PresupuestosController::class, 'store'])->name('presupuestos.store');
+Route::get('presupuestos/{presupuesto}', [PresupuestosController::class, 'show'])->name('presupuestos.show');
+Route::get('presupuestos/{presupuesto}/edit', [PresupuestosController::class, 'edit'])->name('presupuestos.edit');
+Route::put('presupuestos/{presupuesto}', [PresupuestosController::class, 'update'])->name('presupuestos.update');
 
 // Rutas de ventas
 Route::get('ventas', [ventasController::class, 'index'])->name('ventas.index');
