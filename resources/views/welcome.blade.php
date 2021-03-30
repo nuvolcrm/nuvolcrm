@@ -7,34 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MOVY</title>
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="../frontend/img/favicons/favicon.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="../frontend/img/favicons/favicon.png">
-	<link rel="icon" type="image/png" href="../frontend/img/favicons/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="../frontend/img/favicons/favicon.png" sizes="16x16">
-	<link rel="manifest" href="../frontend/img/favicons/favicon.png">
-	<link rel="shortcut icon" href="../frontend/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../frontend/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../frontend/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" href="../../frontend/img/favicons/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../frontend/img/favicons/favicon.png" sizes="16x16">
+	<link rel="manifest" href="../../frontend/img/favicons/favicon.png">
+	<link rel="shortcut icon" href="../../frontend/img/favicons/favicon.png">
 	<meta name="msapplication-TileColor" content="#00a8ff">
-	<meta name="msapplication-config" content="../frontend/img/favicons/favicon.png">
+	<meta name="msapplication-config" content="../../frontend/img/favicons/favicon.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="../frontend/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/css/normalize.css">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="../frontend/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/css/bootstrap.css">
 	<!-- Owl -->
-	<link rel="stylesheet" type="text/css" href="../frontend/css/owl.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/css/owl.css">
 	<!-- Animate.css -->
-	<link rel="stylesheet" type="text/css" href="../frontend/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/css/animate.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="../frontend/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
 	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="../frontend/fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="../frontend/css/cardio.css">
+	<link rel="stylesheet" type="text/css" href="../../frontend/css/cardio.css">
 </head>
 
 <body>
 	<div class="preloader">
-		<img src="../frontend/img/loader.gif" alt="Preloader image">
+		<img src="../../frontend/img/loader.gif" alt="Preloader image">
 	</div>
 	<nav class="navbar">
 		<div class="container">
@@ -43,7 +43,7 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="../frontend/img/favicon.png" data-active-url="../frontend/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="../../frontend/img/favicon.png" data-active-url="../../frontend/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -573,13 +573,13 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
-	<script src="../frontend/js/jquery-1.11.1.min.js"></script>
-	<script src="../frontend/js/owl.carousel.min.js"></script>
-	<script src="../frontend/js/bootstrap.min.js"></script>
-	<script src="../frontend/js/wow.min.js"></script>
-	<script src="../frontend/js/typewriter.js"></script>
-	<script src="../frontend/js/jquery.onepagenav.js"></script>
-	<script src="../frontend/js/main.js"></script>
+	<script src="../../frontend/js/jquery-1.11.1.min.js"></script>
+	<script src="../../frontend/js/owl.carousel.min.js"></script>
+	<script src="../../frontend/js/bootstrap.min.js"></script>
+	<script src="../../frontend/js/wow.min.js"></script>
+	<script src="../../frontend/js/typewriter.js"></script>
+	<script src="../../frontend/js/jquery.onepagenav.js"></script>
+	<script src="../../frontend/js/main.js"></script>
 </body>
 
 </html>
