@@ -448,7 +448,7 @@ return [
             ],
         ],
         'Pace' => [
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'css',
@@ -475,5 +475,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
     */
 
-    'livewire' => true,
+    'livewire' => false,
 ];
