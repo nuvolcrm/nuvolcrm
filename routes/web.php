@@ -20,9 +20,9 @@ use App\Http\Controllers\ventasController;
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
 // Rutas de autentificacion
 Auth::routes();
@@ -50,7 +50,8 @@ Route::put('ventas', [ventasController::class, 'store'])->name('ventas.store');
 Route::get('ventas/{venta}', [ventasController::class, 'show'])->name('ventas.show');
 Route::get('ventas/{venta}/edit', [ventasController::class, 'edit'])->name('ventas.edit');
 Route::put('ventas/{venta}', [ventasController::class, 'update'])->name('ventas.update');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*
 //------------------------------------------------------------------------------------------
 Route::get('extra/pedidos', [App\Http\Controllers\HomeController::class, 'pedidos'])->name('pedidos');
 Route::get('extra/enlaces', [App\Http\Controllers\HomeController::class, 'enlaces'])->name('enlaces');
@@ -64,7 +65,7 @@ Route::get('gestion/colaboradores', [App\Http\Controllers\HomeController::class,
 Route::get('gestion/usuarios_roles', [App\Http\Controllers\HomeController::class, 'usuarios_roles'])->name('usuarios_roles');
 
 // Rutas de clientes --> Victor
-/*Route::get('/clientes', [App\Http\Controllers\HomeController::class, 'clientes'])->name('clientes');
+Route::get('/clientes', [App\Http\Controllers\HomeController::class, 'clientes'])->name('clientes');
 Route::get('/crear_clientes', [App\Http\Controllers\HomeController::class, 'crear_clientes'])->name('crear_clientes');
 Route::get('/editar_cliente', [App\Http\Controllers\ClientesController::class, 'edit'])->name('editar_cliente');
 
@@ -73,7 +74,7 @@ Route::get('/presupuestos', [App\Http\Controllers\HomeController::class, 'presup
 Route::get('/ventas', [App\Http\Controllers\HomeController::class, 'ventas'])->name('ventas');
 Route::post('/crear', [App\Http\Controllers\ClientesController::class, 'store'])->name('crear.store');
 Route::patch('/editar', [App\Http\Controllers\ClientesController::class, 'update'])->name('editar');
-
+/*
 Route::get('/presupuestos', [App\Http\Controllers\HomeController::class, 'presupuestos'])->name('presupuestos');
 Route::get('/crear_presupuestos', [App\Http\Controllers\HomeController::class, 'crear_presupuestos'])->name('crear_presupuestos');
 
