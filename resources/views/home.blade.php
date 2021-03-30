@@ -467,7 +467,7 @@ $ventas = DB::table('ventas')
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <th><img src="/public/img/masmovil.jpg"></img></th>
+                                        <th><img src="img/masmovil.jpg" height="30"></img></th>
                                         <td>Másmóvil</td>
                                         <td class="text-right"><span class="label label-success">9</span></td>
                                     </tr>
