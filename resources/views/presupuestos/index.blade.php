@@ -52,7 +52,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($presupuestos as $pre)
+                            @foreach ($presupuesto as $pre)
                                 <tr>
                                     <td>{{ $pre->idPresupuesto }}</td>
                                     <td>{{ $pre->fecha }}</td>
