@@ -201,9 +201,10 @@ return [
     'profile_url' => true,
 
     'use_route_url' => false,
-    'clients_url' => 'clients',
-    'crear_clients_url' => 'crear_clients',
+    'clients_url' => 'presupuestos',
+    'crear_presupuestos_url' => 'crear_presupuestos',
     'profile_url' => true,
+    
     /*
     |--------------------------------------------------------------------------
     | Laravel Mix
