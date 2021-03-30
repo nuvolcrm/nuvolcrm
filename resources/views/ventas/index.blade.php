@@ -58,7 +58,7 @@
                                     @foreach ($ventas as $row)
                                         <tr>
                                             <td>{{ $row->idVenta }}</td>
-                                            <td><img src="img/{{ $row->logo }}" height="30" alt="{{ $row->nombreOperador }}"></img></td>
+                                            <td><img src="img/{{ $row->logo }}" height="40" alt="{{ $row->nombreOperador }}"></img></td>
                                             <td>{{ $row->descripcion }}</td>
                                             <td>
                                                 <i class='{{ $row->imagen }} text-primary'></i>
