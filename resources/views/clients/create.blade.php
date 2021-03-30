@@ -123,7 +123,10 @@
                     <div class="col-md-4 d-flex flex-row">
                         <div>
                             <label class="control-label">Newsletter</label>
-                            <input type="checkbox" name="newsletter" class="form-control mb-2" checked>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="newsletter" value="1" id="flexCheckDefault" checked>
+                            </div> 
+                            <!-- <input type="checkbox" name="newsletter" class="form-control mb-2" checked> -->
                         </div>
                     </div>
                 </div>

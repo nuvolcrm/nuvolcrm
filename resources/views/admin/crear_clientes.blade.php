@@ -28,9 +28,9 @@
                                 <label class="control-label" for="f99">Segmento</label>
                                 <div class="radio">
                                     <input id="segmento_res" name="segmento" type="radio" value="par">
-                                    <label for="segmento_res">
+                                    <!-- <label for="segmento_res"> -->
                                         Particular&nbsp;&nbsp;
-                                    </label>
+                                    <!-- </label> -->
                                     <input id="segmento_esp" name="segmento" type="radio" value="esp">
                                     <label for="segmento_esp">
                                         Especial&nbsp;&nbsp;
@@ -116,7 +116,13 @@
                  <div class="col-md-4">
                     <div>
                         <label class="control-label">Newsletter</label>
-                        <input type="checkbox" name="newsletter" class="" checked>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                activado
+                            </label>
+                            </div>                        
+                        <!-- <input type="checkbox" name="newsletter" class="" checked> -->
                     </div>
                  </div>
             </div>
