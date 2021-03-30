@@ -67,12 +67,12 @@ class presupuestosController extends Controller
         //$presupuesto = presupuesto::find($presupuesto);
  
         // compact('presupuesto') = ['presupuesto' => $presupuesto]
-        return view('presupuestos.show', compact('presupuesto'));
+        return view('presupuestos.show', compact('presupuestos'));
     }
 
     public function edit(presupuesto $presupuesto){
 
-        return view('presupuestos.edit', compact('presupuesto'));
+        return view('presupuestos.edit', compact('presupuestos'));
         
     }
 
@@ -94,7 +94,7 @@ class presupuestosController extends Controller
         
         $presupuesto->save();
 
-        return view('presupuestos.show', compact('presupuesto'));
+        return view('presupuestos.show', compact('presupuestos'));
         //return view('presupuestos.edit', compact('presupuesto'));
         
     }
