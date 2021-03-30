@@ -105,7 +105,7 @@
                                         @endif
                                     </td>
                                     <td class="bg-info text-right"></td>
-                                    <td><a href="{{ route('clients.edit', $client->id) }}"><i
+                                    <td><a href="{{ route('clients.show', $client->id) }}"><i
                                                 class='fas fa-pencil-alt'></i></a></td>
                                 </tr>
                             @endforeach
