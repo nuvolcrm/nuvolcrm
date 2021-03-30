@@ -33,19 +33,19 @@
                                 <div class="radio">
                                     <input id="segmento_res" name="segmento" type="radio" value="par">
                                     <!-- <label for="segmento_res"> -->
-                                        Particular&nbsp;&nbsp;
+                                    Particular&nbsp;&nbsp;
                                     <!-- </label> -->
                                     <input id="segmento_esp" name="segmento" type="radio" value="esp">
                                     <!-- <label for="segmento_esp"> -->
-                                        Especial&nbsp;&nbsp;
+                                    Especial&nbsp;&nbsp;
                                     <!-- </label> -->
                                     <input id="segmento_aut" name="segmento" type="radio" value="aut">
                                     <!-- <label for="segmento_aut"> -->
-                                        Autónomo&nbsp;&nbsp;
+                                    Autónomo&nbsp;&nbsp;
                                     <!-- </label> -->
                                     <input id="segmento_emp" name="segmento" type="radio" value="emp">
                                     <!-- <label for="segmento_emp"> -->
-                                        Empresa
+                                    Empresa
                                     <!-- </label> -->
                                 </div>
                             </div>
@@ -169,31 +169,32 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col-md-4">
-                    <div>
-                        <label class="control-label">Keywords</label>
-                        <input type="text" name="keywords" placeholder="Keywords" class="form-control mb-2">
+                    <div class="col-md-4">
+                        <div>
+                            <label class="control-label">Keywords</label>
+                            <input type="text" name="keywords" placeholder="Keywords" class="form-control mb-2">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <label class="control-label">Observaciones</label>
+                            <input type="text" name="observaciones" placeholder="Observaciones"
+                                class="form-control mb-2">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <label class="control-label">Otros</label>
+                            <input type="text" name="otros" placeholder="Otros" class="form-control mb-2">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div>
-                        <label class="control-label">Observaciones</label>
-                        <input type="text" name="observaciones" placeholder="Observaciones" class="form-control mb-2">
-                    </div>
+                <div class="row">
+                    <div>&nbsp;</div>
                 </div>
-                <div class="col-md-4">
-                    <div>
-                        <label class="control-label">Otros</label>
-                        <input type="text" name="otros" placeholder="Otros" class="form-control mb-2">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div>&nbsp;</div>
-            </div>
                 <div class="row">
                     <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
-                    <a href="{{route("clients.index")}}">
+                    <a href="{{ route('clients.index') }}">
                         <button type="button" class="btn btn-danger">Cancelar</button>
                     </a>
                 </div>
