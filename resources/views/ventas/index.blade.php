@@ -58,9 +58,11 @@
                                     @foreach ($ventas as $venta)
                                         <tr>
                                             <td>{{ $venta->idVenta }}</td>
-                                            <td>{{ $venta->nombreOperador }}</td>
+                                            <td><img src="img/{{ $venta->logo }}" height="40" alt="{{ $venta->nombreOperador }}"></img></td>
                                             <td>{{ $venta->descripcion }}</td>
-                                            <td><i class='{{ $venta->imagen }} text-primary'></i></td>
+                                            <td>
+                                                <i class='{{ $venta->imagen }} text-primary'></i>
+                                                </td>
                                             <td class="text-right">{{ $venta->cuota }}&nbsp€</td>
                                             <td>{{ $venta->dni }}</td>
                                             <td><i class='fas fa-user text-primary'></i></td>
