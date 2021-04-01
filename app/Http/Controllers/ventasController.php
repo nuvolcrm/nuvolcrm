@@ -34,23 +34,24 @@ class ventasController extends Controller
 
         $venta = new venta();
 
-        // $venta->dni = $request->dni;
-        // $venta->caduca = $request->caduca;
-        // $venta->nombre = $request->nombre;
-        // $venta->apellido1 = $request->apellido1;
-        // $venta->apellido2 = $request->apellido2;
-        // $venta->alias = $request->alias;
-        // $venta->keywords = $request->keywords;
-        // $venta->cuenta = $request->cuenta;
-        // $venta->fecha_nacimiento = $request->fecha_nacimiento;
-        // $venta->direccion = $request->direccion;
-        // $venta->codigoPostal = $request->codigoPostal;
-        // $venta->poblacion = $request->poblacion;
-        // $venta->telefono = $request->telefono;
-        // $venta->idioma = $request->idioma;
-        // $venta->email = $request->email;
-        // $venta->mailing = $request->mailing;
-        // $venta->segmento = $request->segmento;
+        $venta->idCliente  = $request->idCliente ;
+        $venta->vendedor = $request->vendedor;
+        $venta->idTarifa  = $request->idTarifa ;
+        $venta->idColaborador  = $request->idColaborador ;
+        $venta->linea = $request->linea;
+        $venta->prepago = $request->prepago;
+        $venta->fecha_alta = $request->fecha_alta;
+        $venta->fecha_activa = $request->fecha_activa;
+        $venta->fecha_sale = $request->fecha_sale;
+        $venta->tipoalta = $request->tipoalta;
+        $venta->libre = $request->libre;
+        $venta->cobrado = $request->cobrado;
+        $venta->pagado = $request->pagado;
+        $venta->comision = $request->comision;
+        $venta->extracomision = $request->extracomision;
+        $venta->observaciones = $request->observaciones;
+        $venta->incidencias = $request->incidencias;
+        $venta->usuario = $request->usuario;
 
         $venta->save();
 
@@ -75,23 +76,24 @@ class ventasController extends Controller
 
     public function update(Request $request, venta $venta)
     {
-
-        // $venta->dni = $request->dni;
-        // $venta->caduca = $request->caduca;
-        // $venta->nombre = $request->nombre;
-        // $venta->apellido1 = $request->apellido1;
-        // $venta->apellido2 = $request->apellido2;
-        // $venta->alias = $request->alias;
-        // $venta->keywords = $request->keywords;
-        // $venta->cuenta = $request->cuenta;
-        // $venta->fecha_nacimiento = $request->fecha_nacimiento;
-        // $venta->direccion = $request->direccion;
-        // $venta->poblacion = $request->poblacion;
-        // $venta->telefono = $request->telefono;
-        // $venta->idioma = $request->idioma;
-        // $venta->email = $request->email;
-        // $venta->mailing = $request->mailing;
-        // $venta->segmento = $request->segmento;
+        $venta->idCliente  = $request->idCliente ;
+        $venta->vendedor = $request->vendedor;
+        $venta->idTarifa  = $request->idTarifa ;
+        $venta->idColaborador  = $request->idColaborador ;
+        $venta->linea = $request->linea;
+        $venta->prepago = $request->prepago;
+        $venta->fecha_alta = $request->fecha_alta;
+        $venta->fecha_activa = $request->fecha_activa;
+        $venta->fecha_sale = $request->fecha_sale;
+        $venta->tipoalta = $request->tipoalta;
+        $venta->libre = $request->libre;
+        $venta->cobrado = $request->cobrado;
+        $venta->pagado = $request->pagado;
+        $venta->comision = $request->comision;
+        $venta->extracomision = $request->extracomision;
+        $venta->observaciones = $request->observaciones;
+        $venta->incidencias = $request->incidencias;
+        $venta->usuario = $request->usuario;
 
         $venta->save();
 

@@ -54,7 +54,7 @@
                         <tbody>
                             @foreach ($presupuestos as $pre)
                                 <tr>
-                                    <td>{{ $pre->idPresupuesto }}</td>
+                                    <td>{{ $pre->id }}</td>
                                     <td>{{ $pre->fecha }}</td>
                                     <td>
                                         @if ($pre->alias != '')
@@ -84,26 +84,26 @@
                                     </td>
                                     <td>
                                         <!-- <form method='POST' action=''>
-                                        <td value='' name=''>
-                                        <button-sm class='btn-sm btn-success' name='' value='' type='submit'>
-                                        <i class='far fa-smile'></i>
-                                        </button>
-                                        </td>
-                                        </form>
-                                        <form method='POST' action=''>
-                                        <td value='' name=''>
-                                        <button-sm class='btn-sm btn-warning' name='' value='' type='submit'>
-                                        <i class='far fa-meh'></i>
-                                        </button>
-                                        </td>
-                                        </form>
-                                        <form method='POST' action=''>
-                                        <td value='' name=''>
-                                        <button-sm class='btn-sm btn-danger' name='' value='' type='submit'>
-                                        <i class='far fa-frown'></i>
-                                        </button>
-                                        </td>
-                                        </form> -->
+                                            <td value='' name=''>
+                                            <button-sm class='btn-sm btn-success' name='' value='' type='submit'>
+                                            <i class='far fa-smile'></i>
+                                            </button>
+                                            </td>
+                                            </form>
+                                            <form method='POST' action=''>
+                                            <td value='' name=''>
+                                            <button-sm class='btn-sm btn-warning' name='' value='' type='submit'>
+                                            <i class='far fa-meh'></i>
+                                            </button>
+                                            </td>
+                                            </form>
+                                            <form method='POST' action=''>
+                                            <td value='' name=''>
+                                            <button-sm class='btn-sm btn-danger' name='' value='' type='submit'>
+                                            <i class='far fa-frown'></i>
+                                            </button>
+                                            </td>
+                                            </form> -->
                                         <button class='btn-xs btn-success'><i class='far fa-smile'></i></button>
                                         <button class='btn-xs btn-warning'><i class='far fa-meh'></i></button>
                                         <button class='btn-xs btn-danger'><i class='far fa-frown'></i></button>
