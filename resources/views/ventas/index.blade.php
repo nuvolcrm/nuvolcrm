@@ -65,7 +65,7 @@
                                                 </td>
                                             <td class="text-right">{{ $venta->cuota }}&nbsp€</td>
                                             <td>{{ $venta->dni }}</td>
-                                            <td><i class='fas fa-user text-primary'></i></td>
+                                            <td><a href="clients/{{ $venta->id }}"><i class='fas fa-user'></i></a></td>
                                             <td>
                                                 @if ($venta->alias != '')
                                                     ("{{ $venta->alias }}")
