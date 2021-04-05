@@ -12,7 +12,7 @@
     </div>
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
 @endsection
 
 @stop
@@ -28,15 +28,14 @@
                 @method('PUT')
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="">
-                            <label class="control-label">DNI</label>
-                            <select name="idCliente" class="form-control mb-2" id="sjs-example-diacritics">
+                            <label class="control-label">DNI</label><br>
+                            <select class="js-example-basic-single" name="idCliente">
+                            <!-- <select name="idCliente" class="form-control mb-2" id="sjs-example-diacritics"> -->
                                 @foreach ($presupuestos as $pre)
                                     <option value="{{ $pre->idCliente }}">{{ $pre->dni }}, {{ $pre->nombre }}
-                                        {{ $pre->apellido1 }} {{ $pre->apellido2 }}({{ $pre->alias }})</option>
+                                        {{ $pre->apellido1 }} {{ $pre->apellido2 }} ({{ $pre->alias }})</option>
                                 @endforeach
                             </select>
-                        </div>
                     </div>
                     {{-- <div class="col-md-4">
                         <div>
@@ -141,9 +140,14 @@
 
 @section('js')
 
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+<!-- <script>
     $("#js-example-diacritics").select2();
 
+</script> -->
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
 </script>
 @stop
