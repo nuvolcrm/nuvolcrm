@@ -24,104 +24,134 @@
         @method('PUT')
         <div class="row">
             <div class="col-md-4">
-                <label class="control-label">Numpresupuesto - INT</label>
-                <input type="text" name="Numpresupuesto" placeholder="Numpresupuesto" class="form-control mb-2"
+                <label class="control-label">número de presupuesto</label>
+                <input type="numder" name="Numpresupuesto" placeholder="Numpresupuesto" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">idCliente  - INT</label>
-                <input type="text" name="idCliente " placeholder="idCliente " class="form-control mb-2"
+                <label class="control-label">Cliente</label><br>
+                <select class="js-example-basic-single" name="idCliente">
+                <!-- <select name="idCliente" class="form-control mb-2" id="sjs-example-diacritics"> -->
+                    @foreach ($ventas as $pre)
+                        <option value="{{ $pre->idCliente }}">{{ $pre->dni }}, {{ $pre->nombre }}
+                            {{ $pre->apellido1 }} {{ $pre->apellido2 }} 
+                                @if ($pre->alias)
+                                    ({{ $pre->alias }})
+                                @endif
+                            </option>
+                    @endforeach
+                </select>
+        </div>
+            <div class="col-md-4">
+                <label class="control-label">Vendedor</label>
+                <input type="number" name="vendedor" placeholder="vendedor" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">vendedor - INT</label>
-                <input type="text" name="vendedor" placeholder="vendedor" class="form-control mb-2"
-                    required>
-            </div>
-            <div class="col-md-4">
-                <label class="control-label">idTarifa - INT</label>
+                <label class="control-label">Tarifa</label>
+                <select name="idTarifa" class="form-control mb-2" id="sjs-example-diacritics">
+                    @foreach ($tarifas as $tarifa)
+                        <option value="{{ $tarifa->idTarifa }}">{{ $tarifa->nombreTarifa }} ({{ $tarifa->cuota }}€)</option>
+                    @endforeach
+                </select>
+                {{-- <label class="control-label">Tarifa</label>
                 <input type="text" name="idTarifa" placeholder="idTarifa" class="form-control mb-2"
-                    required>
+                    required> --}}
             </div>
             <div class="col-md-4">
-                <label class="control-label">idColaborador - DATE</label>
+                <label class="control-label">Colaborador</label>
+                <select name="idColaborador" class="form-control mb-2" >
+                    @foreach ($colaboradores as $colaborador)
+                        <option value="{{ $colaborador->idColaborador }}">{{ $colaborador->nombre }}</option>
+                    @endforeach
+                </select>
+                {{-- <label class="control-label">idColaborador - DATE</label>
                 <input type="text" name="idColaborador" placeholder="idColaborador" class="form-control mb-2"
-                    required>
+                    required> --}}
             </div>
             <div class="col-md-4">
-                <label class="control-label">linea - VARCHAR(60)</label>
+                <label class="control-label">Linea</label>
                 <input type="text" name="linea" placeholder="linea" class="form-control mb-2"
                     required>
             </div>
-            <div class="col-md-4">
-                <label class="control-label">prepago - VARCHAR(100)</label>
-                <input type="text" name="prepago" placeholder="prepago" class="form-control mb-2"
-                    required>
+            <div class="col-md-4 d-flex flex-row">
+                <label class="control-label">prepago</label>
+                <input type="checkbox" name="prepago" class="form-control mb-2" >
             </div>
             <div class="col-md-4">
-                <label class="control-label">fecha_alta - INT</label>
+                <label class="control-label">ALTA</label>
                 <input type="date" name="fecha_alta" placeholder="fecha_alta" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">fecha_activa - VARCHAR(50)</label>
+                <label class="control-label">ACTIVA</label>
                 <input type="date" name="fecha_activa" placeholder="fecha_activa" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">fecha_sale - VARCHAR(50)</label>
+                <label class="control-label">BAJA</label>
                 <input type="date" name="fecha_sale" placeholder="fecha_sale" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">tipoalta - DATE</label>
-                <input type="date" name="tipoalta" placeholder="tipoalta" class="form-control mb-2"
+                <label class="control-label">Tipo de alta</label>
+                <input type="text" name="tipoalta" placeholder="tipoalta" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">libre - VARCHAR(50)</label>
+                <label class="control-label">Libre</label>
                 <input type="text" name="libre" placeholder="libre" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">cobrado - varchar(200)</label>
+                <label class="control-label">Cobrado</label>
                 <input type="text" name="cobrado" placeholder="cobrado" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">pagado - varchar(200)</label>
+                <label class="control-label">Pagado</label>
                 <input type="text" name="pagado" placeholder="pagado" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">comision - varchar(200)</label>
+                <label class="control-label">Comision</label>
                 <input type="text" name="comision" placeholder="comision" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">extracomision - varchar(200)</label>
+                <label class="control-label">Extracomision</label>
                 <input type="text" name="extracomision" placeholder="extracomision" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">observaciones - varchar(200)</label>
-                <input type="text" name="observaciones" placeholder="observaciones" class="form-control mb-2"
-                    required>
+                <label class="control-label"></label>
+                {{-- <input type="text" name="observaciones" placeholder="observaciones" class="form-control mb-2"
+                    required> --}}
+                <textarea name="observaciones" maxlength="500" placeholder="Observaciones"></textarea>
             </div>
             <div class="col-md-4">
-                <label class="control-label">incidencias - varchar(200)</label>
-                <input type="text" name="incidencias" placeholder="incidencias" class="form-control mb-2"
-                    required>
+                <label class="control-label"></label>
+                {{-- <input type="text" name="incidencias" placeholder="incidencias" class="form-control mb-2"
+                    required> --}}
+                <textarea name="incidencias" maxlength="500" placeholder="Incidencias"></textarea>
             </div>
             <div class="col-md-4">
-                <label class="control-label">usuario - varchar(200)</label>
+                <label class="control-label">Usuario</label>
                 <input type="text" name="usuario" placeholder="usuario" class="form-control mb-2"
                     required>
             </div>
             <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
                 <br><br>
                 <button class="btn btn-primary" type="submit">Añadir Presupuesto</button> &nbsp;
-                <button class="btn btn-danger" type="">Cancelar</button>
+                <a href="{{ route('ventas.index') }}">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
             </div>
             {{-- <h1>Numpresupuesto - INT</h1>
             <h1>idTaeifa - INT</h1>
@@ -142,5 +172,9 @@
 @stop
 
 @section('js')
-
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+    </script>
 @stop

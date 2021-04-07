@@ -33,7 +33,11 @@
                             <!-- <select name="idCliente" class="form-control mb-2" id="sjs-example-diacritics"> -->
                                 @foreach ($presupuestos as $pre)
                                     <option value="{{ $pre->idCliente }}">{{ $pre->dni }}, {{ $pre->nombre }}
-                                        {{ $pre->apellido1 }} {{ $pre->apellido2 }} ({{ $pre->alias }})</option>
+                                        {{ $pre->apellido1 }} {{ $pre->apellido2 }} 
+                                            @if ($pre->alias)
+                                                ({{ $pre->alias }})
+                                            @endif
+                                        </option>
                                 @endforeach
                             </select>
                     </div>
@@ -126,11 +130,14 @@
                         </div>
                     </div>
                     {{-- </div> --}}
-                    <div class="row">
-                        <div class="col-md-4">
-                            <button class="btn btn-primary" type="submit">Añadir Presupuesto</button> &nbsp;
-                            <button class="btn btn-danger" type="">Cancelar</button>
-                        </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" type="submit">Añadir Presupuesto</button> &nbsp;
+                        <a href="{{ route('presupuestos.index') }}">
+                            <button type="button" class="btn btn-danger">Cancelar</button>
+                        </a>
                     </div>
             </form>
         </div>

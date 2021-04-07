@@ -24,9 +24,28 @@ class ventasController extends Controller
         return view('ventas.index', compact('ventas'));
     }
 
+    public function colaboradores()
+    {
+
+        
+
+        return view('ventas.create', compact('colaboradores'));
+    }
+
     public function create()
     {
-        return view('ventas.create');
+        $ventas = DB::table('ventas')
+            ->join('clients', 'clients.id', '=', 'ventas.idCliente')
+            ->join('tarifas', 'ventas.idTarifa', '=', 'tarifas.idTarifa')
+            ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+            ->get();
+        $colaboradores = DB::table('colaboradores')
+            ->get();
+
+        $tarifas = DB::table('tarifas')
+            ->get();
+
+        return view('ventas.create', compact('ventas', 'colaboradores', 'tarifas'));
     }
 
     public function store(Request $request)
