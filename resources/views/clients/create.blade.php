@@ -19,7 +19,7 @@
 <!-- Main content -->
 <section class="content">
     <!-- /.card -->
-    <form action="{{ route('clients.store') }}" method="POST">
+    <form action="{{ route('clients.store') }}" id="demoForm" method="POST">
         @csrf
         @method('PUT')
         <div class="card">
@@ -51,16 +51,35 @@
                             </div>
                         </div>
                     </div>
+                    {{-- <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">DNI</label>
+                            <input type="text" class="form-control mb-2" name="dni" id="" aria-describedby=""
+                                placeholder="DNI" value="{{ old('dni') }}" required>
+
+                            @error('dni')
+                                <small id="" class="form-text text-danger">*{{ $message }}</small>
+                            @enderror
+                        </div>
+                    </div> --}}
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">DNI</label>
-                            <input type="text" name="dni" placeholder="DNI" class="form-control mb-2" required>
+                            <input type="text" name="dni" placeholder="DNI" class="form-control mb-2"
+                                value="{{ old('dni') }}" required>
+                            @error('dni')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Caduca el...</label>
-                            <input type="date" name="caduca" class="form-control mb-2" required>
+                            <input type="date" name="caduca" class="form-control mb-2" value="{{ old('caduca') }}"
+                                required>
+                            @error('caduca')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -68,21 +87,31 @@
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Nombre</label>
-                            <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2" required>
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2"
+                                value="{{ old('nombre') }}" required>
+                            @error('nombre')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Primer Apellido</label>
                             <input type="text" name="apellido1" placeholder="Primer apellido" class="form-control mb-2"
-                                required>
+                                value="{{ old('apellido1') }}" required>
+                            @error('apellido1')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Segundo Apellido</label>
                             <input type="text" name="apellido2" placeholder="Segundo apellido"
-                                class="form-control mb-2">
+                                value="{{ old('apellido2') }}" class="form-control mb-2">
+                            @error('apellido2')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -90,19 +119,28 @@
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Alias</label>
-                            <input type="text" name="alias" placeholder="Alias" class="form-control mb-2">
+                            <input type="text" name="alias" placeholder="Alias" class="form-control mb-2"
+                                value="{{ old('alias') }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Fecha de nacimiento</label>
-                            <input type="date" name="fecha_nacimiento" class="form-control mb-2" required>
+                            <input type="date" name="fecha_nacimiento" class="form-control mb-2"
+                                value="{{ old('fecha_nacimiento') }}" required>
+                            @error('fecha_nacimiento')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">IBAN</label>
-                            <input type="iban" name="iban" required placeholder="ES..." class="form-control mb-2">
+                            <input type="iban" name="cuenta" required placeholder="ES..." class="form-control mb-2"
+                                value="{{ old('cuenta') }}">
+                            @error('iban')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -111,13 +149,20 @@
                         <div>
                             <label class="control-label">Teléfono</label>
                             <input type="tel" name="telefono" required placeholder="Telefono de Contacto" maxlength="9"
-                                pattern="[6-7-9]{1}[0-9]{8}" class="form-control mb-2">
+                                pattern="[6-7-9]{1}[0-9]{8}" value="{{ old('telefono') }}" class="form-control mb-2">
+                            @error('telefono')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Email</label>
-                            <input type="email" name="email" required placeholder="Email" class="form-control mb-2">
+                            <input type="email" name="email" required placeholder="Email" class="form-control mb-2"
+                                value="{{ old('email') }}">
+                            @error('email')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4 d-flex flex-row">
@@ -135,21 +180,30 @@
                         <div>
                             <label class="control-label">Dirección</label>
                             <input type="text" name="direccion" placeholder="Dirección" class="form-control mb-2"
-                                required>
+                                value="{{ old('direccion') }}" required>
+                            @error('direccion')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Código Postal</label>
                             <input type="text" class="form-control mb-2" name="codigoPostal" data-rule-number="true"
-                                maxlength="5" placeholder="Código Postal" required>
+                                maxlength="5" placeholder="Código Postal" value="{{ old('codigoPostal') }}" required>
+                            @error('codigoPostal')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Población</label>
                             <input type="text" name="poblacion" placeholder="Población" class="form-control mb-2"
-                                required>
+                                value="{{ old('poblacion') }}" required>
+                            @error('poblacion')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -168,6 +222,9 @@
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg"
                                     alt="Ingles" width="20" height="15">&nbsp;&nbsp;
                             </div>
+                            @error('idioma')
+                                <small class="text-danger">*{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -175,20 +232,22 @@
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Keywords</label>
-                            <input type="text" name="keywords" placeholder="Keywords" class="form-control mb-2">
+                            <input type="text" name="keywords" placeholder="Keywords" class="form-control mb-2"
+                                value="{{ old('keywords') }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Observaciones</label>
                             <input type="text" name="observaciones" placeholder="Observaciones"
-                                class="form-control mb-2">
+                                value="{{ old('observaciones') }}" class="form-control mb-2">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div>
                             <label class="control-label">Otros</label>
-                            <input type="text" name="otros" placeholder="Otros" class="form-control mb-2">
+                            <input type="text" name="otros" placeholder="Otros" class="form-control mb-2"
+                                value="{{ old('otros') }}">
                         </div>
                     </div>
                 </div>
@@ -208,5 +267,40 @@
 @stop
 
 @section('js')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+<!-- 
+You have to include the full version of FormValidation which contains all validators
+including the iban validator 
+-->
+<script src="/vendors/formvalidation/dist/js/FormValidation.full.min.js"></script>
+<script src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function(e) {
+        FormValidation.formValidation(
+            document.getElementById('demoForm'), {
+                fields: {
+                    cuenta: {
+                        validators: {
+                            cuenta: {
+                                message: 'The value is not a valid IBAN'
+                            }
+                        }
+                    },
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap(),
+                    submitButton: new FormValidation.plugins.SubmitButton(),
+                    icon: new FormValidation.plugins.Icon({
+                        valid: 'fa fa-check',
+                        invalid: 'fa fa-times',
+                        validating: 'fa fa-refresh'
+                    }),
+                },
+            }
+        );
+    });
+
+</script>
 @stop

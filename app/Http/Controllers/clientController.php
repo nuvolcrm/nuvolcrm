@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreClient;
 
 class clientController extends Controller
 {
@@ -18,7 +19,28 @@ class clientController extends Controller
         return view('clients.create');
     }
 
-    public function store(Request $request){
+    public function store(StoreClient $request){
+
+        // validar formulario (StoreClient valida el formulario)
+        // $request->validate([
+        //     'dni' => 'required',
+        //     'caduca' => 'required',
+        //     'nombre' => 'required',
+        //     'apellido1' => 'required',
+        //     'apellido2' => '',
+        //     'alias' => 'required',
+        //     'keywords' => 'required',
+        //     'cuenta' => 'required',
+        //     'fecha_nacimiento' => 'required',
+        //     'direccion' => 'required',
+        //     'codigoPostal' => 'required',
+        //     'poblacion' => 'required',
+        //     'telefono' => 'required',
+        //     'idioma' => 'required',
+        //     'email' => 'required',
+        //     'mailing' => 'required',
+        //     'segmento' => 'required'
+        // ]);
 
         $client = new Client();
 
@@ -60,7 +82,7 @@ class clientController extends Controller
         
     }
 
-    public function update(Request $request, client $client){
+    public function update(StoreClient $request, client $client){
 
         $client->dni = $request->dni;
         $client->caduca = $request->caduca;
