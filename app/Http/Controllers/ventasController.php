@@ -87,14 +87,20 @@ class ventasController extends Controller
         return view('ventas.show', compact('venta'));
     }
 
-    public function edit(venta $venta)
+    public function edit($idVenta)
     {
+        
+        
+        $ventas=venta::findOrFail($idVenta);
 
-        return view('ventas.edit', compact('venta'));
+        
+        
+        return view('ventas.edit', compact('ventas'));
     }
 
     public function update(Request $request, venta $venta)
     {
+        // $venta = venta::find($dni);
         $venta->idCliente  = $request->idCliente ;
         $venta->vendedor = $request->vendedor;
         $venta->idTarifa  = $request->idTarifa ;

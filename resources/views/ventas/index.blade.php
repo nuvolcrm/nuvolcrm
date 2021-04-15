@@ -112,7 +112,7 @@
                                             <td class="bg-info text-right">{{ $venta->extracomision }}</td>
                                             <td class="bg-info text-right">Balance</td>
                                             <td class="bg-info">{{ $venta->idColaborador }}</td>
-                                            <td><a href="#"><i class='fas fa-pencil-alt primary'></i></a></td>
+                                            <td><a href="{{ route('ventas.edit', $venta->idVenta) }}"><i class='fas fa-pencil-alt primary'></i></a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

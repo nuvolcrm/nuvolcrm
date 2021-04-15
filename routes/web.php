@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\PresupuestosController;
 use App\Http\Controllers\ventasController;
+use App\Http\Controllers\PedidosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,15 @@ Route::get('ventas/{venta}', [ventasController::class, 'show'])->name('ventas.sh
 Route::get('ventas/{venta}/edit', [ventasController::class, 'edit'])->name('ventas.edit');
 Route::put('ventas/{venta}', [ventasController::class, 'update'])->name('ventas.update');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Rutas de pedidos
+Route::get('extra/pedidos', [PedidosController::class, 'index'])->name('extra.pedidos.index');
+Route::get('extra/pedidos/create', [PedidosController::class, 'create'])->name('extra.pedidos.create');
+Route::put('extra/pedidos', [PedidosController::class, 'store'])->name('extra.pedidos.store');
+Route::get('extra/pedidos/{presupuesto}', [PedidosController::class, 'show'])->name('extra.pedidos.show');
+Route::get('extra/pedidos/{presupuesto}/edit', [PedidosController::class, 'edit'])->name('extra.pedidos.edit');
+Route::put('extra/pedidos/{presupuesto}', [PedidosController::class, 'update'])->name('extra.pedidos.update');
+
 /*
 //------------------------------------------------------------------------------------------
 Route::get('extra/pedidos', [App\Http\Controllers\HomeController::class, 'pedidos'])->name('pedidos');
