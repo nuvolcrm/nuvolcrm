@@ -25,24 +25,24 @@
                         <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                             <thead class="table-primary">
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Fecha</th>
-                                    <th>Nombre y apellidos</th>
-                                    <th>Teléfono</th>
-                                    <th>Población</th>
-                                    <th>Servicios</th>
-                                    <th>Cuota</th>
-                                    <th>Detalle</th>
-                                    <th><i class='far fa-file-pdf'></i></th>
-                                    <th>Operaciones</th>
-                                    <th>Valor</th>
+                                    <th>FECHA</th>
+                                    <th></th>
+                                    <th>CANTIDAD</th>
+                                    <th>PRODUCTO</th>
+                                    <th>CLIENTE</th>
+                                    <th>TELEFONO</th>
+                                    <th>EMAIL</th>
+                                    <th>PRECIO</th>
+                                    <th>PAGADO</th>
+                                    <th>OBSERVACIONES</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($pedidos as $pedido)
                                     <tr>
                                         <td>
-                                            {{ $pedido->idPedido }}
+                                            {{ $pedido->fecha }}
                                         </td>
                                         <td>
                                             {{ $pedido->estado }}
