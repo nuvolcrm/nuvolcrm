@@ -5,6 +5,8 @@ use App\Http\Controllers\clientController;
 use App\Http\Controllers\PresupuestosController;
 use App\Http\Controllers\ventasController;
 use App\Http\Controllers\PedidosController;
+use App\Http\Controllers\TarifasController;
+use App\Http\Controllers\ColaboradoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,9 +59,25 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('extra/pedidos', [PedidosController::class, 'index'])->name('extra.pedidos.index');
 Route::get('extra/pedidos/create', [PedidosController::class, 'create'])->name('extra.pedidos.create');
 Route::put('extra/pedidos', [PedidosController::class, 'store'])->name('extra.pedidos.store');
-Route::get('extra/pedidos/{presupuesto}', [PedidosController::class, 'show'])->name('extra.pedidos.show');
-Route::get('extra/pedidos/{presupuesto}/edit', [PedidosController::class, 'edit'])->name('extra.pedidos.edit');
-Route::put('extra/pedidos/{presupuesto}', [PedidosController::class, 'update'])->name('extra.pedidos.update');
+Route::get('extra/pedidos/{pedido}', [PedidosController::class, 'show'])->name('extra.pedidos.show');
+Route::get('extra/pedidos/{pedido}/edit', [PedidosController::class, 'edit'])->name('extra.pedidos.edit');
+Route::put('extra/pedidos/{pedido}', [PedidosController::class, 'update'])->name('extra.pedidos.update');
+
+// Rutas de tarifas
+Route::get('gestion/tarifas', [TarifasController::class, 'index'])->name('gestion.tarifas.index');
+Route::get('gestion/tarifas/create', [TarifasController::class, 'create'])->name('gestion.tarifas.create');
+Route::put('gestion/tarifas', [TarifasController::class, 'store'])->name('gestion.tarifas.store');
+Route::get('gestion/tarifas/{tarifa}', [TarifasController::class, 'show'])->name('gestion.tarifas.show');
+Route::get('gestion/tarifas/{tarifa}/edit', [TarifasController::class, 'edit'])->name('gestion.tarifas.edit');
+Route::put('gestion/tarifas/{tarifa}', [TarifasController::class, 'update'])->name('gestion.tarifas.update');
+
+// Rutas de colaboradores
+Route::get('gestion/colaboradores', [ColaboradoresController::class, 'index'])->name('gestion.colaboradores.index');
+Route::get('gestion/colaboradores/create', [ColaboradoresController::class, 'create'])->name('gestion.colaboradores.create');
+Route::put('gestion/colaboradores', [ColaboradoresController::class, 'store'])->name('gestion.colaboradores.store');
+Route::get('gestion/colaboradores/{colaborador}', [ColaboradoresController::class, 'show'])->name('gestion.colaboradores.show');
+Route::get('gestion/colaboradores/{colaborador}/edit', [ColaboradoresController::class, 'edit'])->name('gestion.colaboradores.edit');
+Route::put('gestion/colaboradores/{colaborador}', [ColaboradoresController::class, 'update'])->name('gestion.colaboradores.update');
 
 /*
 //------------------------------------------------------------------------------------------
