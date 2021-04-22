@@ -1,3 +1,7 @@
+<?php
+$servicios = DB::table('servicios')->get();
+?>
+
 @extends('adminlte::page')
 
 @section('title', 'Servicios')
@@ -27,7 +31,7 @@
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->

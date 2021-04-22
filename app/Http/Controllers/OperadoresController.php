@@ -44,8 +44,27 @@ class OperadoresController extends Controller
          */
         public function store(Request $request)
         {
-            //
-            
+            $operadores = DB::table('operadores')->get();
+        //Recoger Datos
+        $operador = array("nombreOperador"=>$request->input("nombreOperador"),
+                          "logo"=>$request->input("logo"),
+                          "orden"=>$request->input("orden"),
+                          "enlace"=>$request->input("enlace"),
+                          "distribuidores"=>$request->input("distribuidores"),
+                          "cliente"=>$request->input("cliente"),
+                          "color"=>$request->input("color"));
+
+        $operadores = new operadores();
+        $operadores->nombreOperador = $operador["nombreOperador"];
+        $operadores->logo = $operador["logo"];
+        $operadores->orden = $operador["orden"];
+        $operadores->enlace = $operador["enlace"];
+        $operadores->distribuidores = $operador["distribuidores"];
+        $operadores->cliente = $operador["cliente"];
+        $operadores->color = $operador["color"];
+
+        $operadores->save();
+        return view("gestion.operadores.index");
         }
     
         /**

@@ -21,7 +21,7 @@
     <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-            <form action="{{ route('gestion.operadores.index') }}" method="POST">
+            <form action="{{ route('gestion.operadores.store') }}" method="POST">
                 @csrf
                 @method('PUT')
             <div class="box box-primary">
@@ -109,13 +109,13 @@
             <div class="row">
                 <div class="col-md-4">
                     <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
-                    <a href="{{ route('gestion.tarifas.index') }}">
+                    <a href="{{ route('gestion.operadores.index') }}">
                         <button type="button" class="btn btn-danger">Cancelar</button>
                     </a>
                 </div>
             </div>
             
-        </form>
+            </form>
         </div>
     </div>
 </section>
