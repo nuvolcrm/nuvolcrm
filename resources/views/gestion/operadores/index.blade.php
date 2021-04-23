@@ -48,7 +48,7 @@ $operadores = DB::table('operadores')->get();
                             <tbody>
                                 @foreach ($operadores as $operador)
                                     <tr>
-                                        <td><img src="img/{{ $operador->logo }}"></td>
+                                        <td><img src="../img/{{ $operador->logo }}" height="40"></td>
                                         <td>{{ $operador -> nombreOperador}}</td>
                                         <td>{{ $operador -> orden}}</td>
                                         <td>
