@@ -11,9 +11,9 @@ $enlaces = DB::table('operadores')->get();
         <div class="col-sm">
             <h1>
                 Enlaces
-                <a href="{{ route('gestion.enlaces.create') }}" class="rounded-circle btn btn-primary">
+                {{-- <a href="{{ route('gestion.enlaces.create') }}" class="rounded-circle btn btn-primary">
                     <i class="fas fa-plus"></i>
-                </a>
+                </a> --}}
             </h1>
         </div>
     </div>
