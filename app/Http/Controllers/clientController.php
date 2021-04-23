@@ -19,7 +19,7 @@ class clientController extends Controller
         return view('clients.create');
     }
 
-    public function store(StoreClient $request){
+    public function store(request $request){
 
         // validar formulario (StoreClient valida el formulario)
         // $request->validate([
@@ -63,6 +63,8 @@ class clientController extends Controller
         $client->segmento = $request->segmento;
 
         $client->save();
+        // return $request->all();
+        // $client = Client::create($request->all());
 
         // return view("clients.show");
         return redirect()->route("clients.index");
@@ -82,7 +84,7 @@ class clientController extends Controller
         
     }
 
-    public function update(StoreClient $request, client $client){
+    public function update(request $request, client $client){
 
         $client->dni = $request->dni;
         $client->caduca = $request->caduca;
