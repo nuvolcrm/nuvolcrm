@@ -1,3 +1,6 @@
+<?php
+$operadores = DB::table('operadores')->get();
+?>
 @extends('adminlte::page')
 
 @section('title', 'Operadores')
@@ -27,7 +30,7 @@
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
@@ -45,7 +48,7 @@
                             <tbody>
                                 @foreach ($operadores as $operador)
                                     <tr>
-                                        <td><img src="img/{{ $operador->logo }}"></td>
+                                        <td><img src="../img/{{ $operador->logo }}" height="40"></td>
                                         <td>{{ $operador -> nombreOperador}}</td>
                                         <td>{{ $operador -> orden}}</td>
                                         <td>
@@ -70,4 +73,5 @@
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 <script src="/js/datatable.js"></script>
+
 @stop

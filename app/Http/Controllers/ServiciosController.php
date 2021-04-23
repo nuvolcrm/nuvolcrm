@@ -44,8 +44,19 @@ class ServiciosController extends Controller
          */
         public function store(Request $request)
         {
-            //
-            
+            $servicios = DB::table('servicios')->get();
+        //Recoger Datos
+        $servicio = array("servicio"=>$request->input("servicio"),
+                          "descripcionServicio"=>$request->input("descripcionServicio"),
+                          "imagen"=>$request->input("imagen"));
+
+        $servicios = new servicios();
+        $servicios->servicio = $servicio["servicio"];
+        $servicios->descripcionServicio = $servicio["descripcionServicio"];
+        $servicios->imagen = $servicio["imagen"];
+
+        $servicios->save();
+        return view("gestion.servicios.index");
         }
     
         /**
@@ -54,7 +65,7 @@ class ServiciosController extends Controller
          * @param  \App\Models\tarifas  $tarifas
          * @return \Illuminate\Http\Response
          */
-        public function show(tarifas $tarifas)
+        public function show(servicios $servicios)
         {
             //
     
@@ -66,7 +77,7 @@ class ServiciosController extends Controller
          * @param  \App\Models\tarifas  $tarifas
          * @return \Illuminate\Http\Response
          */
-        public function edit(tarifas $tarifas)
+        public function edit(servicios $servicios)
         {
             //
         }
@@ -78,7 +89,7 @@ class ServiciosController extends Controller
          * @param  \App\Models\tarifas  $tarifas
          * @return \Illuminate\Http\Response
          */
-        public function update(Request $request, tarifas $tarifas)
+        public function update(Request $request, servicios $servicios)
         {
             //
         }
@@ -89,7 +100,7 @@ class ServiciosController extends Controller
          * @param  \App\Models\tarifas  $tarifas
          * @return \Illuminate\Http\Response
          */
-        public function destroy(tarifas $tarifas)
+        public function destroy(servicios $servicios)
         {
             //
         }

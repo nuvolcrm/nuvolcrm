@@ -1,20 +1,19 @@
 <?php
-$servicios = DB::table('servicios')->get();
+$enlaces = DB::table('operadores')->get();
 ?>
-
 @extends('adminlte::page')
 
-@section('title', 'Servicios')
+@section('title', 'Enlaces')
 
 @section('content_header')
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm">
             <h1>
-                Servicios
-                <a href="{{ route('gestion.servicios.create') }}" class="rounded-circle btn btn-primary">
+                Enlaces
+                {{-- <a href="{{ route('gestion.enlaces.create') }}" class="rounded-circle btn btn-primary">
                     <i class="fas fa-plus"></i>
-                </a>
+                </a> --}}
             </h1>
         </div>
     </div>
@@ -31,7 +30,7 @@ $servicios = DB::table('servicios')->get();
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-4">
+            <div class="col-9">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
@@ -40,16 +39,16 @@ $servicios = DB::table('servicios')->get();
                             <thead class="table-primary">
                                 <tr>
                                     <th></th>
-                                    <th>NOMBRE</th>
-                                    <th>DESCRIPCION</th>
+                                    <th>DISTRI</th>
+                                    <th>CLIENTE</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($servicios as $servicio)
+                                @foreach ($enlaces as $enlace)
                                     <tr>
-                                        <td><i class="{{ $servicio->imagen }}"></i></td>
-                                        <td>{{ $servicio -> servicio}}</td>
-                                        <td>{{ $servicio -> descripcionServicio}}</td>
+                                        <td><a href="{{$enlace->enlace}}"><img src="../img/{{ $enlace->logo }}" height="40"></a></td>
+                                        <td>{{ $enlace -> distribuidores}}</td>
+                                        <td>{{ $enlace -> cliente}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -68,4 +67,5 @@ $servicios = DB::table('servicios')->get();
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 <script src="/js/datatable.js"></script>
+
 @stop
