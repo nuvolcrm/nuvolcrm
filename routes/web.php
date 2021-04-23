@@ -9,6 +9,7 @@ use App\Http\Controllers\OperadoresController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\TarifasController;
 use App\Http\Controllers\ColaboradoresController;
+use App\Http\Controllers\EnlacesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,17 +70,17 @@ Route::put('extra/pedidos/{pedido}', [PedidosController::class, 'update'])->name
 Route::get('gestion/operadores', [OperadoresController::class, 'index'])->name('gestion.operadores.index');
 Route::get('gestion/operadores/create', [OperadoresController::class, 'create'])->name('gestion.operadores.create');
 Route::put('gestion/operadores', [OperadoresController::class, 'store'])->name('gestion.operadores.store');
-Route::get('gestion/operadores/{tarifa}', [OperadoresController::class, 'show'])->name('gestion.operadores.show');
-Route::get('gestion/operadores/{tarifa}/edit', [OperadoresController::class, 'edit'])->name('gestion.operadores.edit');
-Route::put('gestion/operadores/{tarifa}', [OperadoresController::class, 'update'])->name('gestion.operadores.update');
+Route::get('gestion/operadores/{operadore}', [OperadoresController::class, 'show'])->name('gestion.operadores.show');
+Route::get('gestion/operadores/{operadore}/edit', [OperadoresController::class, 'edit'])->name('gestion.operadores.edit');
+Route::put('gestion/operadores/{operadore}', [OperadoresController::class, 'update'])->name('gestion.operadores.update');
 
 //Rutas de servicios
 Route::get('gestion/servicios', [ServiciosController::class, 'index'])->name('gestion.servicios.index');
 Route::get('gestion/servicios/create', [ServiciosController::class, 'create'])->name('gestion.servicios.create');
 Route::put('gestion/servicios', [ServiciosController::class, 'store'])->name('gestion.servicios.store');
-Route::get('gestion/servicios/{tarifa}', [ServiciosController::class, 'show'])->name('gestion.servicios.show');
-Route::get('gestion/servicios/{tarifa}/edit', [ServiciosController::class, 'edit'])->name('gestion.servicios.edit');
-Route::put('gestion/servicios/{tarifa}', [ServiciosController::class, 'update'])->name('gestion.servicios.update');
+Route::get('gestion/servicios/{servicio}', [ServiciosController::class, 'show'])->name('gestion.servicios.show');
+Route::get('gestion/servicios/{servicio}/edit', [ServiciosController::class, 'edit'])->name('gestion.servicios.edit');
+Route::put('gestion/servicios/{servicio}', [ServiciosController::class, 'update'])->name('gestion.servicios.update');
 
 // Rutas de tarifas
 Route::get('gestion/tarifas', [TarifasController::class, 'index'])->name('gestion.tarifas.index');
@@ -96,6 +97,14 @@ Route::put('gestion/colaboradores', [ColaboradoresController::class, 'store'])->
 Route::get('gestion/colaboradores/{colaborador}', [ColaboradoresController::class, 'show'])->name('gestion.colaboradores.show');
 Route::get('gestion/colaboradores/{colaborador}/edit', [ColaboradoresController::class, 'edit'])->name('gestion.colaboradores.edit');
 Route::put('gestion/colaboradores/{colaborador}', [ColaboradoresController::class, 'update'])->name('gestion.colaboradores.update');
+
+// Rutas de enlaces
+Route::get('extra/enlaces', [EnlacesController::class, 'index'])->name('gestion.enlaces.index');
+Route::get('extra/enlaces/create', [EnlacesController::class, 'create'])->name('gestion.enlaces.create');
+Route::put('extra/enlaces', [EnlacesController::class, 'store'])->name('gestion.enlaces.store');
+Route::get('extra/enlaces/{enlace}', [EnlacesController::class, 'show'])->name('gestion.enlaces.show');
+Route::get('extra/enlaces/{enlace}/edit', [EnlacesController::class, 'edit'])->name('gestion.enlaces.edit');
+Route::put('extra/enlaces/{enlace}', [EnlacesController::class, 'update'])->name('gestion.enlaces.update');
 
 /*
 //------------------------------------------------------------------------------------------
