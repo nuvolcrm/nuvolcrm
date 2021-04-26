@@ -41,7 +41,7 @@ $ventas = DB::table('ventas')
 <section class="content">
 
     <div class="row">
-        <div class="col-lg-2 col-sm-6">
+        <div class="col-lg-2 col-sm-5">
             <div class="small-box bg-success">
                 <div class="inner">
                     <h3>3847<sup style="font-size: 20px"></sup></h3>
@@ -52,7 +52,7 @@ $ventas = DB::table('ventas')
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
+        <div class="col-lg-2 col-sm-5">
             <div class="small-box bg-primary">
                 <div class="inner">
                     <h3>28<sup style="font-size: 20px"></sup></h3>
