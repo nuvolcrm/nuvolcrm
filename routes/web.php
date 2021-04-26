@@ -10,6 +10,7 @@ use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\TarifasController;
 use App\Http\Controllers\ColaboradoresController;
 use App\Http\Controllers\EnlacesController;
+use App\Http\Controllers\EliminadorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,12 +100,20 @@ Route::get('gestion/colaboradores/{colaborador}/edit', [ColaboradoresController:
 Route::put('gestion/colaboradores/{colaborador}', [ColaboradoresController::class, 'update'])->name('gestion.colaboradores.update');
 
 // Rutas de enlaces
-Route::get('extra/enlaces', [EnlacesController::class, 'index'])->name('gestion.enlaces.index');
-Route::get('extra/enlaces/create', [EnlacesController::class, 'create'])->name('gestion.enlaces.create');
-Route::put('extra/enlaces', [EnlacesController::class, 'store'])->name('gestion.enlaces.store');
-Route::get('extra/enlaces/{enlace}', [EnlacesController::class, 'show'])->name('gestion.enlaces.show');
-Route::get('extra/enlaces/{enlace}/edit', [EnlacesController::class, 'edit'])->name('gestion.enlaces.edit');
-Route::put('extra/enlaces/{enlace}', [EnlacesController::class, 'update'])->name('gestion.enlaces.update');
+Route::get('extra/enlaces', [EnlacesController::class, 'index'])->name('extra.enlaces.index');
+Route::get('extra/enlaces/create', [EnlacesController::class, 'create'])->name('extra.enlaces.create');
+Route::put('extra/enlaces', [EnlacesController::class, 'store'])->name('extra.enlaces.store');
+Route::get('extra/enlaces/{enlace}', [EnlacesController::class, 'show'])->name('extra.enlaces.show');
+Route::get('extra/enlaces/{enlace}/edit', [EnlacesController::class, 'edit'])->name('extra.enlaces.edit');
+Route::put('extra/enlaces/{enlace}', [EnlacesController::class, 'update'])->name('extra.enlaces.update');
+
+// Rutas de eliminador
+Route::get('extra/eliminador', [EliminadorController::class, 'index'])->name('extra.eliminador.index');
+Route::get('extra/eliminador/create', [EliminadorController::class, 'create'])->name('extra.eliminador.create');
+Route::put('extra/eliminador', [EliminadorController::class, 'store'])->name('extra.eliminador.store');
+Route::get('extra/eliminador/{eliminador}', [EliminadorController::class, 'show'])->name('extra.eliminador.show');
+Route::get('extra/eliminador/{eliminador}/edit', [EliminadorController::class, 'edit'])->name('extra.enlac.edit');
+Route::put('extra/eliminador/{eliminador}', [EliminadorController::class, 'update'])->name('extra.eliminador.update');
 
 /*
 //------------------------------------------------------------------------------------------
