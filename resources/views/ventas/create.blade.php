@@ -19,11 +19,17 @@
 <!-- Main content -->
 <section class="content">
     <!-- /.card -->
-    <form action="{{ route('ventas.store') }}" method="POST">
+    <form action="{{ route('clients.store') }}" id="demoForm" method="POST">
         @csrf
         @method('PUT')
-        <div class="row">
-            <div class="col-md-4">
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+    <!-- /.card -->
+    <form action="{{ route('ventas.store') }}" method="POST">
+
                 <label class="control-label">número de presupuesto</label>
                 <input type="numder" name="Numpresupuesto" placeholder="Numpresupuesto" class="form-control mb-2"
                     required>
@@ -89,11 +95,6 @@
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">BAJA</label>
-                <input type="date" name="fecha_sale" placeholder="fecha_sale" class="form-control mb-2"
-                    required>
-            </div>
-            <div class="col-md-4">
                 <label class="control-label">Tipo de alta</label>
                 <input type="text" name="tipoalta" placeholder="tipoalta" class="form-control mb-2"
                     required>
@@ -146,15 +147,16 @@
             <div class="col-md-4">
                 
             </div>
-            <div class="col-md-4">
+            </div>
+            <div class="row d-flex justify-content-between">
                 <br><br>
-                <button class="btn btn-primary" type="submit">Añadir Presupuesto</button> &nbsp;
+                <button class="btn btn-primary" type="submit">Añadir</button> &nbsp;
                 <a href="{{ route('ventas.index') }}">
-                    <button type="button" class="btn btn-danger">Cancelar</button>
+                    <button type="button" class="btn btn-outline-danger">Cancelar</button>
                 </a>
             </div>
             {{-- <h1>Numpresupuesto - INT</h1>
-            <h1>idTaeifa - INT</h1>
+            <h1>idTarifa - INT</h1>
             <h1>idCliente - INT</h1>
             <h1>estado - INT</h1>
             <h1>fecha - DATE</h1>

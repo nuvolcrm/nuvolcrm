@@ -169,14 +169,14 @@
                                     </div>
                                 </div>
                             </div>
-                <div class="row">
+                    <div class="row d-flex justify-content-between">
 
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4"> -->
                         <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
                         <a href="{{ route('presupuestos.index') }}">
-                            <button type="button" class="btn btn-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-danger">Cancelar</button>
                         </a>
-                    </div>
+                    <!-- </div> -->
                 </div>
                 </form>
             </div>
