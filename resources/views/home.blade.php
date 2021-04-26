@@ -40,7 +40,7 @@ $ventas = DB::table('ventas')
 <!-- Main content -->
 <section class="content">
 
-    <div class="row">
+    {{--<div class="row">
         <div class="col-lg-2 col-sm-5">
             <div class="small-box bg-success">
                 <div class="inner">
@@ -107,7 +107,7 @@ $ventas = DB::table('ventas')
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 
     <div class="row">
         <div class="col-md-2">
