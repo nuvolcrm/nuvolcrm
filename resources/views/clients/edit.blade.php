@@ -229,7 +229,7 @@
                         <div>&nbsp;</div>
                     </div>
                     <div class="row">
-                        <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
+                        <button class="btn btn-primary" type="submit">Editar</button>&nbsp;
                         <a href="{{ route('clients.index') }}">
                             <button type="button" class="btn btn-danger">Cancelar</button>
                         </a>
