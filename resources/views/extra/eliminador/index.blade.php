@@ -28,7 +28,7 @@
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-9">
+            <div class="col-2">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
