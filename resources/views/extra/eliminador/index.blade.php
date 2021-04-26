@@ -26,6 +26,54 @@
 @stop
 @section('content')
 <section class="content">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fab fa-whatsapp text-primary"></i> WhatsApp</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <div class="input-group input-group-sm">
+                              <input class="form-control form-control-navbar" type="tel" pattern="[6-7]{1}[0-9]{8}" placeholder="WhatsApp..." aria-label="Search" name="tel" id="tel" onkeydown="presionar_tecla()">
+                              <div class="input-group-append">
+                                <span class="input-group-text" onclick="whats()">
+                                  <i class="fab fa-whatsapp"></i>
+                                </span>
+                              </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-8">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fas fa-text-width text-primary"></i> Elimina espacios y guiones:</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <input class="w-100" type="text" name="cadena" id="cadena" onblur="eliminarespacios()" placeholder="Escribe el texto y haz click fuera">
+                        <br>
+                        <div id="cadena2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{--<section class="content">
     <body>
         <div class="row">
             <div class="col">
@@ -49,7 +97,7 @@
             </div>
         </div>
     </body>
-</section>
+</section>--}}
 @stop
 
 @section('js')
