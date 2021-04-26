@@ -28,13 +28,13 @@
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-2">
+            <div class="col">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
                     <div class="card-body">
                             <div class="input-group input-group-sm">
-                              <input class="form-control form-control-navbar" type="tel" pattern="[6-7]{1}[0-9]{8}" placeholder="WhatsApp..." aria-label="Search" name="tel" id="tel" onkeydown="presionar_tecla()">
+                              <input class="w-25 form-control form-control-navbar" type="tel" pattern="[6-7]{1}[0-9]{8}" placeholder="WhatsApp..." aria-label="Search" name="tel" id="tel" onkeydown="presionar_tecla()">
                               <div class="input-group-append">
                                 <span class="input-group-text" onclick="whats()">
                                   <i class="fab fa-whatsapp"></i>
