@@ -381,31 +381,31 @@ $ventas = DB::table('ventas')
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <th><img src="1.jpg"></img></th>
+                                        <th><img src="img/masmovil.jpg" height="30"></img></th>
                                         <td>Másmóvil</td>
                                         <td class="text-right"><span class="label label-success">1.050 €</span></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <th><img src="2.jpg"></img></th>
+                                        <th><img src="img/lowi.png" height="30"></img></th>
                                         <td>Lowi</td>
                                         <td class="text-right"><span class="label label-warning">937 €</span></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <th><img src="3.jpg"></img></th>
+                                        <th><img src="img/masmovilNegocios.png" height="30"></img></th>
                                         <td>Másmóvil PRO</td>
                                         <td class="text-right"><span class="label label-danger">458 €</span></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <th><img src="4.jpg"></img></th>
+                                        <th><img src="img/digi.jpg" height="30"></img></th>
                                         <td>Digi</td>
                                         <td class="text-right"><span class="label label-info">299 €</span></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <th><img src="5.jpg"></img></th>
+                                        <th><img src="img/pepephone.png" height="30"></img></th>
                                         <td>Pepephone</td>
                                         <td class="text-right"><span class="label label-warning">245 €</span></td>
                                     </tr>
@@ -479,19 +479,19 @@ $ventas = DB::table('ventas')
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <th><img src="3.jpg"></img></th>
+                                        <th><img src="img/o2.jpg" height="30"></img></th>
                                         <td>O2</td>
                                         <td class="text-right"><span class="label label-danger">4</span></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <th><img src="4.jpg"></img></th>
+                                        <th><img src="img/digi.jpg" height="30" width="30"></img></th>
                                         <td>Digi</td>
                                         <td class="text-right"><span class="label label-info">3</span></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <th><img src="5.jpg"></img></th>
+                                        <th><img src="img/movistar.jpg" height="30"></img></th>
                                         <td>Movistar</td>
                                         <td class="text-right"><span class="label label-warning">2</span></td>
                                     </tr>
@@ -552,31 +552,31 @@ $ventas = DB::table('ventas')
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td><img src="masmovil.jpg"></img></td>
+                                        <th><img src="img/masmovil.jpg" height="30"></img></th>
                                         <td>Másmóvil</td>
                                         <td class="text-right"><span class="label label-success">17</span></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <th><img src="2.jpg"></img></th>
+                                        <th><img src="img/lowi.png" height="30"></img></th>
                                         <td>Lowi</td>
                                         <td class="text-right"><span class="label label-warning">17</span></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <th><img src="3.jpg"></img></th>
+                                        <th><img src="img/llamaya.png" height="30"></img></th>
                                         <td>LlamaYá</td>
                                         <td class="text-right"><span class="label label-danger">13</span></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <th><img src="4.jpg"></img></th>
+                                        <th><img src="img/o2.jpg" height="30"></img></th>
                                         <td>O2</td>
                                         <td class="text-right"><span class="label label-info">11</span></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <th><img src="5.jpg"></img></th>
+                                        <th><img src="img/digi.jpg" height="30"></img></th>
                                         <td>Digi</td>
                                         <td class="text-right"><span class="label label-warning">10</span></td>
                                     </tr>
