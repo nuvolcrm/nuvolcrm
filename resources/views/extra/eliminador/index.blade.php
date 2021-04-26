@@ -39,7 +39,7 @@
                         <!-- /.box-header -->
                         <!-- form start -->
                         <div class="input-group input-group-sm">
-                              <input class="form-control form-control-navbar" type="tel" pattern="[6-7]{1}[0-9]{8}" placeholder="WhatsApp..." aria-label="Search" name="tel" id="tel" onkeydown="presionar_tecla()">
+                              <input class="form-control form-control-navbar" type="tel" pattern="[6-7]{1}[0-9]{8}" placeholder="Escribe el teléfono y pulsa intro" aria-label="Search" name="tel" id="tel" onkeydown="presionar_tecla()">
                               <div class="input-group-append">
                                 <span class="input-group-text" onclick="whats()">
                                   <i class="fab fa-whatsapp"></i>
@@ -101,11 +101,7 @@
 @stop
 
 @section('js')
-<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
-<script src="/js/datatable.js"></script>
+
 <script>
     function whats(){
       var tel = document.getElementById("tel").value;
