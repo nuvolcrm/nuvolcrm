@@ -19,7 +19,7 @@
     <body>
         <!-- Main content -->
         <section class="content">
-            <div class="venta">
+            <div class="row">
                 <div class="col-12">
                     <!-- /.card -->
                     <div class="card">
