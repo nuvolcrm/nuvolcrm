@@ -38,23 +38,21 @@ $operadores = DB::table('operadores')->get();
                         <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                             <thead class="table-primary">
                                 <tr>
-                                    <th></th>
-                                    <th>NOMBRE</th>
-                                    <th>POS</th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>Id</th>
+                                    <th>Logo</th>
+                                    <th>Nombre</th>
+                                    <th>Web Cliente</th>
+                                    <th>Web Distribuidor</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($operadores as $operador)
                                     <tr>
+                                        <td>{{ $operador -> idOperador}}</td>
                                         <td><img src="../img/{{ $operador->logo }}" height="40"></td>
                                         <td>{{ $operador -> nombreOperador}}</td>
-                                        <td>{{ $operador -> orden}}</td>
-                                        <td>
-                                        <button class='btn-xs btn-success'><i class='fas fa-arrow-up'></i></button>
-                                        <button class='btn-xs btn-danger'><i class='fas fa-arrow-down'></i></button>
-                                        </td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -39,14 +39,16 @@ $servicios = DB::table('servicios')->get();
                         <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                             <thead class="table-primary">
                                 <tr>
-                                    <th></th>
-                                    <th>NOMBRE</th>
-                                    <th>DESCRIPCION</th>
+                                    <th>Id</th>
+                                    <th>Icono</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($servicios as $servicio)
                                     <tr>
+                                       <td>{{ $servicio -> idServicio}}</td>
                                         <td><i class="{{ $servicio->imagen }}"></i></td>
                                         <td>{{ $servicio -> servicio}}</td>
                                         <td>{{ $servicio -> descripcionServicio}}</td>

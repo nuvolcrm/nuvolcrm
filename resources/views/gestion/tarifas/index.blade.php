@@ -34,6 +34,7 @@
                     <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                         <thead class="table-primary">
                             <tr>
+                                <th>Id</th>
                                 <th>Operador</th>
                                 <th>Tipo</th>
                                 <th>Nombre</th>
@@ -51,6 +52,7 @@
                         <tbody>
                             @foreach ($tarifas as $tarifa)
                                 <tr>
+                                    <td>{{ $tarifa -> idTarifa}}</td>
                                     <td><img src="../img/{{ $tarifa->logo }}" height="40"></td>
                                     <td><i class='{{ $tarifa->imagen }} text-primary'></i></td>
                                     <td>{{ $tarifa -> nombreTarifa}}</td>
