@@ -255,7 +255,7 @@
                     <div>&nbsp;</div>
                 </div>
                 <div class="row d-flex justify-content-between">
-                    <button class="btn btn-primary" type="submit">Añadir</button>&nbsp;
+                    <button class="btn btn-primary" type="submit">Añadir</button>
                     <a href="{{ route('clients.index') }}">
                         <button type="button" class="btn btn-outline-danger">Cancelar</button>
                     </a>

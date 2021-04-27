@@ -88,7 +88,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Color</label>
-                                    <input type="text" name="color" placeholder="Color"
+                                    <input type="color" name="color" placeholder="Color"
                                     class="form-control mb-2">
                                 </div>
                             </div>
@@ -106,13 +106,12 @@
                         </div>
                     </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
+            <br>
+            <div class="row d-flex justify-content-between">
+                    <button class="btn btn-primary" type="submit">Añadir</button> &nbsp;
                     <a href="{{ route('gestion.operadores.index') }}">
-                        <button type="button" class="btn btn-danger">Cancelar</button>
+                        <button type="button" class="btn btn-outline-danger">Cancelar</button>
                     </a>
-                </div>
             </div>
             
             </form>

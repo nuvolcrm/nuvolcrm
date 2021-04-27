@@ -54,8 +54,10 @@
                     required>
             </div>
             <div class="col-md-4">
-                <label class="control-label">Tarifa</label>
-                <select name="idTarifa" class="form-control mb-2" id="sjs-example-diacritics">
+                <label class="control-label">Tarifa</label><br>
+                <!-- <select name="idTarifa" class="form-control mb-2" id="sjs-example-diacritics"> -->
+                <select class="js-example-basic-single" name="idTarifa">
+
                     @foreach ($tarifas as $tarifa)
                         <option value="{{ $tarifa->idTarifa }}">{{ $tarifa->nombreTarifa }} ({{ $tarifa->cuota }}€)</option>
                     @endforeach
@@ -65,10 +67,11 @@
                     required> --}}
             </div>
             <div class="col-md-4">
-                <label class="control-label">Colaborador</label>
-                <select name="idColaborador" class="form-control mb-2" >
+                <label class="control-label">Colaborador</label><br>
+                <select class="js-example-basic-single" name="idColaborador">
+                <!-- <select name="idColaborador" class="form-control mb-2" > -->
                     @foreach ($colaboradores as $colaborador)
-                        <option value="{{ $colaborador->idColaborador }}">{{ $colaborador->nombre }}</option>
+                        <option value="{{ $colaborador->idColaborador }}">({{ $colaborador->dni }}) {{ $colaborador->nombre }} {{ $colaborador->apellido1 }} {{ $colaborador->apellido2 }}</option>
                     @endforeach
                 </select>
                 {{-- <label class="control-label">idColaborador - DATE</label>
