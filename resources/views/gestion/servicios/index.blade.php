@@ -31,7 +31,7 @@ $servicios = DB::table('servicios')->get();
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-4">
+            <div class="col-12">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->
