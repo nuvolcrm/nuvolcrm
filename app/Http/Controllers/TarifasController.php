@@ -18,6 +18,8 @@ class TarifasController extends Controller
         //
         $tarifas = DB::table('tarifas')
         ->orderBy('idTarifa', 'desc')
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
         ->get();
 
         return view('gestion.tarifas.index', compact('tarifas'));
