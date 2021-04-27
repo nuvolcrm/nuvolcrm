@@ -34,18 +34,18 @@
                     <table id="example2" class="table table-hover table-responsive-xl table-md text-sm">
                         <thead class="table-primary">
                             <tr>
-                                <th>OPERADOR</th>
-                                <th></th>
-                                <th></th>
-                                <th>DESCRIPCION</th>
-                                <th>DESCRIPCION LARGA</th>
-                                <th>CUOTA</th>
-                                <th>DATOS</th>
-                                <th>LLAMADAS</th>
-                                <th>VELOCIDAD FIBRA</th>
-                                <th>PORTA</th>
-                                <th>NUEVA</th>
-                                <th>MIGRA</th>
+                                <th>Operador</th>
+                                <th>Tipo</th>
+                                <th>Nombre</th>
+                                <th>Desc. corta</th>
+                                <th>Desc. larga</th>
+                                <th>Cuota (€)</th>
+                                <th>Gigas</th>
+                                <th>Minutos</th>
+                                <th>Vel. fibra</th>
+                                <th>Com. Porta</th>
+                                <th>Com. Migra</th>
+                                <th>Com. Nueva</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,8 +65,8 @@
                                         @endif
                                     </td>
                                     <td>{{ $tarifa -> comision_portabilidad}}</td>
-                                    <td>{{ $tarifa -> comision_nueva}}</td>
                                     <td>{{ $tarifa -> comision_migra}}</td>
+                                    <td>{{ $tarifa -> comision_nueva}}</td>
                                 </tr>
                             @endforeach
                         </tbody>

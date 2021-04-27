@@ -30,7 +30,7 @@ $operadores = DB::table('operadores')->get();
 <section class="content">
     <body>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col">
                 <!-- /.card -->
                 <div class="card">
                     <!-- /.card-header -->

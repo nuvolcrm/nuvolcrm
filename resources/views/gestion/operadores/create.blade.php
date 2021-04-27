@@ -24,18 +24,12 @@
             <form action="{{ route('gestion.operadores.store') }}" method="POST">
                 @csrf
                 @method('PUT')
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title"><i class="fas fa-cubes text-primary"></i> ???</h3>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-4">
                     <div class="box-body">
                         <div class="form-group">
-                            <label class="control-label">Nombre Operador</label>
-                            <input type="text" name="nombreOperador" placeholder="Nombre Operador"
-                                class="form-control mb-2">
+                            <label class="control-label">Nombre</label>
+                            <input type="text" name="nombreOperador" placeholder="Ej: Pepephone" class="form-control mb-2">
                         </div>
                     </div>
                 </div>
@@ -43,9 +37,8 @@
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">Orden</label>
-                                    <input type="number" name="orden" placeholder="orden"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Web Cliente</label>
+                                    <input type="text" name="enlace" placeholder="Ej: https://www.pepephone.com/" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -54,42 +47,18 @@
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">Enlace</label>
-                                    <input type="text" name="enlace" placeholder="Enlace"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Web Distribuidor</label>
+                                    <input type="text" name="distribuidores" placeholder="Ej: https://canales.pepephone.com/" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">Distribuidor</label>
-                                    <input type="text" name="distribuidores" placeholder="distribuidor"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">Cliente</label>
-                                    <input type="text" name="cliente" placeholder="Cliente"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
+                    <div class="col-1">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Color</label>
-                                    <input type="color" name="color" placeholder="Color"
-                                    class="form-control mb-2">
+                                    <input type="color" name="color" placeholder="Color" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -99,8 +68,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="image" class="control-label">Logo</label>
-                                    <input type="file" name="logo" placeholder="logo"
-                                    class="form-control mb-2">
+                                    <input type="file" name="logo" placeholder="logo" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>

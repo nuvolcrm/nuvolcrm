@@ -17,9 +17,9 @@ class TarifasController extends Controller
     {
         //
         $tarifas = DB::table('tarifas')
-        ->orderBy('idTarifa', 'desc')
-        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
-        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->leftJoin('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->leftJoin('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->orderBy('operadores.idOperador', 'asc')
         ->get();
 
         return view('gestion.tarifas.index', compact('tarifas'));
@@ -33,15 +33,19 @@ class TarifasController extends Controller
     public function create()
     {
         //
-        $clients = DB::table('clients')->get();
-        $tarifas = DB::table('tarifas')->get();
-        $presupuestos = DB::table('presupuestos')
-                        ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
-                        ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
-                        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
-                        ->get();
+        // $clients = DB::table('clients')->get();
+        $tarifas = DB::table('tarifas')
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->get();
 
-        return view('gestion.tarifas.create', compact('clients', 'tarifas', 'presupuestos'));
+        // $presupuestos = DB::table('presupuestos')
+        //                 ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
+        //                 ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
+        //                 ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        //                 ->get();
+
+        return view('gestion.tarifas.create', compact('tarifas'));
     }
 
     /**

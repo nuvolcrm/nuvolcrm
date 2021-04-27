@@ -25,7 +25,7 @@
                 @csrf
                 @method('PUT')
             <div class="row">
-                <div class="col-4">
+                <!-- <div class="col-4">
                     <div class="box-body">
                         <div class="box-body">
                             <div class="form-gruop">
@@ -34,8 +34,16 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="col-md-4">
+                    <label class="control-label">Operador</label><br>
+                    <select class="js-example-basic-single" name="idOperador">
+                        @foreach ($tarifas as $tar)
+                            <option value="{{ $tar->nombreOperador }}">{{ $tar->nombreOperador }}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <div class="col-4">
+                <!-- <div class="col-4">
                     <div class="box-body">
                         <div class="box-body">
                             <div class="form-gruop">
@@ -44,6 +52,14 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="col-md-4">
+                    <label class="control-label">Servicio</label><br>
+                    <select class="js-example-basic-single" name="idServicio">
+                        @foreach ($tarifas as $tar)
+                            <option value="{{ $tar->idServicio }}">{{ $tar->servicio }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-4">
                     <div class="box-body">
@@ -58,7 +74,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Descripción corta</label>
-                                    <input type="text" name="descripcion" placeholder="39GB + llamadas ilimitadas" class="form-control mb-2">
+                                    <input type="text" name="descripcion" placeholder="Ej: 39GB + llamadas ilimitadas" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -69,7 +85,7 @@
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Descripción larga</label>
                                     <!-- <textarea name="descripcion_larga" maxlength="500" placeholder="39GB acumulables + llamadas ilimitadas. Cobertura Yoigo. Sin permanencia."></textarea> -->
-                                    <input type="text" name="descripcion_larga" placeholder="39GB acumulables + llamadas ilimitadas. Cobertura Yoigo. Sin permanencia." class="form-control mb-2">
+                                    <input type="text" name="descripcion_larga" placeholder="Ej: 39GB acumulables + llamadas ilimitadas. Cobertura Yoigo. Sin permanencia." class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -78,8 +94,8 @@
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">Cuota</label>
-                                    <input type="number" name="cuota" placeholder="cuota" class="form-control mb-2">
+                                    <label for="" class="control-label">Cuota (€)</label>
+                                    <input type="number" name="cuota" placeholder="Ej: 19.90" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -134,7 +150,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+            </div>
+                    <div class="row">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
@@ -144,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
@@ -154,7 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
@@ -163,6 +181,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                     <!-- <div class="col-4">
                         <div class="box-body">
@@ -175,10 +194,9 @@
                         </div>
                     </div> -->
                     
-            </div>
             <br>
             <div class="row d-flex justify-content-between">
-                    <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
+                    <button class="btn btn-primary" type="submit">Añadir</button> &nbsp;
                     <a href="{{ route('gestion.tarifas.index') }}">
                         <button type="button" class="btn btn-outline-danger">Cancelar</button>
                     </a>
