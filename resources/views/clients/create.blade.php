@@ -217,15 +217,6 @@
                     @enderror
                 </div>
             </div>
-            <div class="col-md-3">
-                <div>
-                    <label class="control-label">Provincia</label>
-                    <input type="text" name="provincia" placeholder="Ej: VALENCIA" class="form-control mb-2" value="{{ old('provincia') }}" required>
-                    @error('provincia')
-                    <small class="text-danger">*{{ $message }}</small>
-                    @enderror
-                </div>
-            </div>
         </div>
         <div>
             <hr>
@@ -248,12 +239,6 @@
                 <div>
                     <label class="control-label">Observaciones</label>
                     <input type="text" name="observaciones" placeholder="Ej: AMIGO DE JUANJO" value="{{ old('observaciones') }}" class="form-control mb-2">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <label class="control-label">Otros</label>
-                    <input type="text" name="otros" placeholder="Ej: COBERTURA PUEBLO MOVISTAR" class="form-control mb-2" value="{{ old('otros') }}">
                 </div>
             </div>
         </div>
