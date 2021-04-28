@@ -12,6 +12,7 @@
     </div>
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="/skins/line/blue.css" rel="stylesheet">
 @endsection
 
 @stop
@@ -34,8 +35,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label class="control-label">Documento</label>
-                                <input type="text" name="nombreTarifa" placeholder="DNI/NIE"
-                                    class="form-control mb-2">
+                                <input type="text" name="dni" placeholder="DNI/NIE" class="form-control mb-2">
                             </div>
                         </div>
                     </div>
@@ -44,8 +44,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Nombre</label>
-                                    <input type="text" name="descripcion" placeholder="Nombre"
-                                        class="form-control mb-2">
+                                    <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -55,8 +54,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Alias</label>
-                                    <input type="text" name="descripcion_larga" placeholder="Alias"
-                                        class="form-control mb-2">
+                                    <input type="text" name="alias" placeholder="Alias" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -66,37 +64,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Primer Apellido</label>
-                                    <input type="text" name="cuota" placeholder="Primer Apellido" class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">Segundo Apellido</label>
-                                    <input type="text" name="datos" placeholder="Segundo Apellido" class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">Direccion</label>
-                                    <input type="text" name="llamadas" placeholder="Direccion" class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">Cuenta</label>
-                                    <input type="text" name="velocidad" placeholder="Cuenta"
+                                    <input type="text" name="apellido1" placeholder="Primer Apellido"
                                         class="form-control mb-2">
                                 </div>
                             </div>
@@ -106,8 +74,50 @@
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
+                                    <label for="" class="control-label">Segundo Apellido</label>
+                                    <input type="text" name="apellido2" placeholder="Segundo Apellido"
+                                        class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Direccion</label>
+                                    <input type="text" name="direccion" placeholder="Direccion"
+                                        class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Cuenta</label>
+                                    <input type="text" name="cuenta" placeholder="Cuenta" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">E-mail</label>
+                                    <input type="text" name="email" placeholder="E-mail" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
                                     <label for="" class="control-label">Telefono</label>
-                                    <input type="text" name="permanencia" placeholder="Telefono"
+                                    <input type="number" name="telefono" placeholder="Telefono"
                                         class="form-control mb-2">
                                 </div>
                             </div>
@@ -118,8 +128,7 @@
                             <div class="box-body">
                                 <div class="form-gruop">
                                     <label for="" class="control-label">Tipo</label>
-                                    <input type="text" name="comision_portabilidad" placeholder="Tipo"
-                                        class="form-control mb-2">
+                                    <input type="number" name="tipo" placeholder="Tipo" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
@@ -128,9 +137,16 @@
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">Activo</label>
-                                    <input type="text" name="comision_nueva" placeholder="Activo"
-                                        class="form-control mb-2">
+                                    <div class="col-2">
+                                        <input type="radio" name="iCheck">
+                                        <label>off</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="radio" name="iCheck" checked>
+                                        <label>on</label>
+                                    </div>
+                                    {{-- <input type="radio" name="iCheck">off 
+                                    <input type="radio" name="iCheck" checked> on --}}
                                 </div>
                             </div>
                         </div>
@@ -158,5 +174,21 @@
         $('.js-example-basic-single').select2();
     });
 
+    $(document).ready(function() {
+        $('input').each(function() {
+            var self = $(this),
+                label = self.next(),
+                label_text = label.text();
+
+            label.remove();
+            self.iCheck({
+                checkboxClass: 'icheckbox_line-blue',
+                radioClass: 'iradio_line-blue',
+                insert: '<div class="icheck_line-icon"></div>' + label_text
+            });
+        });
+    });
+
 </script>
+<script src="/js/icheck.js"></script>
 @stop
