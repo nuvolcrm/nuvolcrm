@@ -69,6 +69,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- </div> -->
                     <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
