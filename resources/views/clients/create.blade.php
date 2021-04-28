@@ -71,6 +71,15 @@
             </div>
             <div class="col-md-3">
                 <div>
+                    <label class="control-label">Subir documento</label>
+                    <input type="file" name="subirdni" placeholder="Selecciona archivo" value="{{ old('subirdni') }}" required>
+                    @error('subirdni')
+                    <small class="text-danger">*{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
                     <label class="control-label">Caduca el...</label>
                     <input type="date" name="caduca" class="form-control mb-2" value="{{ old('caduca') }}" required>
                     @error('caduca')
@@ -178,10 +187,10 @@
                     @enderror
                 </div>
             </div>
-            <div class="col-md-3 d-flex flex-row">
+            <div class="col-md-3">
                 <div>
-                    <label class="control-label">Newsletter</label>
-                    <input type="checkbox" name="newsletter" class="form-control mb-2" checked>
+                    <label class="control-label">Newsletter</label><br>
+                    <input type="checkbox" name="newsletter" checked>
                 </div>
             </div>
         </div>
@@ -217,18 +226,19 @@
                     @enderror
                 </div>
             </div>
+            <div class="col-md-3">
+                <label class="control-label">Provincia</label><br>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Ej: VALENCIA">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+            </div>
         </div>
         <div>
             <hr>
             <!-- <h5 class="text-primary text-bold">Información adicional</h5> -->
         </div>
         <div class="row">
-            <div class="col-md-3">
-                <div>
-                    <label class="control-label">Campaña</label>
-                    <input type="text" name="campanya" placeholder="Ej: FB16FEB21, flyers..." class="form-control mb-2" value="{{ old('keywords') }}">
-                </div>
-            </div>
             <div class="col-md-3">
                 <div>
                     <label class="control-label">Keywords</label>
@@ -241,6 +251,18 @@
                     <input type="text" name="observaciones" placeholder="Ej: AMIGO DE JUANJO" value="{{ old('observaciones') }}" class="form-control mb-2">
                 </div>
             </div>
+            <div class="col-md-3">
+                <div>
+                    <label class="control-label">Comercial</label>
+                    <input type="text" name="campanya" placeholder="Ej: JAVIER PEREZ" class="form-control mb-2" value="{{ old('keywords') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <label class="control-label">Campaña</label>
+                    <input type="text" name="campanya" placeholder="Ej: FB16FEB21, flyers..." class="form-control mb-2" value="{{ old('keywords') }}">
+                </div>
+            </div>
         </div>
         <div>
             <hr>
@@ -249,13 +271,13 @@
         <div class="row">
             <div class="col-md-3">
                 <div>
-                    <label class="control-label">Marca</label>
+                    <label class="control-label">Marca comercial</label>
                     <input type="text" name="otros" placeholder="Ej: MOVY.ES" class="form-control mb-2" value="{{ old('otros') }}">
                 </div>
             </div>
             <div class="col-md-3">
                 <div>
-                    <label class="control-label">Razón Social</label>
+                    <label class="control-label">Razón social</label>
                     <input type="text" name="otros" placeholder="Ej: MOVY SERVICIOS INTEGRALES SL" class="form-control mb-2" value="{{ old('otros') }}">
                 </div>
             </div>
