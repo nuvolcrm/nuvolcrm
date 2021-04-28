@@ -235,7 +235,7 @@
             </div>
         </div>
         <div>
-            <hr>
+            <hr class="bg-primary">
             <!-- <h5 class="text-primary text-bold">Información adicional</h5> -->
         </div>
         <div class="row">
@@ -265,7 +265,7 @@
             </div>
         </div>
         <div>
-            <hr>
+            <hr class="bg-primary">
             <h5 class="text-primary text-bold">Datos empresa</h5>
         </div>
         <div class="row">
