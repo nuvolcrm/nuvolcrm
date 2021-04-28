@@ -37,7 +37,7 @@
                 </div> -->
                 <div class="col-md-4">
                     <label class="control-label">Operador</label><br>
-                    <select class="js-example-basic-single" name="idOperador">
+                    <select class="js-example-basic-single" style="width: 100%" name="idOperador">
                         @foreach ($tarifas as $tar)
                             <option value="{{ $tar->nombreOperador }}">{{ $tar->nombreOperador }}</option>
                         @endforeach
@@ -55,7 +55,7 @@
                 </div> -->
                 <div class="col-md-4">
                     <label class="control-label">Servicio</label><br>
-                    <select class="js-example-basic-single" name="idServicio">
+                    <select class="js-example-basic-single" style="width: 100%" name="idServicio">
                         @foreach ($tarifas as $tar)
                             <option value="{{ $tar->idServicio }}">{{ $tar->servicio }}</option>
                         @endforeach
