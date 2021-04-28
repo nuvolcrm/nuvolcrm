@@ -58,17 +58,17 @@
                                     <td>{{ $tarifa -> nombreTarifa}}</td>
                                     <td>{{ $tarifa -> descripcion}}</td>
                                     <td>{{ $tarifa -> descripcion_larga}}</td>
-                                    <td>{{ $tarifa -> cuota}} €</td>
-                                    <td>{{ $tarifa -> datos}}</td>
+                                    <td class="text-right">{{ $tarifa -> cuota}} €</td>
+                                    <td>{{ $tarifa -> datos}} GB</td>
                                     <td>{{ $tarifa -> llamadas}}</td>
-                                    <td>
+                                    <td class="text-right">
                                         @if ($tarifa -> velocidad)
-                                            {{ $tarifa -> velocidad}}MB
+                                            {{ $tarifa -> velocidad}} MB
                                         @endif
                                     </td>
-                                    <td>{{ $tarifa -> comision_portabilidad}}</td>
-                                    <td>{{ $tarifa -> comision_migra}}</td>
-                                    <td>{{ $tarifa -> comision_nueva}}</td>
+                                    <td class="text-right">{{ $tarifa -> comision_portabilidad}} €</td>
+                                    <td class="text-right">{{ $tarifa -> comision_migra}} €</td>
+                                    <td class="text-right">{{ $tarifa -> comision_nueva}} €</td>
                                 </tr>
                             @endforeach
                         </tbody>
