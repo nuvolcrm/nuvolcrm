@@ -25,7 +25,7 @@
                 @csrf
                 @method('PUT')
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="box-body">
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
@@ -54,6 +54,7 @@
                         </div>
                     </div>
             </div>
+            <br>
             <div class="row d-flex justify-content-between">
                     <button class="btn btn-primary" type="submit">Añadir</button> &nbsp;
                     <a href="{{ route('gestion.servicios.index') }}">
