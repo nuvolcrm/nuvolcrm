@@ -61,7 +61,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="box-body">
                         <div class="form-group">
                             <label class="control-label">Nombre</label>
