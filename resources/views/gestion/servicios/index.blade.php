@@ -41,6 +41,7 @@ $servicios = DB::table('servicios')->get();
                                 <tr>
                                     <th>Id</th>
                                     <th>Icono</th>
+                                    <th>Tipo</th>
                                     <th>Nombre</th>
                                     <th>Descripción</th>
                                 </tr>
@@ -50,6 +51,7 @@ $servicios = DB::table('servicios')->get();
                                     <tr>
                                        <td>{{ $servicio -> idServicio}}</td>
                                         <td><i class="{{ $servicio->imagen }}"></i></td>
+                                        <td>{{ $servicio -> tipo}}</td>
                                         <td>{{ $servicio -> servicio}}</td>
                                         <td>{{ $servicio -> descripcionServicio}}</td>
                                     </tr>

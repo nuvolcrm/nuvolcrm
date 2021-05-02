@@ -343,7 +343,7 @@ $ventas = DB::table('ventas')
                 <div class="card-body">
                     <!-- NEWSLETTER OPERADORES -->
                     <div class="box-header with-border">
-                        <h4 class="box-title text-primary"><i class="fas fa-chart-line"></i>&nbsp;<strong>incentivos del mes</strong></h4>
+                        <h4 class="box-title text-primary"><i class="fas fa-chart-line"></i><strong> incentivos del mes</strong></h4>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
