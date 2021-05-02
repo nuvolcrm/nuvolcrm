@@ -46,7 +46,7 @@ $ventas = DB::table('ventas')
                 <div class="icon">
                 <div class="icon">
                     <h3>3847<sup style="font-size: 20px"></sup></h3>
-                    <h5>Ingresosxx</h5>
+                    <h5>Ingresos</h5>
                 </div>
                 <div class="icon">
                     <i class="fas fa-euro-sign"></i>
