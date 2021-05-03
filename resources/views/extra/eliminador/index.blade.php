@@ -71,6 +71,32 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="far fa-user-circle text-primary"></i> Lowi (ver Cliente)</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <div class="input-group input-group-sm">
+                              <input class="form-control form-control-navbar" type="text" placeholder="Indica el DNI/NIE" aria-label="Search" name="doc" id="doc" onkeydown="presionar_tecla_lowi()">
+                              <div class="input-group-append">
+                                <span class="input-group-text" onclick="verlowi()">
+                                  <i class="far fa-user-circle"></i>
+                                </span>
+                              </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 {{--<section class="content">
@@ -111,6 +137,10 @@
       var cadena = document.getElementById("cadena").value;
       document.getElementById("cadena2").innerHTML = cadena.replace(/-|\s/g,"");
     }
+    function verlowi(){
+        var doc = document.getElementById("doc").value;
+      window.open('https://retail.lowi.es/user/details?document_number=' + doc); 
+    }
     function presionar_tecla(){
         tecla_enter = event.keyCode;
 
@@ -118,6 +148,13 @@
             var tel = document.getElementById("tel").value;
             window.open('https://wa.me/34' + tel); 
         }
+    // function presionar_tecla_lowi(){
+    //     tecla_enter = event.keyCode;
+
+    //     if(tecla_enter == 13){
+    //         var doc = document.getElementById("doc").value;
+    //         window.open('https://retail.lowi.es/user/details?document_number=' + doc); 
+    //     }
     }
 </script>
 

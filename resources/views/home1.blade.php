@@ -40,43 +40,323 @@ $ventas = DB::table('ventas')
 <!-- Main content -->
 <section class="content">
 
-    <!-- 3 INDICADORES INGRESOS / FIBRAS / MOVILES -->
+    {{--<div class="row">
+        <div class="col-lg-2 col-sm-5">
+            <div class="small-box bg-success">
+                <div class="icon">
+                <div class="icon">
+                    <h3>3847<sup style="font-size: 20px"></sup></h3>
+                    <h5>Ingresos</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-5">
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h3>28<sup style="font-size: 20px"></sup></h3>
+                    <h5>Fibras</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <h3>85<sup style="font-size: 20px"></sup></h3>
+                    <h5>Móviles</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-mobile"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>27<sup style="font-size: 20px"></sup></h3>
+                    <h5>Clientes</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+            <div class="small-box bg-secondary">
+                <div class="inner">
+                    <h3>12<sup style="font-size: 20px"></sup></h3>
+                    <h5>Presupuestos</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>128<sup style="font-size: 20px"></sup></h3>
+                    <h5>Emails</h5>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+            </div>
+        </div>
+    </div>--}}
+
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
             <!-- /.card -->
             <div class="card bg-success">
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Ingresos: <strong>3847 </strong><i class="fas fa-euro-sign"></i></h1>
+                        <h1><strong>3847</strong>&nbsp;<i class="fas fa-euro-sign"></i></h1>
+                        <h3>Ingresos</h3>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
             <!-- /.card -->
             <div class="card bg-primary">
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Fibras: <strong>28 </strong><i class="fas fa-wifi"></i></h1>
+                        <h1><strong>28</strong>&nbsp;<i class="fas fa-wifi"></i></h1>
+                        <h3>Fibras</h3>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
             <!-- /.card -->
             <div class="card bg-danger">
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Móviles: <strong>85 </strong><i class="fas fa-mobile"></i></h1>
+                        <h1><strong>85</strong>&nbsp;<i class="fas fa-mobile"></i></h1>
+                        <h3>Móviles</h3>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-md-2">
+            <!-- /.card -->
+            <div class="card bg-warning">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box-header with-border">
+                        <h1><strong>27</strong>&nbsp;<i class="fas fa-user"></i></h1>
+                        <h3>Clientes</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <!-- /.card -->
+            <div class="card bg-secondary">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box-header with-border">
+                        <h1><strong>12</strong>&nbsp;<i class="fas fa-calculator"></i></h1>
+                        <h3>Presupuestos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <!-- /.card -->
+            <div class="card bg-info">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="box-header with-border">
+                        <h1><strong>128</strong>&nbsp;<i class="fas fa-newspaper"></i></h1>
+                        <h3>Emails</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <!-- 5 ULTIMOS CLIENTES -->
+                    <div class="box-header with-border">
+                        <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;<strong>last 5 Clientes</strong></h4>
+                        <!--
+                                <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                                -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-responsive-xl table-md text-md">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre y apellidos</th>
+                                        <!-- <th class="text-right">Ingresos</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php($orden = 1)
+                                    @foreach ($clients as $cli)
+                                    <tr>
+                                        <td>{{ $orden }}</td>
+                                        <td>
+                                            @if ($cli -> alias <> '')
+                                                ("{{ $cli -> alias }}")
+                                                @endif
+                                                {{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td> <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
+                                    </tr>
+                                    @php($orden++)
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo
+                            Cliente</a>
+                        <a href="{{ route('clients.index') }}" class="btn btn-sm btn-default pull-right">Ver
+                            todo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.box-footer -->
+
+        <div class="col-md-4">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+
+                    <!-- 5 ULTIMOS PRESUPUESTOS -->
+
+                    <div class="box-header with-border">
+                        <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;<strong>last 5 presupuestos</strong></h4>
+                        <!--
+                                                                <div class="box-tools pull-right">
+                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                                                </div>
+                                                                -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-responsive-xl table-md text-md">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre y apellidos</th>
+                                        <th class="text-right">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php($orden = 1)
+                                    @foreach ($presupuestos as $pre)
+
+                                    <tr>
+                                        <td>{{ $orden }}</td>
+                                        <td>{{ $pre->nombre . ' ' . $pre->apellido1 . ' ' . $pre->apellido2 }}
+                                        </td>
+                                        <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span>
+                                        </td>
+                                    </tr>
+                                    @php($orden++)
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <a href="{{ route('presupuestos.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo
+                            presupuesto</a>
+                        <a href="{{ route('presupuestos.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.box-footer -->
+
+        <div class="col-md-4">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+
+
+                    <!-- 5 ULTIMAS VENTAS -->
+
+                    <div class="box-header with-border">
+                        <h4 class="box-title text-primary"><i class="far fa-handshake"></i>&nbsp;<strong>last 5 ventas</strong></h4>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-responsive-xl table-md text-md">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre y apellidos</th>
+                                        <th class="text-right">Cuota</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php($orden = 1)
+                                    @foreach ($ventas as $ven)
+                                    <tr>
+                                        <td>{{ $orden }}</td>
+                                        <!-- <td>Másmóvil</td> -->
+                                        <td>{{ $ven->nombre . ' ' . $ven->apellido1 . ' ' . $ven->apellido2 }}
+                                        </td>
+                                        <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
+                                    </tr>
+                                    @php($orden++)
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
+                        <a href="{{ route('ventas.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.box-footer -->
+
+
+    </div>
+
     <div class="row">
         <div class="col-md-4">
             <!-- /.card -->
@@ -334,240 +614,6 @@ $ventas = DB::table('ventas')
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <!-- /.card -->
-            <div class="card">
-                <!-- /.card-header -->
-                <div class="card-body">
-                    <!-- NEWSLETTER OPERADORES -->
-                    <div class="box-header with-border">
-                        <h4 class="box-title text-primary"><i class="fas fa-chart-line"></i><strong> incentivos del mes</strong></h4>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-responsive-xs table-xs text-sm">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Operador</th>
-                                        <th>Incentivos</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th><img src="img/masmovil.jpg" height="20"></img></th>
-                                        <td>Másmóvil</td>
-                                        <td>MasXmenos hasta 4 mayo. +10 fibras 100€ +15 moviles x8€</td>
-                                    </tr>
-                                    <tr>
-                                        <th><img src="img/o2.jpg" height="20"></img></th>
-                                        <td>O2</td>
-                                        <td>+200€ por bloques 4 fibras</td>
-                                    </tr>
-                                    <tr>
-                                        <th><img src="img/lowi.png" height="20"></img></th>
-                                        <td>Lowi</td>
-                                        <td>+150€ por 10 fibras</td>
-                                    </tr>
-                                    <tr>
-                                        <th><img src="img/digi.jpg" height="20"></img></th>
-                                        <td>Digi</td>
-                                        <td>+de 3 fibras beginner +20€ cada una</td>
-                                    </tr>
-                                    <tr>
-                                        <th><img src="img/pepephone.png" height="20"></img></th>
-                                        <td>Pepephone</td>
-                                        <td>245 €</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                </div>
-            </div>
-            <!-- /.card -->     
-        </div>
-    </div>
-
-
-
-    <div class="row">
-        <div class="col-md-4">
-            <!-- /.card -->
-            <div class="card">
-                <!-- /.card-header -->
-                <div class="card-body">
-                    <!-- 5 ULTIMOS CLIENTES -->
-                    <div class="box-header with-border">
-                        <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;<strong>last 5 Clientes</strong></h4>
-                        <!--
-                                <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                </div>
-                                -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-responsive-xl table-md text-md">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nombre y apellidos</th>
-                                        <!-- <th class="text-right">Ingresos</th> -->
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php($orden = 1)
-                                    @foreach ($clients as $cli)
-                                    <tr>
-                                        <td>{{ $orden }}</td>
-                                        <td>
-                                            @if ($cli -> alias <> '')
-                                                ("{{ $cli -> alias }}")
-                                                @endif
-                                                {{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td> <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
-                                    </tr>
-                                    @php($orden++)
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo
-                            Cliente</a>
-                        <a href="{{ route('clients.index') }}" class="btn btn-sm btn-default pull-right">Ver
-                            todo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /.box-footer -->
-
-        <div class="col-md-4">
-            <!-- /.card -->
-            <div class="card">
-                <!-- /.card-header -->
-                <div class="card-body">
-
-                    <!-- 5 ULTIMOS PRESUPUESTOS -->
-
-                    <div class="box-header with-border">
-                        <h4 class="box-title text-primary"><i class="fas fa-calculator"></i>&nbsp;<strong>last 5 presupuestos</strong></h4>
-                        <!--
-                                                                <div class="box-tools pull-right">
-                                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                                                </div>
-                                                                -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-responsive-xl table-md text-md">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nombre y apellidos</th>
-                                        <th class="text-right">Valor</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php($orden = 1)
-                                    @foreach ($presupuestos as $pre)
-
-                                    <tr>
-                                        <td>{{ $orden }}</td>
-                                        <td>{{ $pre->nombre . ' ' . $pre->apellido1 . ' ' . $pre->apellido2 }}
-                                        </td>
-                                        <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span>
-                                        </td>
-                                    </tr>
-                                    @php($orden++)
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <a href="{{ route('presupuestos.create') }}" class="btn btn-sm btn-primary pull-left">Nuevo
-                            presupuesto</a>
-                        <a href="{{ route('presupuestos.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /.box-footer -->
-
-        <div class="col-md-4">
-            <!-- /.card -->
-            <div class="card">
-                <!-- /.card-header -->
-                <div class="card-body">
-
-
-                    <!-- 5 ULTIMAS VENTAS -->
-
-                    <div class="box-header with-border">
-                        <h4 class="box-title text-primary"><i class="far fa-handshake"></i>&nbsp;<strong>last 5 ventas</strong></h4>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-responsive-xl table-md text-md">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nombre y apellidos</th>
-                                        <th class="text-right">Cuota</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php($orden = 1)
-                                    @foreach ($ventas as $ven)
-                                    <tr>
-                                        <td>{{ $orden }}</td>
-                                        <!-- <td>Másmóvil</td> -->
-                                        <td>{{ $ven->nombre . ' ' . $ven->apellido1 . ' ' . $ven->apellido2 }}
-                                        </td>
-                                        <td class="text-right"><span class="label label-success">39<sup>90</sup>€</span></td>
-                                    </tr>
-                                    @php($orden++)
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <a href="javascript:void(0)" class="btn btn-sm btn-primary pull-left">Nueva venta</a>
-                        <a href="{{ route('ventas.index') }}" class="btn btn-sm btn-default pull-right">Ver todo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /.box-footer -->
-
-
-    </div>
-
-    
 </section>
 
 @stop
