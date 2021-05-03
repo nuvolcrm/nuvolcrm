@@ -134,6 +134,21 @@
                     <input type="number" name="linea" required placeholder="678901234" class="form-control mb-2">
                 </div>
                 <div class="col-md-4">
+                        <div class="input-group">
+                            <div class="form-group required inline" data-fid="f99" name="tipo">
+                                <label class="control-label" for="f99">Tipo</label>
+                                <div class="radio">
+                                    <input id="porta" name="alta" type="radio" value="par">
+                                    Portabilidad&nbsp;&nbsp;
+                                    <input id="nueva" name="alta" type="radio" value="esp">
+                                    Alta nueva&nbsp;&nbsp;
+                                    <input id="migra" name="alta" type="radio" value="aut">
+                                    Migración
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-4">
                     <label class="control-label">Usuario</label>
                     <input type="text" name="usuario" required placeholder="Ej.: HIJO JUAN" class="form-control mb-2">
                 </div>
