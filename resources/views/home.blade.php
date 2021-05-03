@@ -48,7 +48,7 @@ $ventas = DB::table('ventas')
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Ingresos: <strong>3847 </strong><i class="fas fa-euro-sign"></i></h1>
+                        <h2 class="text-center">Ingresos: <strong>3847 </strong><i class="fas fa-euro-sign"></i></h2>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ $ventas = DB::table('ventas')
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Fibras: <strong>28 </strong><i class="fas fa-wifi"></i></h1>
+                        <h2 class="text-center">Fibras: <strong>28 </strong><i class="fas fa-wifi"></i></h2>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ $ventas = DB::table('ventas')
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="box-header with-border">
-                        <h1>Móviles: <strong>85 </strong><i class="fas fa-mobile"></i></h1>
+                        <h2 class="text-center">Móviles: <strong>85 </strong><i class="fas fa-mobile"></i></h2>
                     </div>
                 </div>
             </div>
