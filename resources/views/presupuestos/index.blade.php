@@ -55,7 +55,7 @@
                             @foreach ($presupuestos as $pre)
                                 <tr>
                                     <td>{{ $pre->id }}</td>
-                                    {{-- <td>{{ $pre->created_at }}</td> --}}
+                                    <td>{{ $pre->created_at }}</td>
                                     <td>
                                         @if ($pre->alias != '')
                                             ("{{ $pre->alias }}")
