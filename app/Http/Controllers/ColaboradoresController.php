@@ -15,9 +15,10 @@ class ColaboradoresController extends Controller
      */
     public function index()
     {
-        $colaboradores = DB::table('colaboradores')
+        // $colaboradores = DB::table('colaboradores')
         // ->orderBy('idColaborador', 'desc')
-        ->get();
+        // ->get();
+        $colaboradores = colaboradores::all();
 
         return view('gestion.colaboradores.index', compact('colaboradores'));
     }
@@ -42,6 +43,23 @@ class ColaboradoresController extends Controller
     public function store(Request $request)
     {
         //
+        $colaboradores = new colaboradores();
+
+        $colaboradores->dni = $request->dni;
+        $colaboradores->nombre = $request->nombre;
+        $colaboradores->apellido1 = $request->apellido1;
+        $colaboradores->apellido2 = $request->apellido2;
+        $colaboradores->alias = $request->alias;
+        $colaboradores->direccion = $request->direccion;
+        $colaboradores->telefono = $request->telefono;
+        $colaboradores->email = $request->email;
+        $colaboradores->cuenta = $request->cuenta;
+        $colaboradores->tipo = $request->tipo;
+        $colaboradores->activo = $request->activo;
+
+        $colaboradores->save();
+
+        return redirect()->route('gestion.colaboradores.index');
     }
 
     /**
@@ -53,6 +71,7 @@ class ColaboradoresController extends Controller
     public function show(colaboradores $colaboradores)
     {
         //
+        return view('gestion.colaboradores.show', compact('colaboradores'));
     }
 
     /**
@@ -64,6 +83,7 @@ class ColaboradoresController extends Controller
     public function edit(colaboradores $colaboradores)
     {
         //
+        return view('gestion.colaboradores.edit', compact('colaboradores'));
     }
 
     /**
@@ -76,6 +96,21 @@ class ColaboradoresController extends Controller
     public function update(Request $request, colaboradores $colaboradores)
     {
         //
+        $colaboradores->dni = $request->dni;
+        $colaboradores->nombre = $request->nombre;
+        $colaboradores->apellido1 = $request->apellido1;
+        $colaboradores->apellido2 = $request->apellido2;
+        $colaboradores->alias = $request->alias;
+        $colaboradores->direccion = $request->direccion;
+        $colaboradores->telefono = $request->telefono;
+        $colaboradores->email = $request->email;
+        $colaboradores->cuenta = $request->cuenta;
+        $colaboradores->tipo = $request->tipo;
+        $colaboradores->activo = $request->activo;
+
+        $colaboradores->save();
+
+        return view('gestion.colaboradores.show', compact('colaboradores'));
     }
 
     /**

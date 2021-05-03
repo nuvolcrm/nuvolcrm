@@ -44,6 +44,9 @@ class PedidosController extends Controller
     public function store(Request $request)
     {
         //
+        $pedido = pedidos::create($request->all());
+        
+        return redirect()->route('extra.pedidos.index', $pedido);
     }
 
     /**

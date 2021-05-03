@@ -17,7 +17,9 @@ class TarifasController extends Controller
     {
         //
         $tarifas = DB::table('tarifas')
-        ->orderBy('idTarifa', 'desc')
+        ->leftJoin('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->leftJoin('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->orderBy('operadores.idOperador', 'asc')
         ->get();
 
         return view('gestion.tarifas.index', compact('tarifas'));
@@ -31,15 +33,27 @@ class TarifasController extends Controller
     public function create()
     {
         //
-        $clients = DB::table('clients')->get();
-        $tarifas = DB::table('tarifas')->get();
-        $presupuestos = DB::table('presupuestos')
-                        ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
-                        ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
-                        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
-                        ->get();
+        // $clients = DB::table('clients')->get();
+        $tarifas = DB::table('tarifas')
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->distinct('servicios.idServicio')
+        ->get();
 
-        return view('gestion.tarifas.create', compact('clients', 'tarifas', 'presupuestos'));
+        $operadores = DB::table('operadores')
+        ->distinct()
+        ->get();
+
+        $servicios = DB::table('servicios')
+        ->distinct()
+        ->get();
+        // $presupuestos = DB::table('presupuestos')
+        //                 ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
+        //                 ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
+        //                 ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        //                 ->get();
+
+        return view('gestion.tarifas.create', compact('tarifas', 'operadores', 'servicios'));
     }
 
     /**
@@ -51,7 +65,27 @@ class TarifasController extends Controller
     public function store(Request $request)
     {
         //
+        $Tarifa = new Tarifas();
+
+        $Tarifa->idTarifa = $request->idTarifa;
+        $Tarifa->nombreTarifa = $request->nombreTarifa;
+        $Tarifa->descripcion = $request->descripcion;
+        $Tarifa->descripcion_larga = $request->descripcion_larga;
+        $Tarifa->cuota = $request->cuota;
+        $Tarifa->datos = $request->datos;
+        $Tarifa->llamadas = $request->llamadas;
+        $Tarifa->velocidad = $request->velocidad;
+        $Tarifa->permanencia = $request->permanencia;
+        $Tarifa->comision_portabilidad = $request->comision_portabilidad;
+        $Tarifa->comision_nueva = $request->comision_nueva;
+        $Tarifa->comision_migra = $request->comision_migra;
+        $Tarifa->descatalogado = $request->descatalogado;
+        $Tarifa->idServicio = $request->idServicio;
+        $Tarifa->idOperador = $request->idOperador;
+
+        $Tarifa->save();
         
+        return redirect()->route("gestion.tarifas.index");
     }
 
     /**

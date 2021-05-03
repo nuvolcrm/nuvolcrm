@@ -24,172 +24,183 @@
             <form action="{{ route('gestion.tarifas.store') }}" method="POST">
                 @csrf
                 @method('PUT')
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title"><i class="fas fa-cubes text-primary"></i> ???</h3>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-4">
+                <!-- <div class="col-4">
+                    <div class="box-body">
+                        <div class="box-body">
+                            <div class="form-gruop">
+                                <label for="" class="control-label">Operador</label>
+                                <input type="select" name="idOperador " placeholder="Ej: Pepephone" class="form-control mb-2">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <label class="control-label">Operador</label><br>
+                    <select class="js-example-basic-single" name="idOperador">
+                        @foreach ($operadores as $tar)
+                            <option value="{{ $tar->idOperador }}">{{ $tar->nombreOperador }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <!-- <div class="col-4">
+                    <div class="box-body">
+                        <div class="box-body">
+                            <div class="form-gruop">
+                                <label for="" class="control-label">Servicio</label>
+                                <input type="select" name="idServicio " placeholder="Ej: Movil" class="form-control mb-2">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <label class="control-label">Servicio</label><br>
+                    <select class="js-example-basic-single" name="idServicio">
+                        @foreach ($servicios as $tar)
+                            <option value="{{ $tar->idServicio }}">{{ $tar->servicio }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-4">
                     <div class="box-body">
                         <div class="form-group">
-                            <label class="control-label">Nombre Tarifa</label>
-                            <input type="text" name="nombreTarifa" placeholder="Nombre Tarifa"
-                                class="form-control mb-2">
+                            <label class="control-label">Nombre</label>
+                            <input type="text" name="nombreTarifa" placeholder="Ej: La Inimitable" class="form-control mb-2">
                         </div>
                     </div>
                 </div>
-                    <div class="col-4">
+                <!-- </div> -->
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">descripcion</label>
-                                    <input type="text" name="descripcion" placeholder="descripcion"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Descripción corta</label>
+                                    <input type="text" name="descripcion" placeholder="Ej: 39GB + llamadas ilimitadas" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">descripcion larga</label>
-                                    <input type="text" name="descripcion_larga" placeholder="descripcion larga"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Descripción larga</label>
+                                    <!-- <textarea name="descripcion_larga" maxlength="500" placeholder="39GB acumulables + llamadas ilimitadas. Cobertura Yoigo. Sin permanencia."></textarea> -->
+                                    <input type="text" name="descripcion_larga" placeholder="Ej: 39GB acumulables + llamadas ilimitadas. Cobertura Yoigo. Sin permanencia." class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">cuota</label>
-                                    <input type="text" name="cuota" placeholder="cuota"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Cuota (€)</label>
+                                    <input type="number" name="cuota" placeholder="Ej: 19.90" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">datos</label>
-                                    <input type="text" name="datos" placeholder="datos"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Gigas</label>
+                                    <input type="number" name="datos" placeholder="Ej: 39" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">llamadas</label>
-                                    <input type="text" name="llamadas" placeholder="llamadas"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Minutos</label>
+                                    <input type="number" name="llamadas" placeholder="Ej: 9999 (ilimitados)" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">velocidad</label>
-                                    <input type="text" name="velocidad" placeholder="velocidad"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Velocidad fibra (mbps)</label>
+                                    <input type="number" name="velocidad" placeholder="Ej: 600" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">permanencia</label>
-                                    <input type="text" name="permanencia" placeholder="permanencia"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Permanencia (meses)</label>
+                                    <input type="number" name="permanencia" placeholder="Ej: 0" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <div class="box-body">
                             <div class="box-body">
                                 <div class="form-gruop">
-                                    <label for="" class="control-label">comision_portabilidad</label>
-                                    <input type="text" name="comision_portabilidad" placeholder="comision_portabilidad"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">comision_nueva</label>
-                                    <input type="text" name="comision_nueva" placeholder="comision_nueva"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">comision_migra</label>
-                                    <input type="text" name="comision_migra" placeholder="comision_migra"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">descatalogado</label>
-                                    <input type="text" name="descatalogado" placeholder="descatalogado"
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">idServicio </label>
-                                    <input type="number" name="idServicio " placeholder="idServicio "
-                                    class="form-control mb-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <label for="" class="control-label">idOperador </label>
-                                    <input type="number" name="idOperador " placeholder="idOperador"
-                                    class="form-control mb-2">
+                                    <label for="" class="control-label">Clawback (meses)</label>
+                                    <input type="number" name="clawback" placeholder="Ej: 6" class="form-control mb-2">
                                 </div>
                             </div>
                         </div>
                     </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Comision porta (€)</label>
+                                    <input type="number" name="comision_portabilidad" placeholder="Ej: 40" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Comision migra (€)</label>
+                                    <input type="number" name="comision_migra" placeholder="Ej: 30" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Comision nueva (€)</label>
+                                    <input type="number" name="comision_nueva" placeholder="Ej: 30" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- <div class="col-4">
+                        <div class="box-body">
+                            <div class="box-body">
+                                <div class="form-gruop">
+                                    <label for="" class="control-label">Descatalogada</label>
+                                    <input type="check" name="descatalogado" placeholder="descatalogado" class="form-control mb-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+            <br>
+            <div class="row d-flex justify-content-between">
+                    <button class="btn btn-primary" type="submit">Añadir</button> &nbsp;
                     <a href="{{ route('gestion.tarifas.index') }}">
-                        <button type="button" class="btn btn-danger">Cancelar</button>
+                        <button type="button" class="btn btn-outline-danger">Cancelar</button>
                     </a>
-                </div>
             </div>
             
         </form>

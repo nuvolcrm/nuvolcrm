@@ -55,7 +55,7 @@
                             @foreach ($presupuestos as $pre)
                                 <tr>
                                     <td>{{ $pre->id }}</td>
-                                    <td>{{ $pre->fecha }}</td>
+                                    {{-- <td>{{ $pre->created_at }}</td> --}}
                                     <td>
                                         @if ($pre->alias != '')
                                             ("{{ $pre->alias }}")
@@ -68,12 +68,13 @@
                                             href="https://api.whatsapp.com/send?phone=34{{ $pre->telefono }}"></a>
                                         {{ $pre->telefono }}
                                     </td>
-                                    <td>{{ $pre->poblacionPre }}</td>
+                                    <td>{{ $pre->poblacion }}</td>
                                     <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
-                                    <td class="text-right">{{ $pre->cuota }}&nbsp€</td>
+                                    <td class="text-right">{{ $pre->cuotaTotal }}&nbsp€</td>
                                     <td>
                                         <!-- <button-sm type='button' id='presupuesto' class='btn-sm' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''> -->
-                                        <a href='#'><i class='far fa-list-alt text-primary'></i></a>
+                                        <a href='clients/{{ $pre->id }}'><i class='far fa-list-alt text-primary'></i></a>
+                                        
                                         <!-- </button> -->
                                     </td>
                                     <td>

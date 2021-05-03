@@ -17,6 +17,18 @@
 
 @stop
 @section('content')
+<div class="card">
+    <div class="card-body">
+        {!! Form::open(['route' => 'gestion.colaboradores.store']) !!}
+
+            <div class="form-group">
+                {!! Form::label('name', 'nombre') !!}
+                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            </div>
+
+        {!! Form::close() !!}
+    </div>
+</div>
 <section class="content">
     <!-- /.card -->
     <div class="card">
@@ -133,30 +145,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-1">
                         <div class="box-body">
-                            <div class="box-body">
-                                <div class="form-gruop">
-                                    <div class="col-2">
-                                        <input type="radio" name="iCheck">
-                                        <label>off</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <input type="radio" name="iCheck" checked>
-                                        <label>on</label>
-                                    </div>
-                                    {{-- <input type="radio" name="iCheck">off 
-                                    <input type="radio" name="iCheck" checked> on --}}
-                                </div>
+                            <div class="form-gruop">
+                                <input type="radio" name="iCheck">
+                                <label>off</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="box-body">
+                            <div class="form-gruop">
+                                <br>
+                                <input type="radio" name="iCheck" checked>
+                                <label>on</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row d-flex justify-content-between">
                     <div class="col-md-4">
                         <button class="btn btn-primary" type="submit">Añadir producto</button> &nbsp;
                         <a href="{{ route('gestion.colaboradores.index') }}">
-                            <button type="button" class="btn btn-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-danger">Cancelar</button>
                         </a>
                     </div>
                 </div>

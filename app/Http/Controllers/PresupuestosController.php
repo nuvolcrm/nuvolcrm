@@ -11,11 +11,13 @@ class presupuestosController extends Controller
     public function index(){
 
         //$presupuestos = presupuesto::all();
-         $presupuestos = DB::table('presupuestos')
-                         ->join('clients', 'clients.id', '=', 'presupuestos.idCliente')
+         $presupuestos = DB::table('clients')
+                         ->join('presupuestos', 'clients.id', '=', 'presupuestos.idCliente')
                          ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
                          ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
-                         ->orderBy('presupuestos.idpresupuesto', 'desc')
+                         ->select('clients.id', 'clients.alias', 'clients.nombre', 'clients.apellido1', 'clients.apellido2', 'clients.telefono', 'clients.poblacion', DB::raw('sum(tarifas.cuota) as cuotaTotal'))
+                         //->orderBy('presupuestos.idpresupuesto', 'desc')
+                         ->groupByRaw('clients.id')
                          ->get();
 
         // $presupuestos = DB::table('presupuestos')
@@ -34,26 +36,37 @@ class presupuestosController extends Controller
                         ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
                         ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
                         ->get();
+                        
+        $operadores = DB::table('operadores')
+                        ->get();
 
-        return view('presupuestos.create', compact('presupuestos'));
+        $servicios = DB::table('servicios')
+                        ->get();
+
+        $tarifas = DB::table('tarifas')
+                        ->get();
+        $clients = DB::table('clients')
+                        ->get();
+
+        return view('presupuestos.create', compact('presupuestos', 'operadores', 'servicios', 'tarifas', 'clients'));
     }
 
     public function store(Request $request){
 
         $presupuesto = new presupuesto();
 
-        $presupuesto->numpresupuesto = $request->numpresupuesto;
+        //$presupuesto->numpresupuesto = $request->numpresupuesto;
         $presupuesto->idTarifa = $request->idTarifa;
         $presupuesto->idCliente  = $request->idCliente ;
-        $presupuesto->estado = $request->estado;
-        $presupuesto->fecha = $request->fecha;
+        //$presupuesto->estado = $request->estado;
+        //$presupuesto->fecha = $request->fecha;
         $presupuesto->poblacionPre = $request->poblacionPre;
         $presupuesto->usuario = $request->usuario;
         $presupuesto->linea = $request->linea;
         $presupuesto->opactual = $request->opactual;
         $presupuesto->cuotaactual = $request->cuotaactual;
         $presupuesto->finpermanencia = $request->finpermanencia;
-        $presupuesto->texto_fijo = $request->texto_fijo;
+        $presupuesto->texto_fijo = "MOVY.ES no se hace responbsable bla. Validez bla";
         $presupuesto->textolibre = $request->textolibre;
 
         $presupuesto->save();
