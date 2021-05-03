@@ -16,7 +16,7 @@ class presupuestosController extends Controller
                          ->join('tarifas', 'presupuestos.idTarifa', '=', 'tarifas.idTarifa')
                          ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
                          ->select('clients.id', 'clients.alias', 'clients.nombre', 'clients.apellido1', 'clients.apellido2', 'clients.telefono', 'clients.poblacion', DB::raw('sum(tarifas.cuota) as cuotaTotal'))
-                         //->orderBy('presupuestos.idpresupuesto', 'desc')
+                         ->orderBy('clients.id', 'desc')
                          ->groupByRaw('clients.id')
                          ->get();
 
