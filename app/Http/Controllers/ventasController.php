@@ -11,7 +11,6 @@ class ventasController extends Controller
 {
     public function index()
     {
-
         $ventas = DB::table('ventas')
             ->join('clients', 'clients.id', '=', 'ventas.idCliente')
             ->join('tarifas', 'tarifas.idTarifa', '=', 'ventas.idTarifa')
@@ -26,9 +25,6 @@ class ventasController extends Controller
 
     public function colaboradores()
     {
-
-        
-
         return view('ventas.create', compact('colaboradores'));
     }
 
@@ -50,9 +46,7 @@ class ventasController extends Controller
 
     public function store(Request $request)
     {
-
         $venta = new venta();
-
         $venta->idCliente  = $request->idCliente ;
         $venta->vendedor = $request->vendedor;
         $venta->idTarifa  = $request->idTarifa ;
@@ -80,20 +74,14 @@ class ventasController extends Controller
 
     public function show(venta $venta)
     {
-
         //$venta = venta::find($venta);
-
         // compact('venta') = ['venta' => $venta]
         return view('ventas.show', compact('venta'));
     }
 
     public function edit($idVenta)
     {
-        
-        
-        $ventas=venta::findOrFail($idVenta);
-
-        
+        $ventas=venta::findOrFail($idVenta); 
         
         return view('ventas.edit', compact('ventas'));
     }
@@ -124,6 +112,5 @@ class ventasController extends Controller
 
         return view('ventas.show', compact('venta'));
         //return view('ventas.edit', compact('venta'));
-
     }
 }

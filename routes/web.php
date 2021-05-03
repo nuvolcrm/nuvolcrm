@@ -11,6 +11,8 @@ use App\Http\Controllers\TarifasController;
 use App\Http\Controllers\ColaboradoresController;
 use App\Http\Controllers\EnlacesController;
 use App\Http\Controllers\EliminadorController;
+use App\Http\Controllers\ChartJsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -114,6 +116,9 @@ Route::put('extra/eliminador', [EliminadorController::class, 'store'])->name('ex
 Route::get('extra/eliminador/{eliminador}', [EliminadorController::class, 'show'])->name('extra.eliminador.show');
 Route::get('extra/eliminador/{eliminador}/edit', [EliminadorController::class, 'edit'])->name('extra.enlac.edit');
 Route::put('extra/eliminador/{eliminador}', [EliminadorController::class, 'update'])->name('extra.eliminador.update');
+
+// Ruta de Chart.js
+Route::get('chartjs', [ChartJsController::class, 'index'])->name('chartjs.index');
 
 /*
 //------------------------------------------------------------------------------------------

@@ -85,5 +85,32 @@ class HomeController extends Controller
     {
         return view('admin.crear_presupuestos');
     }
-    
+
+    public function escritorio()
+    {
+        //
+        $top5ingresos = DB::table('ventas')
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        ->orderBy('operadores.idOperador', 'asc')
+        ->get(5);
+
+        $top5fibras = DB::table('ventas')
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        // ->whereBetween('ventas.fechaalta', [(1)/{{ date('m') }}/{{ date('Y') }}, {{ date('d') }}/{{ date('m') }}/{{ date('Y') }}])
+        ->orderBy('operadores.idOperador', 'asc')
+        ->count() //no sé si cuenta los registros o hace sumatorio de fibras
+        ->get(5);
+
+        $top5fibras = DB::table('ventas')
+        ->count()
+        ->join('servicios', 'tarifas.idServicio', '=', 'servicios.idServicio')
+        ->join('operadores', 'tarifas.idOperador', '=', 'operadores.idOperador')
+        // ->whereBetween('ventas.fechaalta', [(1)/{{ date('m') }}/{{ date('Y') }}, {{ date('d') }}/{{ date('m') }}/{{ date('Y') }}])
+        ->orderBy('operadores.idOperador', 'asc')
+        ->get(5);
+
+        return view('gestion.tarifas.index', compact('tarifas'));
+    }
 }
