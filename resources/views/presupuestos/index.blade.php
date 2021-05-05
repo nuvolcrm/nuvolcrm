@@ -54,7 +54,7 @@
                         <tbody>
                             @foreach ($presupuestos as $pre)
                                 <tr>
-                                    <td>{{ $pre->id }}</td>
+                                    <td>{{ $pre->idPresupuesto }}</td>
                                     <td>{{ $pre->created_at }}</td>
                                     <td>
                                         @if ($pre->alias != '')
@@ -69,12 +69,20 @@
                                         {{ $pre->telefono }}
                                     </td>
                                     <td>{{ $pre->poblacion }}</td>
-                                    <td><i class="fas fa-wifi"></i> X <i class="fas fa-mobile-alt"></i> Y</td>
+                                    <td>
+                                        @if ($pre->fibra)
+                                            <i class="fas fa-wifi"></i> {{ $pre->fibra }}
+                                        @endif
+                                        @if ($pre->movil)
+                                            <i class="fas fa-mobile-alt"></i> {{ $pre->movil }}
+                                        @endif
+                                    </td>
                                     <td class="text-right">{{ $pre->cuotaTotal }}&nbsp€</td>
                                     <td>
                                         <!-- <button-sm type='button' id='presupuesto' class='btn-sm' data-toggle='modal' data-id='' data-target='#miModal' onclick='mostrarid(this.value);' value=''> -->
-                                        <a href='clients/{{ $pre->id }}'><i class='far fa-list-alt text-primary'></i></a>
-                                        
+                                        <a href='presupuestos/{{ $pre->idPresupuesto }}'><i
+                                                class='far fa-list-alt text-primary'></i></a>
+
                                         <!-- </button> -->
                                     </td>
                                     <td>

@@ -68,10 +68,11 @@
                                     <!-- <td>{{ $client->alias }}</td> -->
                                     <td>{{ $client->dni }}</td>
                                     <td>
-                                        @if (($client->idioma === 'Valenciano') or ($client->idioma === 'valenciano') or ($client->idioma === 'val'))
+                                        @if ($client->idioma === 'Valenciano' or $client->idioma === 'valenciano' or $client->idioma === 'val')
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_the_Land_of_Valencia_%28official%29.svg"
                                                 alt="Valenciano" width="20" height="15">
-                                        @elseif (($client->idioma === 'Español') or ($client->idioma === 'espanyol') or ($client->idioma === 'esp'))
+                                        @elseif (($client->idioma === 'Español') or ($client->idioma === 'espanyol')
+                                            or ($client->idioma === 'esp'))
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg"
                                                 alt="Español" width="20" height="15">
                                         @elseif (($client->idioma === 'Ingles') or ($client->idioma === 'eng'))
@@ -103,10 +104,15 @@
                                         @if ($client->mailing === 'on')
                                             <i class="fas fa-check text-primary"></i>
                                         @endif
+                                        <a href='clients/{{ $client->id }}'>
+                                            <i class='far fa-list-alt'></i>
+                                        </a>
                                     </td>
                                     <td class="bg-info text-right"></td>
-                                    <td><a href="{{ route('clients.edit', $client->id) }}"><i
-                                                class='fas fa-pencil-alt'></i></a></td>
+                                    <td>
+                                        <a href="{{ route('clients.edit', $client->id) }}"><i
+                                                class='fas fa-pencil-alt'></i></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -124,30 +130,33 @@
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 <script>
-  $('#example2').DataTable({
-    responsive: true,
-    autoWidth: false,
-    "order": [[ 0, "desc" ]],
-    "language": {
-      "lengthMenu": "Ver " +
-        `<select class = "custom-select custom-select-sm form-control form-control-sm">
+    $('#example2').DataTable({
+        responsive: true,
+        autoWidth: false,
+        "order": [
+            [0, "desc"]
+        ],
+        "language": {
+            "lengthMenu": "Ver " +
+                `<select class = "custom-select custom-select-sm form-control form-control-sm">
                             <option value = '5'>5</option>
                             <option value = '10'>10</option>
                             <option value = '25'>25</option>
                             <option value = '50'>50</option>
                             <option value = '-1'>All</option>
                           </select>` +
-        " registros",
-      "zeroRecords": "Ninguna coincidencia",
-      "info": "Página _PAGE_ de _PAGES_",
-      "infoEmpty": "Sin registros disponibles",
-      "infoFiltered": "(filtrado de _MAX_ registros totales)",
-      'search': 'Buscar',
-      'paginate': {
-        'next': 'Siguiente',
-        'previous': 'Anterior'
-      }
-    }
-  });
+                " registros",
+            "zeroRecords": "Ninguna coincidencia",
+            "info": "Página _PAGE_ de _PAGES_",
+            "infoEmpty": "Sin registros disponibles",
+            "infoFiltered": "(filtrado de _MAX_ registros totales)",
+            'search': 'Buscar',
+            'paginate': {
+                'next': 'Siguiente',
+                'previous': 'Anterior'
+            }
+        }
+    });
+
 </script>
 @stop
