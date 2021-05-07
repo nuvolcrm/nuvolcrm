@@ -7,34 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MOVY</title>
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="public/frontend/img/favicons/favicon.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="public/frontend/img/favicons/favicon.png">
-	<link rel="icon" type="image/png" href="public/frontend/img/favicons/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="public/frontend/img/favicons/favicon.png" sizes="16x16">
-	<link rel="manifest" href="public/frontend/img/favicons/favicon.png">
-	<link rel="shortcut icon" href="public/frontend/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="frontend/img/favicons/favicon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="frontend/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" href="frontend/img/favicons/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="frontend/img/favicons/favicon.png" sizes="16x16">
+	<link rel="manifest" href="frontend/img/favicons/favicon.png">
+	<link rel="shortcut icon" href="frontend/img/favicons/favicon.png">
 	<meta name="msapplication-TileColor" content="#00a8ff">
-	<meta name="msapplication-config" content="public/frontend/img/favicons/favicon.png">
+	<meta name="msapplication-config" content="frontend/img/favicons/favicon.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="frontend/css/normalize.css">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="frontend/css/bootstrap.css">
 	<!-- Owl -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/css/owl.css">
+	<link rel="stylesheet" type="text/css" href="frontend/css/owl.css">
 	<!-- Animate.css -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="frontend/css/animate.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="frontend/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
 	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="frontend/fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="public/frontend/css/cardio.css">
+	<link rel="stylesheet" type="text/css" href="frontend/css/cardio.css">
 </head>
 
 <body>
 	<div class="preloader">
-		<img src="public/frontend/img/loader.gif" alt="Preloader image">
+		<img src="frontend/img/loader.gif" alt="Preloader image">
 	</div>
 	<nav class="navbar">
 		<div class="container">
@@ -43,7 +43,7 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="public/frontend/img/favicon.png" data-active-url="public/frontend/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="frontend/img/favicon.png" data-active-url="frontend/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -238,25 +238,25 @@
 			</div>
             <div class="col-md-8 col-md-offset-2">
                 <div id="particulares" class="item text-center">
-                    <img src="public/frontend/img/particulares/movistar.png" class="img-circle" alt="movistar" width="25%">
-                    <img src="public/frontend/img/particulares/o2.png" class="img-circle" alt="o2" width="25%">
-                    <img src="public/frontend/img/particulares/tuenti.png" class="img-circle" alt="tuenti" width="25%">
-                    <img src="public/frontend/img/particulares/masmovil.png" class="img-circle" alt="masmovil" width="25%">
-                    <img src="public/frontend/img/particulares/pepephone.png" class="img-circle" alt="pepephone" width="25%">
-                    <img src="public/frontend/img/particulares/llamaya.png" class="img-circle" alt="llamaya" width="25%">
-                    <img src="public/frontend/img/particulares/lowi.png" class="img-circle" alt="lowi" width="25%">
-                    <img src="public/frontend/img/particulares/fi.png" class="img-circle" alt="fi" width="25%">
-                    <img src="public/frontend/img/particulares/digi.png" class="img-circle" alt="digi" width="25%">
-                    <img src="public/frontend/img/particulares/amena.png" class="img-circle" alt="amena" width="25%">
-                    <img src="public/frontend/img/particulares/simyo.png" class="img-circle" alt="simyo" width="25%">
-                    <img src="public/frontend/img/particulares/p.png" class="img-circle" alt="p" width="25%">
+                    <img src="frontend/img/particulares/movistar.png" class="img-circle" alt="movistar" width="25%">
+                    <img src="frontend/img/particulares/o2.png" class="img-circle" alt="o2" width="25%">
+                    <img src="frontend/img/particulares/tuenti.png" class="img-circle" alt="tuenti" width="25%">
+                    <img src="frontend/img/particulares/masmovil.png" class="img-circle" alt="masmovil" width="25%">
+                    <img src="frontend/img/particulares/pepephone.png" class="img-circle" alt="pepephone" width="25%">
+                    <img src="frontend/img/particulares/llamaya.png" class="img-circle" alt="llamaya" width="25%">
+                    <img src="frontend/img/particulares/lowi.png" class="img-circle" alt="lowi" width="25%">
+                    <img src="frontend/img/particulares/fi.png" class="img-circle" alt="fi" width="25%">
+                    <img src="frontend/img/particulares/digi.png" class="img-circle" alt="digi" width="25%">
+                    <img src="frontend/img/particulares/amena.png" class="img-circle" alt="amena" width="25%">
+                    <img src="frontend/img/particulares/simyo.png" class="img-circle" alt="simyo" width="25%">
+                    <img src="frontend/img/particulares/p.png" class="img-circle" alt="p" width="25%">
                 </div>
                 <div id="autonomos_negocios" class="item text-center">
-                    <img src="public/frontend/img/autonomos_negocios/masmovil.png" class="img-circle" alt="masmovil" width="25%">
-                    <img src="public/frontend/img/autonomos_negocios/movistar.png" class="img-circle" alt="movistar" width="25%">
-                    <img src="public/frontend/img/autonomos_negocios/orange.png" class="img-circle" alt="orange" width="25%">
-                    <img src="public/frontend/img/autonomos_negocios/vodafone.png" class="img-circle" alt="vodafone" width="25%">
-                    <img src="public/frontend/img/autonomos_negocios/yoigo.png" class="img-circle" alt="yoigo" width="25%">
+                    <img src="frontend/img/autonomos_negocios/masmovil.png" class="img-circle" alt="masmovil" width="25%">
+                    <img src="frontend/img/autonomos_negocios/movistar.png" class="img-circle" alt="movistar" width="25%">
+                    <img src="frontend/img/autonomos_negocios/orange.png" class="img-circle" alt="orange" width="25%">
+                    <img src="frontend/img/autonomos_negocios/vodafone.png" class="img-circle" alt="vodafone" width="25%">
+                    <img src="frontend/img/autonomos_negocios/yoigo.png" class="img-circle" alt="yoigo" width="25%">
                 </div>
             </div>
 		</div>
@@ -436,7 +436,7 @@
 			<div class="row no-margin">
 				<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
 					<div class="pricing">
-						<div class="box-main active" data-img="public/frontend/img/pricing1.jpg">
+						<div class="box-main active" data-img="frontend/img/pricing1.jpg">
 							<h4 class="white">Yoga Pilates</h4>
 							<h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
 							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
@@ -453,7 +453,7 @@
 						</div>
 					</div>
 					<div class="pricing">
-						<div class="box-main" data-img="public/frontend/img/pricing2.jpg">
+						<div class="box-main" data-img="frontend/img/pricing2.jpg">
 							<h4 class="white">Cardio Training</h4>
 							<h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
 							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
@@ -573,13 +573,13 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
-	<script src="public/frontend/js/jquery-1.11.1.min.js"></script>
-	<script src="public/frontend/js/owl.carousel.min.js"></script>
-	<script src="public/frontend/js/bootstrap.min.js"></script>
-	<script src="public/frontend/js/wow.min.js"></script>
-	<script src="public/frontend/js/typewriter.js"></script>
-	<script src="public/frontend/js/jquery.onepagenav.js"></script>
-	<script src="public/frontend/js/main.js"></script>
+	<script src="frontend/js/jquery-1.11.1.min.js"></script>
+	<script src="frontend/js/owl.carousel.min.js"></script>
+	<script src="frontend/js/bootstrap.min.js"></script>
+	<script src="frontend/js/wow.min.js"></script>
+	<script src="frontend/js/typewriter.js"></script>
+	<script src="frontend/js/jquery.onepagenav.js"></script>
+	<script src="frontend/js/main.js"></script>
 </body>
 
 </html>
