@@ -339,7 +339,12 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        
+        [
+            'text' => 'Front End',
+            'url'  => 'frontend',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+
         ['header' => 'labels'],
         [
             'text'       => 'important',

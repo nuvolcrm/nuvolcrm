@@ -11,7 +11,8 @@ use App\Http\Controllers\TarifasController;
 use App\Http\Controllers\ColaboradoresController;
 use App\Http\Controllers\EnlacesController;
 use App\Http\Controllers\EliminadorController;
-use App\Http\Controllers\ChartJsController;
+use App\Http\Controllers\FrontendController;
+
 
 
 /*
@@ -120,6 +121,23 @@ Route::put('extra/eliminador/{eliminador}', [EliminadorController::class, 'updat
 // Ruta de Chart.js
 Route::get('chartjs', [ChartJsController::class, 'index'])->name('chartjs.index');
 
+// Rutas de frontend
+Route::get('frontend', [FrontendController::class, 'index'])->name('frontend.index');
+Route::get('frontend/create', [FrontendController::class, 'create'])->name('frontend.create');
+Route::get('frontend/create1', [FrontendController::class, 'create1'])->name('frontend.create1');
+Route::get('frontend/create2', [FrontendController::class, 'create2'])->name('frontend.create2');
+Route::get('frontend/{fibras_moviles}/edit', [FrontendController::class, 'edit'])->name('frontend.edit');
+Route::get('frontend/{fibra}/edit1', [FrontendController::class, 'edit1'])->name('frontend.edit1');
+Route::get('frontend/{moviles}/edit2', [FrontendController::class, 'edit2'])->name('frontend.edit2');
+Route::put('frontend/store', [FrontendController::class, 'store'])->name('frontend.store');
+Route::put('frontend/store1', [FrontendController::class, 'store1'])->name('frontend.store1');
+Route::put('frontend/store2', [FrontendController::class, 'store2'])->name('frontend.store2');
+Route::put('frontend/{fibras_moviles}/update', [FrontendController::class, 'update'])->name('frontend.update');
+Route::put('frontend/{fibra}/update1', [FrontendController::class, 'update1'])->name('frontend.update1');
+Route::put('frontend/{moviles}/update2', [FrontendController::class, 'update2'])->name('frontend.update2');
+Route::get('frontend/{fibras_moviles}/destroy', [FrontendController::class, 'destroy'])->name('frontend.destroy');
+Route::get('frontend/{fibra}/destroy1', [FrontendController::class, 'destroy1'])->name('frontend.destroy1');
+Route::get('frontend/{moviles}/destroy2', [FrontendController::class, 'destroy2'])->name('frontend.destroy2');
 /*
 //------------------------------------------------------------------------------------------
 Route::get('extra/pedidos', [App\Http\Controllers\HomeController::class, 'pedidos'])->name('pedidos');
