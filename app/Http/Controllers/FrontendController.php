@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\fibra;
 use App\Models\moviles;
 use App\Models\fibras_moviles;
+use App\Models\resenas;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -180,6 +181,51 @@ class FrontendController extends Controller
         //
         $moviles = moviles::findOrFail($id);
         $moviles->delete();
+        return view('frontend.index');
+    }
+    public function create_resenas()
+    {
+        //
+        return view('frontend.create_resenas');
+    }
+    public function store_resenas(Request $request)
+    {
+            $resenas = DB::table('resenas')->get();
+        //Recoger Datos
+        $resena = array("nombre"=>$request->input("nombre"),
+                        "descripcion"=>$request->input("descripcion"),
+                        "foto"=>$request->input("foto"));
+
+        $resenas = new resenas();
+        $resenas->nombre = $resena["nombre"];
+        $resenas->descripcion = $resena["descripcion"];
+        $resenas->foto = $resena["foto"];
+
+        $resenas->save();
+        return view("frontend.index");
+    }
+    public function edit_resenas($id)
+    {
+        //
+        $resenas = resenas::findOrFail($id);
+        return view('frontend.edit_resenas', compact('resenas'));
+    }
+    public function update_resenas(Request $request, resenas $resenas)
+    {
+        //
+        $resenas->nombre = $request->nombre;
+        $resenas->descripcion = $request->descripcion;
+        $resenas->foto = $request->foto;
+        
+        $resenas->save();
+
+        return view('frontend.index', compact('resenas'));
+    }
+    public function destroy_resenas($id)
+    {
+        //
+        $resenas = resenas::findOrFail($id);
+        $resenas->delete();
         return view('frontend.index');
     }
 }

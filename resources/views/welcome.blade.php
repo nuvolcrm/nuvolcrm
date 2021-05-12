@@ -2,11 +2,13 @@
 use App\Models\fibra;
 use App\Models\moviles;
 use App\Models\fibras_moviles;
+use App\Models\resenas;
 use Illuminate\Support\Facades\DB;
 
     $fibras = fibra::all();
     $moviles = moviles::all();
     $fibras_moviles = fibras_moviles::all();
+	$reseñas = resenas::all();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -308,12 +310,15 @@ use Illuminate\Support\Facades\DB;
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="owl-twitter owl-carousel">
+						@foreach ($reseñas as $reseña)
 						<div class="item text-center">
 							<h2 class="white light">Reseñas</h2><br>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
+							<img src="img/resenas/{{$reseña->foto}}">
+							<h4 class="white light">{{$reseña->descripcion}}</h4>
+							<i class="light-white light">{{$reseña->nombre}}</i>
 						</div>
-						<div class="item text-center">
+						@endforeach
+						{{-- <div class="item text-center">
 							<i class="icon fa fa-twitter"></i>
 							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
 							<h4 class="light-white light">#health #training #exercise</h4>
@@ -322,7 +327,7 @@ use Illuminate\Support\Facades\DB;
 							<i class="icon fa fa-twitter"></i>
 							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
 							<h4 class="light-white light">#health #training #exercise</h4>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

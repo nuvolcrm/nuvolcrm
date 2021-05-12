@@ -138,6 +138,11 @@ Route::put('frontend/{moviles}/update2', [FrontendController::class, 'update2'])
 Route::get('frontend/{fibras_moviles}/destroy', [FrontendController::class, 'destroy'])->name('frontend.destroy');
 Route::get('frontend/{fibra}/destroy1', [FrontendController::class, 'destroy1'])->name('frontend.destroy1');
 Route::get('frontend/{moviles}/destroy2', [FrontendController::class, 'destroy2'])->name('frontend.destroy2');
+Route::get('frontend/create_resenas', [FrontendController::class, 'create_resenas'])->name('frontend.create_resenas');
+Route::put('frontend/store_resenas', [FrontendController::class, 'store_resenas'])->name('frontend.store_resenas');
+Route::get('frontend/{resenas}/destroy_resenas', [FrontendController::class, 'destroy_resenas'])->name('frontend.destroy_resenas');
+Route::get('frontend/{resenas}/edit_resenas', [FrontendController::class, 'edit_resenas'])->name('frontend.edit_resenas');
+Route::put('frontend/{resenas}/update_resenas', [FrontendController::class, 'update_resenas'])->name('frontend.update_resenas');
 /*
 //------------------------------------------------------------------------------------------
 Route::get('extra/pedidos', [App\Http\Controllers\HomeController::class, 'pedidos'])->name('pedidos');

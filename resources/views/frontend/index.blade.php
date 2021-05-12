@@ -2,11 +2,13 @@
 use App\Models\fibra;
 use App\Models\moviles;
 use App\Models\fibras_moviles;
+use App\Models\resenas;
 use Illuminate\Support\Facades\DB;
 
     $fibras = fibra::all();
     $moviles = moviles::all();
     $fibras_moviles = fibras_moviles::all();
+    $reseñas = resenas::all();
 ?>
 @extends('adminlte::page')
 
@@ -227,6 +229,71 @@ use Illuminate\Support\Facades\DB;
                     <!-- /.box-body -->
                     <div class="box-footer clearfix">
                         <a href="{{ route('frontend.create2') }}" class="btn btn-sm btn-primary pull-left">Nueva Oferta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- reseñas --}}
+        <div class="col-md-8">
+            <!-- /.card -->
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <!-- RESEÑAS-->
+                    <div class="box-header with-border">
+                        <h4 class="box-title text-primary"><i class="fas fa-users"></i>&nbsp;<strong>RESEÑAS</strong></h4>
+                        <!--
+                                <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                                -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-responsive-xl table-md text-md">
+                                <thead>
+                                    <tr>
+                                        <th>Foto</th>
+                                        <th>Nombre</th>
+                                        <th>Descripcion</th>
+                                        <!-- <th class="text-right">Ingresos</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($reseñas as $reseña)
+                                    <tr>
+                                        <td><img src="img/resenas/{{ $reseña->foto }}" height="40"></td>
+                                        <td>{{ $reseña->nombre }}</td>
+                                        <td>{{ $reseña->descripcion }}</td>
+                                        <td><a href="{{ route('frontend.edit_resenas', $reseña->id) }}"><i
+                                            class='fas fa-pencil-alt'></i></a></td>
+                                        <td><a href="{{ route('frontend.destroy_resenas', $reseña->id) }}"><i
+                                            class='fas fa-trash-alt'></i></a></td>
+                                    </tr>
+                                    @endforeach
+                                    {{-- @php($orden = 1)
+                                    @foreach ($clients as $cli)
+                                    <tr>
+                                        <td>{{ $orden }}</td>
+                                        <td>
+                                            @if ($cli -> alias <> '')
+                                                ("{{ $cli -> alias }}")
+                                                @endif
+                                                {{ $cli -> nombre.' '.$cli-> apellido1.' '.$cli-> apellido2 }}</td> <!-- <td class="text-right"><span class="label label-success">1050,13 €</span></td> -->
+                                    </tr>
+                                    @php($orden++)
+                                    @endforeach --}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <a href="{{ route('frontend.create_resenas') }}" class="btn btn-sm btn-primary pull-left">Nueva Reseña</a>
                     </div>
                 </div>
             </div>
