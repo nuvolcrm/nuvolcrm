@@ -313,7 +313,7 @@ use Illuminate\Support\Facades\DB;
 						@foreach ($reseñas as $reseña)
 						<div class="item text-center">
 							<h2 class="white light">Reseñas</h2><br>
-							<img src="img/resenas/{{$reseña->foto}}">
+							<img class="img-circle" width="10%" src="img/resenas/{{$reseña->foto}}">
 							<h4 class="white light">{{$reseña->descripcion}}</h4>
 							<i class="light-white light">{{$reseña->nombre}}</i>
 						</div>

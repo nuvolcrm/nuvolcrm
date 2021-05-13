@@ -190,6 +190,11 @@ class FrontendController extends Controller
     }
     public function store_resenas(Request $request)
     {
+        if($request->hasFile('foto')){
+            $file = $request->file('foto');
+            $name = time().$file->getClientOriginalName();
+            $file->move('img/resenas/', $name);
+        }
             $resenas = DB::table('resenas')->get();
         //Recoger Datos
         $resena = array("nombre"=>$request->input("nombre"),
@@ -199,7 +204,7 @@ class FrontendController extends Controller
         $resenas = new resenas();
         $resenas->nombre = $resena["nombre"];
         $resenas->descripcion = $resena["descripcion"];
-        $resenas->foto = $resena["foto"];
+        $resenas->foto = $name;
 
         $resenas->save();
         return view("frontend.index");
@@ -213,11 +218,16 @@ class FrontendController extends Controller
     public function update_resenas(Request $request, resenas $resenas)
     {
         //
+        if($request->hasFile('foto')){
+            $file = $request->file('foto');
+            $name = time().$file->getClientOriginalName();
+            $file->move('img/resenas/', $name);
+        }
         $resenas->nombre = $request->nombre;
         $resenas->descripcion = $request->descripcion;
-        $resenas->foto = $request->foto;
+        $resenas->foto = $name;
         
-        $resenas->save();
+        $resenas->save(); 
 
         return view('frontend.index', compact('resenas'));
     }

@@ -9,7 +9,7 @@
 @section('content')
 <!-- Main content -->
 <section class="content">
-    <form action="{{route('frontend.update_resenas', $resenas)}}" method="POST">
+    <form action="{{route('frontend.update_resenas', $resenas)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">

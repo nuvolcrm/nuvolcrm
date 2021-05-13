@@ -19,7 +19,7 @@
 <!-- Main content -->
 <section class="content">
     <!-- /.card -->
-    <form action="{{ route('frontend.store_resenas') }}" method="POST" files="true">
+    <form action="{{ route('frontend.store_resenas') }}" method="POST" files="true" enctype="multipart/form-data">
         @csrf
         @method('PUT')
     <div class="row">
@@ -45,8 +45,8 @@
                 <div class="box-body">
                     <div class="box-body">
                         <div class="form-gruop">
-                            <label for="image" class="control-label">Foto</label>
-                            <input type="file" name="foto" placeholder="foto" class="form-control mb-2">
+                            <label for="" class="control-label">Foto</label>
+                            <input type="file" name="foto" class="form-control mb-2">
                         </div>
                     </div>
                 </div>
