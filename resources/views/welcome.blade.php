@@ -48,16 +48,10 @@ use Illuminate\Support\Facades\DB;
 	<div class="preloader">
 		<img src="frontendp/img/loader.gif" alt="Preloader image">
 	</div>
-	<nav class="navbar">
+	<nav class="main-header navbar
+    navbar-expand
+    navbar-dark navbar-light">
 		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			{{-- <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<a class="navbar-brand" href="#"><img src="frontendp/img/favicon.png" data-active-url="frontendp/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a>
-			</div> --}}
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
                     <li><a class="navbar-brand" href="#"><img src="frontendp/img/favicon.png" data-active-url="frontendp/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a></li>
@@ -91,10 +85,11 @@ use Illuminate\Support\Facades\DB;
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="white typed">TENEMOS LAS MEJORES TARIFAS</h1>
+							<h3 class="white typed">TENEMOS LAS MEJORES TARIFAS</h3>
 							<span class="typed-cursor">|</span>
-							<h3 class="light white">
-                                Dinos lo que necesitas y te buscaremos la mejor solución al mejor precio. Te asesoramos con total confianza para que no te lleves sorpresas. Cientos de Clientes satisfechos en 4 años son nuestro mejor aval.</h3>
+							<h4 class="light white">
+                                Dinos lo que necesitas y te buscaremos la mejor solución al mejor precio. Te asesoramos con total confianza para que no te lleves sorpresas. Cientos de Clientes satisfechos en 4 años son nuestro mejor aval.
+							</h4>
 						</div>
 					</div>
                     <form action="mailto:?Subject=Contacto MOVY.es" method="POST">
@@ -123,7 +118,7 @@ use Illuminate\Support\Facades\DB;
 	<section id="operadores" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
-				<h2>OPERADORES</h2>
+				<h3>OPERADORES</h3>
 				<ul class="">
                     <li class="btn btn-primary" href="#particulares" onclick="mostrarParticulares()"><a>Particulares</a></li>
                     <li class="btn btn-primary" href="#autonomos_negocios" onclick="ocultarParticulares()"><a>Autonomos y Negocios</a></li>
@@ -181,23 +176,23 @@ use Illuminate\Support\Facades\DB;
 	<section id="fibra+movil" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">OFERTAS FIBRA+MOVIL</h2>
+				<h3 class="margin-top">OFERTAS FIBRA+MOVIL</h3>
 			</div>
 			<div class="row">
 				@foreach ($fibras_moviles as $fib_mov)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="cover" style="background:url('img/team/team-cover1.jpg'); background-size:cover;">
-								<div class="overlay text-center">
-									<h1 class="white">€{{$fib_mov->precio}}/MES</h1>
+							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
+								<div class=" text-center">
+									<h2 class="white">€{{$fib_mov->precio}}/MES</h2>
 								</div>
 							</div>
-							<h3 class="title">{{$fib_mov->titulo}}</h3>
+							<h4 class="title">{{$fib_mov->titulo}}</h4>
 							<div class="light">
-								<h4 class="muted regular">{{$fib_mov->descripcion1}}</h4>
-								<h4 class="muted regular">{{$fib_mov->descripcion2}}</h4>
-								<h4 class="muted regular">{{$fib_mov->descripcion3}}</h4>
-								<h4 class="muted regular">{{$fib_mov->descripcion4}}</h4>
+								<h5 class="muted regular">{{$fib_mov->descripcion1}}</h5>
+								<h5 class="muted regular">{{$fib_mov->descripcion2}}</h5>
+								<h5 class="muted regular">{{$fib_mov->descripcion3}}</h5>
+								<h5 class="muted regular">{{$fib_mov->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -208,23 +203,23 @@ use Illuminate\Support\Facades\DB;
     <section id="movil" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">OFERTAS MOVIL</h2>
+				<h3 class="margin-top">OFERTAS MOVIL</h3>
 			</div>
 			<div class="row">
 				@foreach ($moviles as $movil)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="cover" style="background:url('img/team/team-cover1.jpg'); background-size:cover;">
-								<div class="overlay text-center">
-									<h1 class="white">€{{$movil->precio}}/MES</h1>
+							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
+								<div class=" text-center">
+									<h2 class="white">€{{$movil->precio}}/MES</h2>
 								</div>
 							</div>
-							<h3 class="title">{{$movil->titulo}}</h3>
+							<h4 class="title">{{$movil->titulo}}</h4>
 							<div class="light">
-								<h4 class="muted regular">{{$movil->descripcion1}}</h4>
-								<h4 class="muted regular">{{$movil->descripcion2}}</h4>
-								<h4 class="muted regular">{{$movil->descripcion3}}</h4>
-								<h4 class="muted regular">{{$movil->descripcion4}}</h4>
+								<h5 class="muted regular">{{$movil->descripcion1}}</h5>
+								<h5 class="muted regular">{{$movil->descripcion2}}</h5>
+								<h5 class="muted regular">{{$movil->descripcion3}}</h5>
+								<h5 class="muted regular">{{$movil->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -235,23 +230,23 @@ use Illuminate\Support\Facades\DB;
     <section id="fibra" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">OFERTAS FIBRA</h2>
+				<h3 class="margin-top">OFERTAS FIBRA</h3>
 			</div>
 			<div class="row">
 				@foreach ($fibras as $fibra)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="cover" style="background:url('img/team/team-cover1.jpg'); background-size:cover;">
-								<div class="overlay text-center">
-									<h1 class="white">€{{$fibra->precio}}/MES</h1>
+							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
+								<div class=" text-center">
+									<h2 class="white">€{{$fibra->precio}}/MES</h2>
 								</div>
 							</div>
-							<h3 class="title">{{$fibra->titulo}}</h3>
+							<h4 class="title">{{$fibra->titulo}}</h4>
 							<div class="light">
-								<h4 class="muted regular">{{$fibra->descripcion1}}</h4>
-								<h4 class="muted regular">{{$fibra->descripcion2}}</h4>
-								<h4 class="muted regular">{{$fibra->descripcion3}}</h4>
-								<h4 class="muted regular">{{$fibra->descripcion4}}</h4>
+								<h5 class="muted regular">{{$fibra->descripcion1}}</h5>
+								<h5 class="muted regular">{{$fibra->descripcion2}}</h5>
+								<h5 class="muted regular">{{$fibra->descripcion3}}</h5>
+								<h5 class="muted regular">{{$fibra->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -259,52 +254,6 @@ use Illuminate\Support\Facades\DB;
 			</div>
 		</div>
 	</section>
-	{{-- <section id="pricing" class="section">
-		<div class="container">
-			<div class="row title text-center">
-				<h2 class="margin-top white">Pricing</h2>
-				<h4 class="light white">Choose your favorite pricing plan and sign up today!</h4>
-			</div>
-			<div class="row no-margin">
-				<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
-					<div class="pricing">
-						<div class="box-main active" data-img="frontendp/img/pricing1.jpg">
-							<h4 class="white">Yoga Pilates</h4>
-							<h4 class="white regular light">$850.00 <span class="small-font">/ year</span></h4>
-							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
-							<i class="info-icon icon_question"></i>
-						</div>
-						<div class="box-second active">
-							<ul class="white-list text-left">
-								<li>One Personal Trainer</li>
-								<li>Big gym space for training</li>
-								<li>Free tools &amp; props</li>
-								<li>Free locker</li>
-								<li>Free before / after shower</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pricing">
-						<div class="box-main" data-img="frontendp/img/pricing2.jpg">
-							<h4 class="white">Cardio Training</h4>
-							<h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>
-							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
-							<i class="info-icon icon_question"></i>
-						</div>
-						<div class="box-second">
-							<ul class="white-list text-left">
-								<li>One Personal Trainer</li>
-								<li>Big gym space for training</li>
-								<li>Free tools &amp; props</li>
-								<li>Free locker</li>
-								<li>Free before / after shower</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> --}}
 	<section id="reseñas" class="section section-padded blue-bg">
 		<div class="container">
 			<div class="row">
@@ -312,22 +261,12 @@ use Illuminate\Support\Facades\DB;
 					<div class="owl-twitter owl-carousel">
 						@foreach ($reseñas as $reseña)
 						<div class="item text-center">
-							<h2 class="white light">Reseñas</h2><br>
+							<h3 class="white light">Reseñas</h3><br>
 							<img class="img-circle" width="10%" src="img/resenas/{{$reseña->foto}}">
 							<h4 class="white light">{{$reseña->descripcion}}</h4>
 							<i class="light-white light">{{$reseña->nombre}}</i>
 						</div>
 						@endforeach
-						{{-- <div class="item text-center">
-							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
-						</div>
-						<div class="item text-center">
-							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
-						</div> --}}
 					</div>
 				</div>
 			</div>
@@ -338,7 +277,7 @@ use Illuminate\Support\Facades\DB;
             <div class="container">
                 <div class="row modulesTitle">
                     <div class="col-xs-12 text-center">
-                        <h2 id="section-5f8b6dc6cb541-title" class="s123-page-header">CONTACTO</h2>
+                        <h3 id="section-5f8b6dc6cb541-title" class="s123-page-header">CONTACTO</h3>
                         <hr class="small">
                         <h4 id="section-5f8b6dc6cb541-slogan" class="s123-page-slogan"></h4>
                     </div>
