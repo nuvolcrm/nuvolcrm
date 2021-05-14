@@ -27,10 +27,10 @@ use App\Http\Controllers\FrontendController;
 */
 
 // Rutas de login
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('auth.login');
 });
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
