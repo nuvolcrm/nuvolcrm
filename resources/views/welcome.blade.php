@@ -56,16 +56,16 @@ use Illuminate\Support\Facades\DB;
 				<ul class="nav navbar-nav navbar-right main-nav">
                     <li><a class="navbar-brand" href="#"><img src="frontendp/img/favicon.png" data-active-url="frontendp/img/favicon.png" style="width:50px !important; height:50px !important" alt=""></a></li>
 					<li><a href="#operadores">OPERADORES</a></li>
-					<li><a href="#fibra+movil">OFERTAS FIBRA+MOVIL</a></li>
-					<li><a href="#movil">OFERTAS MOVIL</a></li>
-					<li><a href="#fibra">OFERTAS FIBRA</a></li>
+					<li><a href="#fibra+movil">FIBRA+MOVIL</a></li>
+					<li><a href="#movil">MOVIL</a></li>
+					<li><a href="#fibra">FIBRA</a></li>
 					<li><a href="#reseñas">RESEÑAS</a></li>
 					<li><a href="#contacto">CONTACTO</a></li>
 					<li>{{-- <a href="{{('login')}}" datsoua-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up </a>--}}
                         @if (Route::has('login'))
                             <div class="fixed top-0 right-0 px-6 py-4 sm:block">
                                 @auth
-                                    <a href="{{ url('home') }}" class="btn btn-blue">Home</a>
+                                    <a href="{{ url('home') }}" class="btn btn-blue">Volver al CRM</a>
                                     <span class="open-blink"></span>
                                 @else
                                     <a href="{{ route('login') }}" class="btn btn-blue">Log in</a>
