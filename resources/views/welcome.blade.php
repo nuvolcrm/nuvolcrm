@@ -95,16 +95,16 @@ use Illuminate\Support\Facades\DB;
                     <form action="mailto:?Subject=Contacto MOVY.es" method="POST">
                         <div>
                             <div class="col-md-12" >
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2" required>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="tel" name="telefono" placeholder="Teléfono" class="form-control mb-2" maxlength="9" pattern="[6-7-9]{1}[0-9]{8}">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
                                 </div>
-                                <div class="col-md-4" >
+                                <div class="col-md-3" >
                                     <button class="btn btn-primary btn-block" type="submit">CONTACTAR</button>
                                 </div>
                             </div>
