@@ -105,7 +105,7 @@ use Illuminate\Support\Facades\DB;
                                     <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
                                 </div>
                                 <div class="col-md-3" >
-                                    <button class="btn btn-primary btn-block" type="submit">CONTACTAR</button>
+                                    <button class="btn" type="submit">CONTACTAR</button>
                                 </div>
                             </div>
                         </div>
