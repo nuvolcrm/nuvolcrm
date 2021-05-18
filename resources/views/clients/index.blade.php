@@ -94,36 +94,22 @@
                                     <td>{{ $client->poblacion }}</td>
                                     <td>{{ $client->fecha_nacimiento }}
                                         <br>
+                                        @if ($dias === substr(str_replace ( '-', '', $client->fecha_nacimiento),4,4))
+                                            <!-- esta echo -->
+                                            <i class="fas fa-birthday-cake text-primary"></i>
+                                        @endif
+                                        
                                         <script>
                                             var hoy = new Date();
-                                            var nacimiento = new Date('1989, 8, 5');
+                                            //var nacimiento = new Date('1989, 8, 5');
+                                            var nacimiento = new Date('{{substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}, substr(str_replace ( '-', '', $client->fecha_nacimiento),4,2), substr(str_replace ( '-', '', $client->fecha_nacimiento),6,2)');
                                 
                                             var dias = ((((hoy-nacimiento)/1000)/60)/60)/24;
                                             var meses = parseInt((dias%365)/30);
                                             var anios = parseInt(dias/365);
                                             dias = parseInt((dias%365)%30);
-                                            document.write("<br /> " + anios + " años, " + meses + " meses, " + dias + " días.");
+                                            document.write("<br /> " + anios + " años");
                                         </script>
-                                        {{-- {{$tari5 = substr(str_replace ( '-', '', $client->fecha_nacimiento),4,4)}} --}}
-                                        {{-- {{$mes = date("m", $client->fecha_nacimiento)}}
-                                        {{$dia = date("d", $client->fecha_nacimiento)}} --}}
-                                        {{-- @if ($dias === substr(str_replace ( '-', '', $client->fecha_nacimiento),4,4))
-                                            <!-- esta echo -->
-                                            <i class="fas fa-birthday-cake text-primary"></i>
-                                        @endif
-                                        @if ($anio >= substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4))
-                                            @if ($mes >= substr(str_replace ( '-', '', $client->fecha_nacimiento),4,2))
-                                                @if ($dia >= substr(str_replace ( '-', '', $client->fecha_nacimiento),6,2))
-                                                    {{ $anio - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
-                                                @else
-                                                    {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
-                                                @endif  
-                                            @else
-                                                {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
-                                            @endif
-                                        @else
-                                            {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
-                                        @endif --}}
                                     </td>
                                     <td>{{ $client->segmento }}</td>
                                     <td><a class="far fa-envelope" href=" mailto:{{ $client->email }}"></a></td>
