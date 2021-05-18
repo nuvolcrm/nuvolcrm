@@ -4,15 +4,28 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreClient;
 
 class clientController extends Controller
 {
     public function index(){
 
-        $clients = Client::all();
+        //https://carbon.nesbot.com/docs/
+        $date = Carbon::now();
 
-        return view('clients.index', compact('clients'));
+        $clients = Client::all();
+       
+        $date = Carbon::now()->toDateString();
+
+        $fechaEntera = time();
+        $anio = date("Y", $fechaEntera);
+        $mes = date("m", $fechaEntera);
+        $dia = date("d", $fechaEntera);
+        $dias = $mes.$dia;
+
+        return view('clients.index', compact('clients' , 'date', 'dias', 'mes', 'anio', 'dia'));
     }
 
     public function create(){
@@ -61,6 +74,11 @@ class clientController extends Controller
         $client->email = $request->email;
         $client->mailing = $request->mailing;
         $client->segmento = $request->segmento;
+
+        $client->provincia = $request->provincia;
+        $client->observaciones = $request->observaciones;
+        $client->comercial = $request->comercial;
+        $client->compania = $request->compania;
 
         $client->save();
         // return $request->all();

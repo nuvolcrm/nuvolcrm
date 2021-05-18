@@ -89,13 +89,41 @@
                                             href="https://api.whatsapp.com/send?phone=34{{ $client->telefono }}"></a>
                                         {{ $client->telefono }}
                                     </td>
-                                    <td>{{ $client->direccion }}</td>
+                                    <td>
+                                        {{ $client->direccion }}</td>
                                     <td>{{ $client->poblacion }}</td>
                                     <td>{{ $client->fecha_nacimiento }}
-                                        @if ($client->fecha_nacimiento === date('Y-m-d'))
-                                            <!-- esta condición no es correcta. Habría que cortar del string el mes/día y compararlos con el mes/dia actual date('m-d')-->
+                                        <br>
+                                        <script>
+                                            var hoy = new Date();
+                                            var nacimiento = new Date('1989, 8, 5');
+                                
+                                            var dias = ((((hoy-nacimiento)/1000)/60)/60)/24;
+                                            var meses = parseInt((dias%365)/30);
+                                            var anios = parseInt(dias/365);
+                                            dias = parseInt((dias%365)%30);
+                                            document.write("<br /> " + anios + " años, " + meses + " meses, " + dias + " días.");
+                                        </script>
+                                        {{-- {{$tari5 = substr(str_replace ( '-', '', $client->fecha_nacimiento),4,4)}} --}}
+                                        {{-- {{$mes = date("m", $client->fecha_nacimiento)}}
+                                        {{$dia = date("d", $client->fecha_nacimiento)}} --}}
+                                        {{-- @if ($dias === substr(str_replace ( '-', '', $client->fecha_nacimiento),4,4))
+                                            <!-- esta echo -->
                                             <i class="fas fa-birthday-cake text-primary"></i>
                                         @endif
+                                        @if ($anio >= substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4))
+                                            @if ($mes >= substr(str_replace ( '-', '', $client->fecha_nacimiento),4,2))
+                                                @if ($dia >= substr(str_replace ( '-', '', $client->fecha_nacimiento),6,2))
+                                                    {{ $anio - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
+                                                @else
+                                                    {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
+                                                @endif  
+                                            @else
+                                                {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
+                                            @endif
+                                        @else
+                                            {{ $anio - 1 - substr(str_replace ( '-', '', $client->fecha_nacimiento),0,4)}}
+                                        @endif --}}
                                     </td>
                                     <td>{{ $client->segmento }}</td>
                                     <td><a class="far fa-envelope" href=" mailto:{{ $client->email }}"></a></td>
@@ -130,6 +158,20 @@
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 <script>
+    function getEdad(dateString) {
+        let hoy = new Date()
+        let fechaNacimiento = new Date(dateString)
+        let edad = hoy.getFullYear() - fechaNacimiento.getFullYear()
+        let diferenciaMeses = hoy.getMonth() - fechaNacimiento.getMonth()
+        if (
+            diferenciaMeses < 0 ||
+            (diferenciaMeses === 0 && hoy.getDate() < fechaNacimiento.getDate())
+        ) {
+            edad--
+        }
+        return edad
+    }
+
     $('#example2').DataTable({
         responsive: true,
         autoWidth: false,
