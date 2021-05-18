@@ -215,7 +215,6 @@ use Illuminate\Support\Facades\DB;
 								<div class=" text-center">
 									<h2 class="white">{{$movil->precio}}</h2>
 									<h4 class="white">€/mes</h4>
-
 								</div>
 							</div>
 							<h4 class="title">{{$movil->titulo}}</h4>
@@ -236,7 +235,7 @@ use Illuminate\Support\Facades\DB;
 			<div class="row title text-center">
 				<h3 class="margin-top">OFERTAS FIBRA</h3>
 			</div>
-			<div class="row">
+			<div class="row d-flex justify-content-center">
 				@foreach ($fibras as $fibra)
 					<div class="col-md-4">
 						<div class="team text-center">
@@ -356,9 +355,9 @@ use Illuminate\Support\Facades\DB;
             <div>
 				<div class="col-sm-4 text-center text-center-mobile">
 					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/MOVYES"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.instagram.com/movyonline/?hl=es"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://maps.app.goo.gl/54wju1YQTTTL6gA99" target="_blank"><i class="fa fa-google-plus" style="url('https://static.s123-cdn-static.com/ready_uploads/svg/share.svg?v=2'); -webkit: url('https://static.s123-cdn-static.com/ready_uploads/svg/share.svg?v=2');">&nbsp;</i></a></li>
+						<li><a href="http://www.facebook.com/MOVYES"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="http://www.instagram.com/movyonline/?hl=es"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://maps.app.goo.gl/54wju1YQTTTL6gA99" target="_blank"><i class="fab fa-google-plus" style="url('https://static.s123-cdn-static.com/ready_uploads/svg/share.svg?v=2'); -webkit: url('https://static.s123-cdn-static.com/ready_uploads/svg/share.svg?v=2');">&nbsp;</i></a></li>
 					</ul>
 				</div>
 			</div>
