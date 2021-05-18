@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
     $fibras_moviles = fibras_moviles::all();
 	$reseñas = resenas::all();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,7 @@ use Illuminate\Support\Facades\DB;
 	<link rel="stylesheet" type="text/css" href="frontendp/css/animate.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" type="text/css" href="frontendp/fonts/font-awesome-4.1.0/css/font-awesome.min.css">
-	<!-- Elegant Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="frontendp/fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="frontendp/css/cardio.css">
@@ -121,7 +122,7 @@ use Illuminate\Support\Facades\DB;
 				<h3>OPERADORES</h3>
 				<ul class="">
                     <li class="btn btn-primary" href="#particulares" onclick="mostrarParticulares()"><a>Particulares</a></li>
-                    <li class="btn btn-primary" href="#autonomos_negocios" onclick="ocultarParticulares()"><a>Autonomos y Negocios</a></li>
+                    <li class="btn btn-primary" href="#autonomos_negocios" onclick="ocultarParticulares()"><a>Autónomos y Negocios</a></li>
                 </ul>
 			</div>
             <div class="col-md-8 col-md-offset-2">
@@ -176,23 +177,24 @@ use Illuminate\Support\Facades\DB;
 	<section id="fibra+movil" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h3 class="margin-top">OFERTAS FIBRA+MOVIL</h3>
+				<h3 class="margin-top">OFERTAS FIBRA+MÓVIL</h3>
 			</div>
 			<div class="row">
 				@foreach ($fibras_moviles as $fib_mov)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
+							<div class="bg-primary">
 								<div class=" text-center">
-									<h2 class="white">€{{$fib_mov->precio}}/MES</h2>
+									<h2 class="white">{{$fib_mov->precio}}</h2>
+									<h4 class="white">€/mes</h4>
 								</div>
 							</div>
 							<h4 class="title">{{$fib_mov->titulo}}</h4>
 							<div class="light">
-								<h5 class="muted regular">{{$fib_mov->descripcion1}}</h5>
-								<h5 class="muted regular">{{$fib_mov->descripcion2}}</h5>
-								<h5 class="muted regular">{{$fib_mov->descripcion3}}</h5>
-								<h5 class="muted regular">{{$fib_mov->descripcion4}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fib_mov->descripcion1}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fib_mov->descripcion2}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fib_mov->descripcion3}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fib_mov->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -203,23 +205,25 @@ use Illuminate\Support\Facades\DB;
     <section id="movil" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h3 class="margin-top">OFERTAS MOVIL</h3>
+				<h3 class="margin-top">OFERTAS MÓVIL</h3>
 			</div>
 			<div class="row">
 				@foreach ($moviles as $movil)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
+							<div class="bg-primary">
 								<div class=" text-center">
-									<h2 class="white">€{{$movil->precio}}/MES</h2>
+									<h2 class="white">{{$movil->precio}}</h2>
+									<h4 class="white">€/mes</h4>
+
 								</div>
 							</div>
 							<h4 class="title">{{$movil->titulo}}</h4>
 							<div class="light">
-								<h5 class="muted regular">{{$movil->descripcion1}}</h5>
-								<h5 class="muted regular">{{$movil->descripcion2}}</h5>
-								<h5 class="muted regular">{{$movil->descripcion3}}</h5>
-								<h5 class="muted regular">{{$movil->descripcion4}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$movil->descripcion1}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$movil->descripcion2}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$movil->descripcion3}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$movil->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -236,17 +240,18 @@ use Illuminate\Support\Facades\DB;
 				@foreach ($fibras as $fibra)
 					<div class="col-md-4">
 						<div class="team text-center">
-							<div class="" style="background-color: rgba(0, 168, 255, 0.9)">
-								<div class=" text-center">
-									<h2 class="white">€{{$fibra->precio}}/MES</h2>
+							<div class="bg-primary">
+								<div class="text-center">
+									<h2 class="white">{{$fibra->precio}}</h2>
+									<h4 class="white">€/mes</h4>
 								</div>
 							</div>
 							<h4 class="title">{{$fibra->titulo}}</h4>
 							<div class="light">
-								<h5 class="muted regular">{{$fibra->descripcion1}}</h5>
-								<h5 class="muted regular">{{$fibra->descripcion2}}</h5>
-								<h5 class="muted regular">{{$fibra->descripcion3}}</h5>
-								<h5 class="muted regular">{{$fibra->descripcion4}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fibra->descripcion1}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fibra->descripcion2}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fibra->descripcion3}}</h5>
+								<h5 class="muted regular"><i class="far fa-check-circle text-primary"></i> {{$fibra->descripcion4}}</h5>
 							</div>
 						</div>
 					</div>
@@ -310,7 +315,7 @@ use Illuminate\Support\Facades\DB;
                             <li class="open_hours_field">
                                 <i class="svg-m s123-icon-converter fa-fw" data-icon-name="clock-o" 
                                 style=" mask: url('https://static.s123-cdn-static.com/ready_uploads/svg/clock-o.svg?v=2'); -webkit-mask: url('https://static.s123-cdn-static.com/ready_uploads/svg/clock-o.svg?v=2');" 
-                                data-ie11-classes="fa-fw">&nbsp;</i>Lunes a viernes 09:00-13:00 Martes y jueves 17:00-20:00
+                                data-ie11-classes="fa-fw">&nbsp;</i>Lunes a viernes. Mañanas 10:00-13:30. Tardes* 17:00-20:00. *miércoles tarde cerrado
                             </li> 
                         </ul> 
                     </div> 
@@ -349,7 +354,7 @@ use Illuminate\Support\Facades\DB;
 	<footer style="text-align: center">
 		<div class="container">
             <div>
-				<div class="col-sm-4 text-ceter text-center-mobile">
+				<div class="col-sm-4 text-center text-center-mobile">
 					<ul class="social-footer">
 						<li><a href="http://www.facebook.com/MOVYES"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://www.instagram.com/movyonline/?hl=es"><i class="fa fa-instagram"></i></a></li>
@@ -410,7 +415,7 @@ $mensaje .= "Su e-mail es: " . $email . "\r\n";
 $mensaje .= "Mensaje: " . $_POST['contact_message'] . "\r\n";
 $mensaje .= "Enviado el " . date('d/m/Y',time());
 
-$para = 'vmarch995@gmail.com';
+$para = 'hola@movy.es';
 $asunto = 'Asunto del email recibido';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
