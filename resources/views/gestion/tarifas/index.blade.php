@@ -53,7 +53,7 @@
                             @foreach ($tarifas as $tarifa)
                                 <tr>
                                     <td>{{ $tarifa -> idTarifa}}</td>
-                                    <td><img src="../img/{{ $tarifa->logo }}" height="40"></td>
+                                    <td><img class="rounded-circle" src="../img/{{ $tarifa->logo }}" height="40"></td>
                                     <td><i class='{{ $tarifa->imagen }} text-primary'></i></td>
                                     <td>{{ $tarifa -> nombreTarifa}}</td>
                                     <td>{{ $tarifa -> descripcion}}</td>

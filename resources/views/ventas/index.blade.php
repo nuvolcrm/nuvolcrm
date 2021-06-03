@@ -25,7 +25,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example2" class="table table-hover table-responsive table-md text-sm">
+                            <table id="example2" class="table table-hover table-responsive text-sm text-nowrap">
                                 <thead class="table-primary">
                                     <tr>
                                         <th>Id</th>
@@ -58,7 +58,7 @@
                                     @foreach ($ventas as $venta)
                                         <tr>
                                             <td>{{ $venta->idVenta }}</td>
-                                            <td><img src="img/{{ $venta->logo }}" height="40" alt="{{ $venta->nombreOperador }}"></img></td>
+                                            <td><img class="rounded-circle" src="img/{{ $venta->logo }}" height="40" alt="{{ $venta->nombreOperador }}"></img></td>
                                             <td>{{ $venta->descripcion }}</td>
                                             <td>
                                                 <i class='{{ $venta->imagen }} text-primary'></i>
@@ -141,6 +141,7 @@
         $('#example2').DataTable({
             responsive: true,
             autoWidth: false,
+            scrollx: true,
             "order": [
                 [11, "desc"]
             ],
